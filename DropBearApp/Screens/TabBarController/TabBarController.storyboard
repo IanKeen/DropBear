@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MSo-ch-cvS">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item 2-->
+        <scene sceneID="DtT-5w-yrK">
+            <objects>
+                <viewController id="pMo-gR-3Hu" customClass="Tab2ViewController" customModule="DropBearApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KyD-br-tTW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2BZ-Hr-va2">
+                                <rect key="frame" x="160.5" y="433" width="93" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tab2button"/>
+                                <state key="normal" title="Item 2 Button"/>
+                                <connections>
+                                    <action selector="buttonTap" destination="pMo-gR-3Hu" eventType="touchUpInside" id="vw1-fI-H2s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2BZ-Hr-va2" firstAttribute="centerX" secondItem="KyD-br-tTW" secondAttribute="centerX" id="dxT-Fa-BDG"/>
+                            <constraint firstItem="2BZ-Hr-va2" firstAttribute="centerY" secondItem="KyD-br-tTW" secondAttribute="centerY" id="mUl-vb-ufU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YFO-r7-TRi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="DHG-44-1tZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0m-m3-R89" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="134"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="EMH-K7-n4p">
+            <objects>
+                <viewController id="pUr-vi-P6k" customClass="Tab1ViewController" customModule="DropBearApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2zt-Db-PCk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-dI-sGp">
+                                <rect key="frame" x="161.5" y="433" width="91" height="30"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tab1button"/>
+                                <state key="normal" title="Item 1 Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hy8-dI-sGp" firstAttribute="centerX" secondItem="2zt-Db-PCk" secondAttribute="centerX" id="2Ik-Qy-ZmW"/>
+                            <constraint firstItem="hy8-dI-sGp" firstAttribute="centerY" secondItem="2zt-Db-PCk" secondAttribute="centerY" id="lbd-t6-iE6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wnl-fA-aCZ"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="B1R-em-sVd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0s7-tA-xPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-61" y="-514"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Ww-eh-OBx">
+            <objects>
+                <tabBarController id="MSo-ch-cvS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SeZ-GT-43Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pUr-vi-P6k" kind="relationship" relationship="viewControllers" id="tAP-3d-bAG"/>
+                        <segue destination="pMo-gR-3Hu" kind="relationship" relationship="viewControllers" id="KXa-Ft-CUt"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qao-fn-tel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="-190"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,642 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32C39A29227A4B18001DA20E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39A28227A4B18001DA20E /* AppDelegate.swift */; };
+		32C39A30227A4B19001DA20E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32C39A2F227A4B19001DA20E /* Assets.xcassets */; };
+		32C39A33227A4B19001DA20E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C39A31227A4B19001DA20E /* LaunchScreen.storyboard */; };
+		32C39A3E227A4B19001DA20E /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39A3D227A4B19001DA20E /* Tests.swift */; };
+		32C39A70227A53A5001DA20E /* DropBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C39A6F227A53A5001DA20E /* DropBear.framework */; };
+		32C39A72227A549E001DA20E /* DropBearSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C39A71227A549E001DA20E /* DropBearSupport.framework */; };
+		32C39A76227A5AC2001DA20E /* DropBearSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C39A75227A5AC2001DA20E /* DropBearSupport.framework */; };
+		32C39A77227A5AC2001DA20E /* DropBearSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 32C39A75227A5AC2001DA20E /* DropBearSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		32C39B76227B7F6D001DA20E /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B75227B7F6D001DA20E /* AccessibilityIdentifiers.swift */; };
+		32C39B9D227BB747001DA20E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B9C227BB747001DA20E /* main.swift */; };
+		32C39B9F227BB771001DA20E /* UITestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B9E227BB771001DA20E /* UITestAppDelegate.swift */; };
+		32C39BA1227BBA4C001DA20E /* UITestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BA0227BBA4C001DA20E /* UITestConfig.swift */; };
+		32C39BA2227BBA4C001DA20E /* UITestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BA0227BBA4C001DA20E /* UITestConfig.swift */; };
+		32C39BAC227BC38E001DA20E /* ScrollableStackRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BAA227BC38E001DA20E /* ScrollableStackRobot.swift */; };
+		32C39BC7227CDCE3001DA20E /* ScrollableStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BC5227CDCE3001DA20E /* ScrollableStackViewController.swift */; };
+		32C39BC8227CDCE3001DA20E /* ScrollableStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C39BC6227CDCE3001DA20E /* ScrollableStackViewController.xib */; };
+		32C39BDB2280B061001DA20E /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32C39BDA2280B061001DA20E /* TabBarController.storyboard */; };
+		32C39BDD2280BD25001DA20E /* Tab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BDC2280BD25001DA20E /* Tab1ViewController.swift */; };
+		32C39BDF2280BD2D001DA20E /* Tab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BDE2280BD2D001DA20E /* Tab2ViewController.swift */; };
+		32C39BE4228220D8001DA20E /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BE3228220D8001DA20E /* TableViewController.swift */; };
+		32C39BE722822141001DA20E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BE522822141001DA20E /* TableViewCell.swift */; };
+		32C39BE822822141001DA20E /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C39BE622822141001DA20E /* TableViewCell.xib */; };
+		32C39BEC228241C5001DA20E /* TabRobots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BEB228241C5001DA20E /* TabRobots.swift */; };
+		32C39BF222827357001DA20E /* TableViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BF122827357001DA20E /* TableViewRobot.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32C39A3A227A4B19001DA20E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32C39A1D227A4B18001DA20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32C39A24227A4B18001DA20E;
+			remoteInfo = DropBearApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		32C39A78227A5AC2001DA20E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				32C39A77227A5AC2001DA20E /* DropBearSupport.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		32C39A25227A4B18001DA20E /* DropBearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A28227A4B18001DA20E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32C39A2F227A4B19001DA20E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32C39A32227A4B19001DA20E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32C39A34227A4B19001DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C39A39227A4B19001DA20E /* DropBearAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBearAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A3D227A4B19001DA20E /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		32C39A3F227A4B19001DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32C39A63227A4CB4001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A67227A4D6A001DA20E /* DropBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A69227A4D6A001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A6B227A4F1F001DA20E /* DropBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A6D227A5236001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A6F227A53A5001DA20E /* DropBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A71227A549E001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A73227A54E4001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39A75227A5AC2001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32C39B75227B7F6D001DA20E /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		32C39B9C227BB747001DA20E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		32C39B9E227BB771001DA20E /* UITestAppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestAppDelegate.swift; sourceTree = "<group>"; };
+		32C39BA0227BBA4C001DA20E /* UITestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestConfig.swift; sourceTree = "<group>"; };
+		32C39BAA227BC38E001DA20E /* ScrollableStackRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStackRobot.swift; sourceTree = "<group>"; };
+		32C39BC5227CDCE3001DA20E /* ScrollableStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableStackViewController.swift; sourceTree = "<group>"; };
+		32C39BC6227CDCE3001DA20E /* ScrollableStackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScrollableStackViewController.xib; sourceTree = "<group>"; };
+		32C39BDA2280B061001DA20E /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		32C39BDC2280BD25001DA20E /* Tab1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1ViewController.swift; sourceTree = "<group>"; };
+		32C39BDE2280BD2D001DA20E /* Tab2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2ViewController.swift; sourceTree = "<group>"; };
+		32C39BE3228220D8001DA20E /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		32C39BE522822141001DA20E /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		32C39BE622822141001DA20E /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		32C39BEB228241C5001DA20E /* TabRobots.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabRobots.swift; sourceTree = "<group>"; };
+		32C39BF122827357001DA20E /* TableViewRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRobot.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32C39A22227A4B18001DA20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C39A76227A5AC2001DA20E /* DropBearSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32C39A36227A4B19001DA20E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C39A72227A549E001DA20E /* DropBearSupport.framework in Frameworks */,
+				32C39A70227A53A5001DA20E /* DropBear.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32C39A1C227A4B18001DA20E = {
+			isa = PBXGroup;
+			children = (
+				32C39A27227A4B18001DA20E /* DropBearApp */,
+				32C39A3C227A4B19001DA20E /* DropBearAppUITests */,
+				32C39A26227A4B18001DA20E /* Products */,
+				32C39A62227A4CB4001DA20E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		32C39A26227A4B18001DA20E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32C39A25227A4B18001DA20E /* DropBearApp.app */,
+				32C39A39227A4B19001DA20E /* DropBearAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C39A27227A4B18001DA20E /* DropBearApp */ = {
+			isa = PBXGroup;
+			children = (
+				32C39BCB227D027E001DA20E /* Resources */,
+				32C39BC3227CDCBB001DA20E /* Screens */,
+				32C39A28227A4B18001DA20E /* AppDelegate.swift */,
+				32C39B9E227BB771001DA20E /* UITestAppDelegate.swift */,
+				32C39B9C227BB747001DA20E /* main.swift */,
+			);
+			path = DropBearApp;
+			sourceTree = "<group>";
+		};
+		32C39A3C227A4B19001DA20E /* DropBearAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				32C39B74227B7F52001DA20E /* Generated */,
+				32C39BA7227BC158001DA20E /* Robots */,
+				32C39A3D227A4B19001DA20E /* Tests.swift */,
+				32C39BA0227BBA4C001DA20E /* UITestConfig.swift */,
+				32C39A3F227A4B19001DA20E /* Info.plist */,
+			);
+			path = DropBearAppUITests;
+			sourceTree = "<group>";
+		};
+		32C39A62227A4CB4001DA20E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32C39A73227A54E4001DA20E /* DropBearSupport.framework */,
+				32C39A71227A549E001DA20E /* DropBearSupport.framework */,
+				32C39A75227A5AC2001DA20E /* DropBearSupport.framework */,
+				32C39A6F227A53A5001DA20E /* DropBear.framework */,
+				32C39A6D227A5236001DA20E /* DropBearSupport.framework */,
+				32C39A6B227A4F1F001DA20E /* DropBear.framework */,
+				32C39A67227A4D6A001DA20E /* DropBear.framework */,
+				32C39A69227A4D6A001DA20E /* DropBearSupport.framework */,
+				32C39A63227A4CB4001DA20E /* DropBearSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32C39B74227B7F52001DA20E /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				32C39B75227B7F6D001DA20E /* AccessibilityIdentifiers.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		32C39BA7227BC158001DA20E /* Robots */ = {
+			isa = PBXGroup;
+			children = (
+				32C39BAA227BC38E001DA20E /* ScrollableStackRobot.swift */,
+				32C39BEB228241C5001DA20E /* TabRobots.swift */,
+				32C39BF122827357001DA20E /* TableViewRobot.swift */,
+			);
+			path = Robots;
+			sourceTree = "<group>";
+		};
+		32C39BC3227CDCBB001DA20E /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				32C39BE2228220BB001DA20E /* TableView */,
+				32C39BD7227FB317001DA20E /* TabBarController */,
+				32C39BC4227CDCC1001DA20E /* ScrollableStackView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		32C39BC4227CDCC1001DA20E /* ScrollableStackView */ = {
+			isa = PBXGroup;
+			children = (
+				32C39BC5227CDCE3001DA20E /* ScrollableStackViewController.swift */,
+				32C39BC6227CDCE3001DA20E /* ScrollableStackViewController.xib */,
+			);
+			path = ScrollableStackView;
+			sourceTree = "<group>";
+		};
+		32C39BCB227D027E001DA20E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				32C39A2F227A4B19001DA20E /* Assets.xcassets */,
+				32C39A31227A4B19001DA20E /* LaunchScreen.storyboard */,
+				32C39A34227A4B19001DA20E /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		32C39BD7227FB317001DA20E /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				32C39BDA2280B061001DA20E /* TabBarController.storyboard */,
+				32C39BDC2280BD25001DA20E /* Tab1ViewController.swift */,
+				32C39BDE2280BD2D001DA20E /* Tab2ViewController.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		32C39BE2228220BB001DA20E /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				32C39BE3228220D8001DA20E /* TableViewController.swift */,
+				32C39BE522822141001DA20E /* TableViewCell.swift */,
+				32C39BE622822141001DA20E /* TableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32C39A24227A4B18001DA20E /* DropBearApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32C39A42227A4B19001DA20E /* Build configuration list for PBXNativeTarget "DropBearApp" */;
+			buildPhases = (
+				32C39B7B227B8D21001DA20E /* [GD] DropBearGen */,
+				32C39A21227A4B18001DA20E /* Sources */,
+				32C39A22227A4B18001DA20E /* Frameworks */,
+				32C39A23227A4B18001DA20E /* Resources */,
+				32C39A78227A5AC2001DA20E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropBearApp;
+			productName = DropBearApp;
+			productReference = 32C39A25227A4B18001DA20E /* DropBearApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32C39A38227A4B19001DA20E /* DropBearAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32C39A45227A4B19001DA20E /* Build configuration list for PBXNativeTarget "DropBearAppUITests" */;
+			buildPhases = (
+				32C39A35227A4B19001DA20E /* Sources */,
+				32C39A36227A4B19001DA20E /* Frameworks */,
+				32C39A37227A4B19001DA20E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32C39A3B227A4B19001DA20E /* PBXTargetDependency */,
+			);
+			name = DropBearAppUITests;
+			productName = DropBearAppUITests;
+			productReference = 32C39A39227A4B19001DA20E /* DropBearAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32C39A1D227A4B18001DA20E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Mustard;
+				TargetAttributes = {
+					32C39A24227A4B18001DA20E = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					32C39A38227A4B19001DA20E = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 32C39A24227A4B18001DA20E;
+					};
+				};
+			};
+			buildConfigurationList = 32C39A20227A4B18001DA20E /* Build configuration list for PBXProject "DropBearApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32C39A1C227A4B18001DA20E;
+			productRefGroup = 32C39A26227A4B18001DA20E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32C39A24227A4B18001DA20E /* DropBearApp */,
+				32C39A38227A4B19001DA20E /* DropBearAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32C39A23227A4B18001DA20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C39A33227A4B19001DA20E /* LaunchScreen.storyboard in Resources */,
+				32C39BE822822141001DA20E /* TableViewCell.xib in Resources */,
+				32C39A30227A4B19001DA20E /* Assets.xcassets in Resources */,
+				32C39BDB2280B061001DA20E /* TabBarController.storyboard in Resources */,
+				32C39BC8227CDCE3001DA20E /* ScrollableStackViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32C39A37227A4B19001DA20E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32C39B7B227B8D21001DA20E /* [GD] DropBearGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[GD] DropBearGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#brew install libxml2 && brew link --force libxml2\n${SRCROOT}/Build/Products/Debug/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32C39A21227A4B18001DA20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C39BDD2280BD25001DA20E /* Tab1ViewController.swift in Sources */,
+				32C39BC7227CDCE3001DA20E /* ScrollableStackViewController.swift in Sources */,
+				32C39B9F227BB771001DA20E /* UITestAppDelegate.swift in Sources */,
+				32C39BE722822141001DA20E /* TableViewCell.swift in Sources */,
+				32C39BE4228220D8001DA20E /* TableViewController.swift in Sources */,
+				32C39BDF2280BD2D001DA20E /* Tab2ViewController.swift in Sources */,
+				32C39BA1227BBA4C001DA20E /* UITestConfig.swift in Sources */,
+				32C39A29227A4B18001DA20E /* AppDelegate.swift in Sources */,
+				32C39B9D227BB747001DA20E /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32C39A35227A4B19001DA20E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32C39BEC228241C5001DA20E /* TabRobots.swift in Sources */,
+				32C39BAC227BC38E001DA20E /* ScrollableStackRobot.swift in Sources */,
+				32C39BF222827357001DA20E /* TableViewRobot.swift in Sources */,
+				32C39A3E227A4B19001DA20E /* Tests.swift in Sources */,
+				32C39B76227B7F6D001DA20E /* AccessibilityIdentifiers.swift in Sources */,
+				32C39BA2227BBA4C001DA20E /* UITestConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32C39A3B227A4B19001DA20E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32C39A24227A4B18001DA20E /* DropBearApp */;
+			targetProxy = 32C39A3A227A4B19001DA20E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		32C39A31227A4B19001DA20E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32C39A32227A4B19001DA20E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32C39A40227A4B19001DA20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32C39A41227A4B19001DA20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32C39A43227A4B19001DA20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = "$(SRCROOT)/DropBearApp/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32C39A44227A4B19001DA20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = "$(SRCROOT)/DropBearApp/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		32C39A46227A4B19001DA20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DropBearApp;
+			};
+			name = Debug;
+		};
+		32C39A47227A4B19001DA20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DropBearApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32C39A20227A4B18001DA20E /* Build configuration list for PBXProject "DropBearApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C39A40227A4B19001DA20E /* Debug */,
+				32C39A41227A4B19001DA20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32C39A42227A4B19001DA20E /* Build configuration list for PBXNativeTarget "DropBearApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C39A43227A4B19001DA20E /* Debug */,
+				32C39A44227A4B19001DA20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32C39A45227A4B19001DA20E /* Build configuration list for PBXNativeTarget "DropBearAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C39A46227A4B19001DA20E /* Debug */,
+				32C39A47227A4B19001DA20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32C39A1D227A4B18001DA20E /* Project object */;
+}
