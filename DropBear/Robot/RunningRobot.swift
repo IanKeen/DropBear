@@ -10,8 +10,10 @@ open class RunningRobot<Context: ContextType, Previous: Robot>: Robot {
     }
 }
 
-public protocol RunningRobotType {
+public protocol RunningRobotType: Robot {
     associatedtype PreviousType
+
+    var previous: PreviousType { get }
 
     init(app: XCUIApplication, previous: PreviousType)
 }
