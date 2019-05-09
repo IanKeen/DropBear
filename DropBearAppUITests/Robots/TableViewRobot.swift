@@ -1,5 +1,5 @@
 import DropBear
 
-class TableViewRobot<Context: ContextType, Previous: Robot>: RunningRobot<Context, Previous>, TableViewControllerRobot {
+class TableViewRobot<Container: ContainerType, Previous: Robot>: RunningRobot<Container, Previous>, TableViewControllerRobot {
     //
 }

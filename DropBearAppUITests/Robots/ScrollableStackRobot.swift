@@ -1,6 +1,6 @@
 import DropBear
 
-class ScrollableStackRobot: LaunchingRobot<NavigationController>, AccessibleRobot {
+class ScrollableStackRobot: LaunchingRobot<UINavigationController>, AccessibleRobot {
     typealias Element = AccessibilityIdentifiers.ScrollableStackViewController
 
     func pushTabBar() -> TabBarRobot<ScrollableStackRobot> {
