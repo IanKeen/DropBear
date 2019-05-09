@@ -1,7 +1,7 @@
 import XCTest
 
 /// A specialized `Robot` representing a screen shown when the app first launches
-open class LaunchingRobot<Context: ContextType>: Robot {
+open class LaunchingRobot<Container: ContainerType>: Robot {
     public let app: XCUIApplication
 
     public init<T: Codable>(configuration: T) {

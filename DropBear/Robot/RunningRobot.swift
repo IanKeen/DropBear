@@ -1,6 +1,6 @@
 import XCTest
 
-open class RunningRobot<Context: ContextType, Previous: Robot>: Robot {
+open class RunningRobot<Container: ContainerType, Previous: Robot>: Robot {
     public let app: XCUIApplication
     public let previous: Previous
 
@@ -32,7 +32,7 @@ extension Robot {
 }
 
 public class Root: Robot {
-    public typealias Context = None
+    public typealias Container = None
     
     public let app: XCUIApplication
 
