@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
   spec.homepage = 'https://github.com/IanKeen/DropBear'
   spec.description = <<-DESC
                       A companion framework for DropBear that generates code for accessibility identifiers.
-                      Allows for compiling the UI testing target during CI and do its thing.
+                      Catch broken tests right away using the compiler!
                      DESC
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
