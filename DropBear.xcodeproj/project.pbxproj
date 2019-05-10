@@ -41,6 +41,45 @@
 		32C39BD92280A3C1001DA20E /* XCUIElement+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BD82280A3C1001DA20E /* XCUIElement+Values.swift */; };
 		32C39BEA2282414A001DA20E /* TabBarControllerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BE92282414A001DA20E /* TabBarControllerRobot.swift */; };
 		32C39BEE22824A8D001DA20E /* CellContainerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BED22824A8D001DA20E /* CellContainerRobot.swift */; };
+		B5AE80822285DBE10098CF95 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80812285DBE10098CF95 /* main.swift */; };
+		B5AE80982285DC210098CF95 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80862285DC210098CF95 /* Parser.swift */; };
+		B5AE80992285DC210098CF95 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80872285DC210098CF95 /* Generator.swift */; };
+		B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80892285DC210098CF95 /* PathKit.swift */; };
+		B5AE809B2285DC210098CF95 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */; };
+		B5AE809C2285DC210098CF95 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808C2285DC210098CF95 /* CSS.swift */; };
+		B5AE809D2285DC210098CF95 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808D2285DC210098CF95 /* libxmlHTMLDocument.swift */; };
+		B5AE809E2285DC210098CF95 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808E2285DC210098CF95 /* libxmlParserOption.swift */; };
+		B5AE809F2285DC210098CF95 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80922285DC210098CF95 /* Kanna.swift */; };
+		B5AE80A02285DC210098CF95 /* Kanna+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80942285DC210098CF95 /* Kanna+Extensions.swift */; };
+		B5AE80A12285DC210098CF95 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80952285DC210098CF95 /* Array+Extensions.swift */; };
+		B5AE80A22285DC210098CF95 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80962285DC210098CF95 /* String+Extensions.swift */; };
+		B5AE80A32285DC210098CF95 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80972285DC210098CF95 /* Dictionary+Extensions.swift */; };
+		B5AE80AB2285DE6E0098CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */; };
+		B5AE80B22285DE6E0098CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B12285DE6E0098CF95 /* Assets.xcassets */; };
+		B5AE80B52285DE6E0098CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */; };
+		B5AE80CB2285DEB50098CF95 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80C92285DEB40098CF95 /* main.swift */; };
+		B5AE80CC2285DEB50098CF95 /* UITestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80CA2285DEB50098CF95 /* UITestAppDelegate.swift */; };
+		B5AE80D92285DEFE0098CF95 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80CF2285DEFD0098CF95 /* TableViewCell.swift */; };
+		B5AE80DA2285DEFE0098CF95 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80D02285DEFD0098CF95 /* TableViewCell.xib */; };
+		B5AE80DB2285DEFE0098CF95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D12285DEFD0098CF95 /* TableViewController.swift */; };
+		B5AE80DC2285DEFE0098CF95 /* ScrollableStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80D32285DEFD0098CF95 /* ScrollableStackViewController.xib */; };
+		B5AE80DD2285DEFE0098CF95 /* ScrollableStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D42285DEFD0098CF95 /* ScrollableStackViewController.swift */; };
+		B5AE80DE2285DEFE0098CF95 /* Tab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D62285DEFD0098CF95 /* Tab2ViewController.swift */; };
+		B5AE80DF2285DEFE0098CF95 /* Tab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D72285DEFD0098CF95 /* Tab1ViewController.swift */; };
+		B5AE80E02285DEFE0098CF95 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80D82285DEFD0098CF95 /* TabBarController.storyboard */; };
+		B5AE80E92285DF500098CF95 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E12285DF500098CF95 /* Tests.swift */; };
+		B5AE80EA2285DF500098CF95 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E32285DF500098CF95 /* AccessibilityIdentifiers.swift */; };
+		B5AE80EB2285DF500098CF95 /* ScrollableStackRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E52285DF500098CF95 /* ScrollableStackRobot.swift */; };
+		B5AE80EC2285DF500098CF95 /* TableViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E62285DF500098CF95 /* TableViewRobot.swift */; };
+		B5AE80ED2285DF500098CF95 /* TabRobots.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E72285DF500098CF95 /* TabRobots.swift */; };
+		B5AE80EE2285DF500098CF95 /* UITestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E82285DF500098CF95 /* UITestConfig.swift */; };
+		B5AE80FD2285DF990098CF95 /* DropBearSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AE80F42285DF990098CF95 /* DropBearSupport.framework */; };
+		B5AE81022285DF990098CF95 /* DropBearSupportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE81012285DF990098CF95 /* DropBearSupportTests.swift */; };
+		B5AE81042285DF990098CF95 /* DropBearSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AE80F62285DF990098CF95 /* DropBearSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5AE810C2285DFB80098CF95 /* DropBearSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE810B2285DFB80098CF95 /* DropBearSupport.swift */; };
+		B5AE810F2285E0560098CF95 /* DropBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C399FF227A3092001DA20E /* DropBear.framework */; };
+		B5AE81102285E0560098CF95 /* DropBearSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AE80F42285DF990098CF95 /* DropBearSupport.framework */; };
+		B5AE81132285E29D0098CF95 /* DropBearSupport.framework in [MSTRD] Copy Frameworks */ = {isa = PBXBuildFile; fileRef = B5AE80F42285DF990098CF95 /* DropBearSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +90,51 @@
 			remoteGlobalIDString = 32C399FE227A3092001DA20E;
 			remoteInfo = DropBear;
 		};
+		B5AE80BC2285DE6F0098CF95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32C399F6227A3092001DA20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AE80A72285DE6E0098CF95;
+			remoteInfo = DropBearApp;
+		};
+		B5AE80FE2285DF990098CF95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32C399F6227A3092001DA20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AE80F32285DF990098CF95;
+			remoteInfo = DropBearSupport;
+		};
+		B5AE810D2285DFC40098CF95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32C399F6227A3092001DA20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AE80F32285DF990098CF95;
+			remoteInfo = DropBearSupport;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5AE807D2285DBE10098CF95 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		B5AE81122285E2820098CF95 /* [MSTRD] Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B5AE81132285E29D0098CF95 /* DropBearSupport.framework in [MSTRD] Copy Frameworks */,
+			);
+			name = "[MSTRD] Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		328A670D2284F050009C9C1D /* ContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerType.swift; sourceTree = "<group>"; };
@@ -91,6 +174,52 @@
 		32C39BD82280A3C1001DA20E /* XCUIElement+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Values.swift"; sourceTree = "<group>"; };
 		32C39BE92282414A001DA20E /* TabBarControllerRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerRobot.swift; sourceTree = "<group>"; };
 		32C39BED22824A8D001DA20E /* CellContainerRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContainerRobot.swift; sourceTree = "<group>"; };
+		B5AE807F2285DBE10098CF95 /* DropBearGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DropBearGen; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80812285DBE10098CF95 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5AE80862285DC210098CF95 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B5AE80872285DC210098CF95 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		B5AE80892285DC210098CF95 /* PathKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathKit.swift; sourceTree = "<group>"; };
+		B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLNode.swift; sourceTree = "<group>"; };
+		B5AE808C2285DC210098CF95 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSS.swift; sourceTree = "<group>"; };
+		B5AE808D2285DC210098CF95 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLDocument.swift; sourceTree = "<group>"; };
+		B5AE808E2285DC210098CF95 /* libxmlParserOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlParserOption.swift; sourceTree = "<group>"; };
+		B5AE80902285DC210098CF95 /* libxml2-kanna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libxml2-kanna.h"; sourceTree = "<group>"; };
+		B5AE80912285DC210098CF95 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		B5AE80922285DC210098CF95 /* Kanna.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kanna.swift; sourceTree = "<group>"; };
+		B5AE80942285DC210098CF95 /* Kanna+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kanna+Extensions.swift"; sourceTree = "<group>"; };
+		B5AE80952285DC210098CF95 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		B5AE80962285DC210098CF95 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		B5AE80972285DC210098CF95 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		B5AE80A82285DE6E0098CF95 /* DropBearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5AE80B12285DE6E0098CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5AE80B42285DE6E0098CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5AE80B62285DE6F0098CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE80BB2285DE6F0098CF95 /* DropBearAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBearAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80C12285DE6F0098CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE80C92285DEB40098CF95 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5AE80CA2285DEB50098CF95 /* UITestAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestAppDelegate.swift; sourceTree = "<group>"; };
+		B5AE80CF2285DEFD0098CF95 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B5AE80D02285DEFD0098CF95 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		B5AE80D12285DEFD0098CF95 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B5AE80D32285DEFD0098CF95 /* ScrollableStackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableStackViewController.xib; sourceTree = "<group>"; };
+		B5AE80D42285DEFD0098CF95 /* ScrollableStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableStackViewController.swift; sourceTree = "<group>"; };
+		B5AE80D62285DEFD0098CF95 /* Tab2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab2ViewController.swift; sourceTree = "<group>"; };
+		B5AE80D72285DEFD0098CF95 /* Tab1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab1ViewController.swift; sourceTree = "<group>"; };
+		B5AE80D82285DEFD0098CF95 /* TabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		B5AE80E12285DF500098CF95 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		B5AE80E32285DF500098CF95 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		B5AE80E52285DF500098CF95 /* ScrollableStackRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableStackRobot.swift; sourceTree = "<group>"; };
+		B5AE80E62285DF500098CF95 /* TableViewRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRobot.swift; sourceTree = "<group>"; };
+		B5AE80E72285DF500098CF95 /* TabRobots.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabRobots.swift; sourceTree = "<group>"; };
+		B5AE80E82285DF500098CF95 /* UITestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestConfig.swift; sourceTree = "<group>"; };
+		B5AE80F42285DF990098CF95 /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80F62285DF990098CF95 /* DropBearSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropBearSupport.h; sourceTree = "<group>"; };
+		B5AE80F72285DF990098CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE80FC2285DF990098CF95 /* DropBearSupportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBearSupportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE81012285DF990098CF95 /* DropBearSupportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBearSupportTests.swift; sourceTree = "<group>"; };
+		B5AE81032285DF990098CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE810B2285DFB80098CF95 /* DropBearSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropBearSupport.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +239,57 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5AE807C2285DBE10098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80A52285DE6E0098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80B82285DE6F0098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE810F2285E0560098CF95 /* DropBear.framework in Frameworks */,
+				B5AE81102285E0560098CF95 /* DropBearSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80F12285DF990098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80F92285DF990098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80FD2285DF990098CF95 /* DropBearSupport.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		32C399F5227A3092001DA20E = {
 			isa = PBXGroup;
 			children = (
+				B5AE80A92285DE6E0098CF95 /* DropBearApp */,
+				B5AE80BE2285DE6F0098CF95 /* DropBearAppUITests */,
 				32C39A01227A3092001DA20E /* DropBear */,
 				32C39A0C227A3092001DA20E /* DropBearTests */,
+				B5AE80F52285DF990098CF95 /* DropBearSupport */,
+				B5AE81002285DF990098CF95 /* DropBearSupportTests */,
+				B5AE80802285DBE10098CF95 /* DropBearGen */,
 				32C39A00227A3092001DA20E /* Products */,
 				32C39A5F227A4C51001DA20E /* Frameworks */,
 			);
@@ -128,6 +300,11 @@
 			children = (
 				32C399FF227A3092001DA20E /* DropBear.framework */,
 				32C39A08227A3092001DA20E /* DropBearTests.xctest */,
+				B5AE807F2285DBE10098CF95 /* DropBearGen */,
+				B5AE80A82285DE6E0098CF95 /* DropBearApp.app */,
+				B5AE80BB2285DE6F0098CF95 /* DropBearAppUITests.xctest */,
+				B5AE80F42285DF990098CF95 /* DropBearSupport.framework */,
+				B5AE80FC2285DF990098CF95 /* DropBearSupportTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +405,170 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		B5AE80802285DBE10098CF95 /* DropBearGen */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80882285DC210098CF95 /* PathKit */,
+				B5AE808A2285DC210098CF95 /* Kanna */,
+				B5AE80932285DC210098CF95 /* Extensions */,
+				B5AE80872285DC210098CF95 /* Generator.swift */,
+				B5AE80862285DC210098CF95 /* Parser.swift */,
+				B5AE80812285DBE10098CF95 /* main.swift */,
+			);
+			path = DropBearGen;
+			sourceTree = "<group>";
+		};
+		B5AE80882285DC210098CF95 /* PathKit */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80892285DC210098CF95 /* PathKit.swift */,
+			);
+			path = PathKit;
+			sourceTree = "<group>";
+		};
+		B5AE808A2285DC210098CF95 /* Kanna */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE808F2285DC210098CF95 /* Modules */,
+				B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */,
+				B5AE808C2285DC210098CF95 /* CSS.swift */,
+				B5AE808D2285DC210098CF95 /* libxmlHTMLDocument.swift */,
+				B5AE808E2285DC210098CF95 /* libxmlParserOption.swift */,
+				B5AE80922285DC210098CF95 /* Kanna.swift */,
+			);
+			path = Kanna;
+			sourceTree = "<group>";
+		};
+		B5AE808F2285DC210098CF95 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80902285DC210098CF95 /* libxml2-kanna.h */,
+				B5AE80912285DC210098CF95 /* module.modulemap */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		B5AE80932285DC210098CF95 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80942285DC210098CF95 /* Kanna+Extensions.swift */,
+				B5AE80952285DC210098CF95 /* Array+Extensions.swift */,
+				B5AE80962285DC210098CF95 /* String+Extensions.swift */,
+				B5AE80972285DC210098CF95 /* Dictionary+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5AE80A92285DE6E0098CF95 /* DropBearApp */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80C82285DE850098CF95 /* Resources */,
+				B5AE80CD2285DEFD0098CF95 /* Screens */,
+				B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */,
+				B5AE80CA2285DEB50098CF95 /* UITestAppDelegate.swift */,
+				B5AE80C92285DEB40098CF95 /* main.swift */,
+			);
+			path = DropBearApp;
+			sourceTree = "<group>";
+		};
+		B5AE80BE2285DE6F0098CF95 /* DropBearAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80E22285DF500098CF95 /* Generated */,
+				B5AE80E42285DF500098CF95 /* Robots */,
+				B5AE80E12285DF500098CF95 /* Tests.swift */,
+				B5AE80E82285DF500098CF95 /* UITestConfig.swift */,
+				B5AE80C12285DE6F0098CF95 /* Info.plist */,
+			);
+			path = DropBearAppUITests;
+			sourceTree = "<group>";
+		};
+		B5AE80C82285DE850098CF95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80B12285DE6E0098CF95 /* Assets.xcassets */,
+				B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */,
+				B5AE80B62285DE6F0098CF95 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5AE80CD2285DEFD0098CF95 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80CE2285DEFD0098CF95 /* TableView */,
+				B5AE80D22285DEFD0098CF95 /* ScrollableStackView */,
+				B5AE80D52285DEFD0098CF95 /* TabBarController */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B5AE80CE2285DEFD0098CF95 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80CF2285DEFD0098CF95 /* TableViewCell.swift */,
+				B5AE80D02285DEFD0098CF95 /* TableViewCell.xib */,
+				B5AE80D12285DEFD0098CF95 /* TableViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		B5AE80D22285DEFD0098CF95 /* ScrollableStackView */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80D32285DEFD0098CF95 /* ScrollableStackViewController.xib */,
+				B5AE80D42285DEFD0098CF95 /* ScrollableStackViewController.swift */,
+			);
+			path = ScrollableStackView;
+			sourceTree = "<group>";
+		};
+		B5AE80D52285DEFD0098CF95 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80D62285DEFD0098CF95 /* Tab2ViewController.swift */,
+				B5AE80D72285DEFD0098CF95 /* Tab1ViewController.swift */,
+				B5AE80D82285DEFD0098CF95 /* TabBarController.storyboard */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		B5AE80E22285DF500098CF95 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80E32285DF500098CF95 /* AccessibilityIdentifiers.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		B5AE80E42285DF500098CF95 /* Robots */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80E52285DF500098CF95 /* ScrollableStackRobot.swift */,
+				B5AE80E62285DF500098CF95 /* TableViewRobot.swift */,
+				B5AE80E72285DF500098CF95 /* TabRobots.swift */,
+			);
+			path = Robots;
+			sourceTree = "<group>";
+		};
+		B5AE80F52285DF990098CF95 /* DropBearSupport */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE810B2285DFB80098CF95 /* DropBearSupport.swift */,
+				B5AE80F62285DF990098CF95 /* DropBearSupport.h */,
+				B5AE80F72285DF990098CF95 /* Info.plist */,
+			);
+			path = DropBearSupport;
+			sourceTree = "<group>";
+		};
+		B5AE81002285DF990098CF95 /* DropBearSupportTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE81012285DF990098CF95 /* DropBearSupportTests.swift */,
+				B5AE81032285DF990098CF95 /* Info.plist */,
+			);
+			path = DropBearSupportTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -236,6 +577,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C39A10227A3092001DA20E /* DropBear.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80EF2285DF990098CF95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE81042285DF990098CF95 /* DropBearSupport.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +627,97 @@
 			productReference = 32C39A08227A3092001DA20E /* DropBearTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B5AE807E2285DBE10098CF95 /* DropBearGen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE80852285DBE10098CF95 /* Build configuration list for PBXNativeTarget "DropBearGen" */;
+			buildPhases = (
+				B5AE807B2285DBE10098CF95 /* Sources */,
+				B5AE807C2285DBE10098CF95 /* Frameworks */,
+				B5AE807D2285DBE10098CF95 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropBearGen;
+			productName = DropBearGen;
+			productReference = B5AE807F2285DBE10098CF95 /* DropBearGen */;
+			productType = "com.apple.product-type.tool";
+		};
+		B5AE80A72285DE6E0098CF95 /* DropBearApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE80C22285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearApp" */;
+			buildPhases = (
+				B5AE81112285E0680098CF95 /* [MSTRD] DropBearGen */,
+				B5AE80A42285DE6E0098CF95 /* Sources */,
+				B5AE80A52285DE6E0098CF95 /* Frameworks */,
+				B5AE80A62285DE6E0098CF95 /* Resources */,
+				B5AE81122285E2820098CF95 /* [MSTRD] Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AE810E2285DFC40098CF95 /* PBXTargetDependency */,
+			);
+			name = DropBearApp;
+			productName = DropBearApp;
+			productReference = B5AE80A82285DE6E0098CF95 /* DropBearApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5AE80BA2285DE6F0098CF95 /* DropBearAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE80C52285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearAppUITests" */;
+			buildPhases = (
+				B5AE80B72285DE6F0098CF95 /* Sources */,
+				B5AE80B82285DE6F0098CF95 /* Frameworks */,
+				B5AE80B92285DE6F0098CF95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AE80BD2285DE6F0098CF95 /* PBXTargetDependency */,
+			);
+			name = DropBearAppUITests;
+			productName = DropBearAppUITests;
+			productReference = B5AE80BB2285DE6F0098CF95 /* DropBearAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B5AE80F32285DF990098CF95 /* DropBearSupport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE81052285DF990098CF95 /* Build configuration list for PBXNativeTarget "DropBearSupport" */;
+			buildPhases = (
+				B5AE80EF2285DF990098CF95 /* Headers */,
+				B5AE80F02285DF990098CF95 /* Sources */,
+				B5AE80F12285DF990098CF95 /* Frameworks */,
+				B5AE80F22285DF990098CF95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropBearSupport;
+			productName = DropBearSupport;
+			productReference = B5AE80F42285DF990098CF95 /* DropBearSupport.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B5AE80FB2285DF990098CF95 /* DropBearSupportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE81082285DF990098CF95 /* Build configuration list for PBXNativeTarget "DropBearSupportTests" */;
+			buildPhases = (
+				B5AE80F82285DF990098CF95 /* Sources */,
+				B5AE80F92285DF990098CF95 /* Frameworks */,
+				B5AE80FA2285DF990098CF95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AE80FF2285DF990098CF95 /* PBXTargetDependency */,
+			);
+			name = DropBearSupportTests;
+			productName = DropBearSupportTests;
+			productReference = B5AE80FC2285DF990098CF95 /* DropBearSupportTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -295,6 +735,23 @@
 					32C39A07227A3092001DA20E = {
 						CreatedOnToolsVersion = 10.2;
 					};
+					B5AE807E2285DBE10098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B5AE80A72285DE6E0098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B5AE80BA2285DE6F0098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B5AE80A72285DE6E0098CF95;
+					};
+					B5AE80F32285DF990098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					B5AE80FB2285DF990098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
 				};
 			};
 			buildConfigurationList = 32C399F9227A3092001DA20E /* Build configuration list for PBXProject "DropBear" */;
@@ -303,14 +760,20 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 32C399F5227A3092001DA20E;
 			productRefGroup = 32C39A00227A3092001DA20E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				B5AE80A72285DE6E0098CF95 /* DropBearApp */,
+				B5AE80BA2285DE6F0098CF95 /* DropBearAppUITests */,
 				32C399FE227A3092001DA20E /* DropBear */,
 				32C39A07227A3092001DA20E /* DropBearTests */,
+				B5AE80F32285DF990098CF95 /* DropBearSupport */,
+				B5AE80FB2285DF990098CF95 /* DropBearSupportTests */,
+				B5AE807E2285DBE10098CF95 /* DropBearGen */,
 			);
 		};
 /* End PBXProject section */
@@ -330,7 +793,61 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5AE80A62285DE6E0098CF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80B52285DE6E0098CF95 /* LaunchScreen.storyboard in Resources */,
+				B5AE80DA2285DEFE0098CF95 /* TableViewCell.xib in Resources */,
+				B5AE80E02285DEFE0098CF95 /* TabBarController.storyboard in Resources */,
+				B5AE80DC2285DEFE0098CF95 /* ScrollableStackViewController.xib in Resources */,
+				B5AE80B22285DE6E0098CF95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80B92285DE6F0098CF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80F22285DF990098CF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80FA2285DF990098CF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5AE81112285E0680098CF95 /* [MSTRD] DropBearGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[MSTRD] DropBearGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${BUILT_PRODUCTS_DIR}/../Debug/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		32C399FB227A3092001DA20E /* Sources */ = {
@@ -378,6 +895,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5AE807B2285DBE10098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80992285DC210098CF95 /* Generator.swift in Sources */,
+				B5AE809E2285DC210098CF95 /* libxmlParserOption.swift in Sources */,
+				B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */,
+				B5AE80A12285DC210098CF95 /* Array+Extensions.swift in Sources */,
+				B5AE80A22285DC210098CF95 /* String+Extensions.swift in Sources */,
+				B5AE809D2285DC210098CF95 /* libxmlHTMLDocument.swift in Sources */,
+				B5AE809B2285DC210098CF95 /* libxmlHTMLNode.swift in Sources */,
+				B5AE80982285DC210098CF95 /* Parser.swift in Sources */,
+				B5AE80822285DBE10098CF95 /* main.swift in Sources */,
+				B5AE809C2285DC210098CF95 /* CSS.swift in Sources */,
+				B5AE80A32285DC210098CF95 /* Dictionary+Extensions.swift in Sources */,
+				B5AE809F2285DC210098CF95 /* Kanna.swift in Sources */,
+				B5AE80A02285DC210098CF95 /* Kanna+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80A42285DE6E0098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80DD2285DEFE0098CF95 /* ScrollableStackViewController.swift in Sources */,
+				B5AE80CB2285DEB50098CF95 /* main.swift in Sources */,
+				B5AE80DF2285DEFE0098CF95 /* Tab1ViewController.swift in Sources */,
+				B5AE80D92285DEFE0098CF95 /* TableViewCell.swift in Sources */,
+				B5AE80DE2285DEFE0098CF95 /* Tab2ViewController.swift in Sources */,
+				B5AE80AB2285DE6E0098CF95 /* AppDelegate.swift in Sources */,
+				B5AE80DB2285DEFE0098CF95 /* TableViewController.swift in Sources */,
+				B5AE80CC2285DEB50098CF95 /* UITestAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80B72285DE6F0098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80ED2285DF500098CF95 /* TabRobots.swift in Sources */,
+				B5AE80EB2285DF500098CF95 /* ScrollableStackRobot.swift in Sources */,
+				B5AE80EA2285DF500098CF95 /* AccessibilityIdentifiers.swift in Sources */,
+				B5AE80EE2285DF500098CF95 /* UITestConfig.swift in Sources */,
+				B5AE80E92285DF500098CF95 /* Tests.swift in Sources */,
+				B5AE80EC2285DF500098CF95 /* TableViewRobot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80F02285DF990098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE810C2285DFB80098CF95 /* DropBearSupport.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80F82285DF990098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE81022285DF990098CF95 /* DropBearSupportTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -386,7 +967,33 @@
 			target = 32C399FE227A3092001DA20E /* DropBear */;
 			targetProxy = 32C39A0A227A3092001DA20E /* PBXContainerItemProxy */;
 		};
+		B5AE80BD2285DE6F0098CF95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AE80A72285DE6E0098CF95 /* DropBearApp */;
+			targetProxy = B5AE80BC2285DE6F0098CF95 /* PBXContainerItemProxy */;
+		};
+		B5AE80FF2285DF990098CF95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AE80F32285DF990098CF95 /* DropBearSupport */;
+			targetProxy = B5AE80FE2285DF990098CF95 /* PBXContainerItemProxy */;
+		};
+		B5AE810E2285DFC40098CF95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AE80F32285DF990098CF95 /* DropBearSupport */;
+			targetProxy = B5AE810D2285DFC40098CF95 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5AE80B42285DE6E0098CF95 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		32C39A11227A3092001DA20E /* Debug */ = {
@@ -441,7 +1048,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -499,7 +1105,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -624,6 +1229,223 @@
 			};
 			name = Release;
 		};
+		B5AE80832285DBE10098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/DropBearGen/Kanna/Modules";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		B5AE80842285DBE10098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				OTHER_LDFLAGS = "-lxml2";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/DropBearGen/Kanna/Modules";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		B5AE80C32285DE6F0098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5AE80C42285DE6F0098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5AE80C62285DE6F0098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DropBearApp;
+			};
+			name = Debug;
+		};
+		B5AE80C72285DE6F0098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DropBearApp;
+			};
+			name = Release;
+		};
+		B5AE81062285DF990098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DropBearSupport/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearSupport;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5AE81072285DF990098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = DropBearSupport/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearSupport;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5AE81092285DF990098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearSupportTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearSupportTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5AE810A2285DF990098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearSupportTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearSupportTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -650,6 +1472,51 @@
 			buildConfigurations = (
 				32C39A17227A3092001DA20E /* Debug */,
 				32C39A18227A3092001DA20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE80852285DBE10098CF95 /* Build configuration list for PBXNativeTarget "DropBearGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE80832285DBE10098CF95 /* Debug */,
+				B5AE80842285DBE10098CF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE80C22285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE80C32285DE6F0098CF95 /* Debug */,
+				B5AE80C42285DE6F0098CF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE80C52285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE80C62285DE6F0098CF95 /* Debug */,
+				B5AE80C72285DE6F0098CF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE81052285DF990098CF95 /* Build configuration list for PBXNativeTarget "DropBearSupport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE81062285DF990098CF95 /* Debug */,
+				B5AE81072285DF990098CF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE81082285DF990098CF95 /* Build configuration list for PBXNativeTarget "DropBearSupportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE81092285DF990098CF95 /* Debug */,
+				B5AE810A2285DF990098CF95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
