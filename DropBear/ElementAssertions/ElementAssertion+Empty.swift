@@ -10,7 +10,7 @@ extension ElementAssertion {
                 return value.isEmpty || element.placeholderValue == value
 
             case let value?:
-                fatalError("Unable to test equality. Unsupported type '\(type(of: value))'")
+                fatalError("Unable to test emptiness. Unsupported type '\(type(of: value))'")
             }
         })
     }
