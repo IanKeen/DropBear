@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.source = {
-    http: "https://github.com/IanKeen/DropBear/releases/download/#{s.version}/dropbeargen-#{s.version}.zip"
+    http: "https://github.com/IanKeen/DropBear/releases/download/#{spec.version}/dropbeargen-#{spec.version}.zip"
   }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
