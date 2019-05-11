@@ -2,14 +2,15 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.name  = 'DropBearGen'
+  spec.name = 'DropBearGen'
   spec.version = '0.1.0'
-  spec.summary = 'A companion framework for DropBear that generates code for accessibility identifiers.'
   spec.homepage = 'https://github.com/IanKeen/DropBear'
+  spec.summary = 'A companion framework for DropBear that generates code for accessibility identifiers.'
   spec.description = <<-DESC
                       A companion framework for DropBear that generates code for accessibility identifiers.
                       Catch broken tests right away using the compiler!
                      DESC
+
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.license = 'MIT'
@@ -19,14 +20,10 @@ Pod::Spec.new do |spec|
   spec.author = { 'Ian Keen' => 'iankeen82@gmail.com' }
   spec.social_media_url = 'https://twitter.com/iankay'
 
-  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-
-  spec.platform = :ios
-
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.source = {
-    http: "https://github.com/IanKeen/DropBear/releases/download/#{spec.version}/dropbeargen-#{spec.version}.zip"
+    http: "#{spec.homepage}/releases/download/#{spec.version}/dropbeargen-#{spec.version}.zip"
   }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
