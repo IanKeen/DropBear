@@ -2,13 +2,13 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.name = 'DropBearGen'
+  spec.name = 'DropBear'
   spec.version = '0.1.0'
   spec.homepage = 'https://github.com/IanKeen/DropBear'
-  spec.summary = 'A companion framework for DropBear that generates code for accessibility identifiers.'
+  spec.summary = 'A marvellous UI testing framework.'
   spec.description = <<-DESC
-                      A companion framework for DropBear that generates code for accessibility identifiers.
-                      Catch broken tests right away using the compiler!
+                      A marvellous UI testing framework.
+                      Based on the robot pattern.
                      DESC
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -20,15 +20,25 @@ Pod::Spec.new do |spec|
   spec.author = { 'Ian Keen' => 'iankeen82@gmail.com' }
   spec.social_media_url = 'https://twitter.com/iankay'
 
+  # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  spec.platform = :ios, '10.0'
+  spec.swift_version = '5.0'
+
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.source = {
-    http: "#{spec.homepage}/releases/download/#{spec.version}/dropbeargen-#{spec.version}.zip"
-  }
+  spec.source = { git: "#{spec.homepage}.git", tag: spec.version }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.preserve_paths = '*'
-  spec.exclude_files = '**/file.zip'
+  spec.source_files = 'DropBear/**/*.swift'
+
+  # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  spec.framework = 'XCTest'
+
+  # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+
+  spec.requires_arc = true
 
 end
