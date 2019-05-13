@@ -29,7 +29,7 @@ public class Generator {
         let output = """
             // Generated using DropBearGen
 
-            // swiftlint:disable superfluous_disable_command redundant_string_enum_value type_name line_length
+            // swiftlint:disable all
 
             enum AccessibilityIdentifiers {
             {{content}}
