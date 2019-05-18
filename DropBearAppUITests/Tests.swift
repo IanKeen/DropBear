@@ -3,7 +3,7 @@ import DropBear
 
 class Tests: UITest {
     func testContactsPermission() {
-        Springboard.deleteApp(named: "DropBearApp", required: true)
+        Springboard.deleteApp(named: "DropBearApp", required: false)
 
         ScrollableStackRobot()
             .assert(.label, .equal(to: "Undecided"))
@@ -48,5 +48,6 @@ class Tests: UITest {
             .backToTabBarController()
             .selectTab1()
             .assert(.tab1button, .exists)
+
     }
 }

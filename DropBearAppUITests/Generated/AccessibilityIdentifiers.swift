@@ -1,23 +1,26 @@
 // Generated using DropBearGen
 
-// swiftlint:disable superfluous_disable_command redundant_string_enum_value type_name line_length
+// swiftlint:disable all
 
 enum AccessibilityIdentifiers {
-	enum ScrollableStackViewController: String {
-		case button = "button"
-		case button1 = "button1"
-		case button2 = "button2"
-		case button3 = "button3"
-		case label = "label"
-		case segment = "segment"
-		case slider = "slider"
-		case `switch` = "switch"
-		case textField = "textField"
+	struct ScrollableStackViewController: RawRepresentable {
+		let rawValue: String
+		static let button = ScrollableStackViewController(rawValue: "button")
+		static let button1 = ScrollableStackViewController(rawValue: "button1")
+		static let button2 = ScrollableStackViewController(rawValue: "button2")
+		static let button3 = ScrollableStackViewController(rawValue: "button3")
+		static let label = ScrollableStackViewController(rawValue: "label")
+		static let segment = ScrollableStackViewController(rawValue: "segment")
+		static let slider = ScrollableStackViewController(rawValue: "slider")
+		static let `switch` = ScrollableStackViewController(rawValue: "switch")
+		static let textField = ScrollableStackViewController(rawValue: "textField")
 	}
-	enum Tab1ViewController: String {
-		case tab1button = "tab1button"
+	struct Tab1ViewController: RawRepresentable {
+		let rawValue: String
+		static let tab1button = Tab1ViewController(rawValue: "tab1button")
 	}
-	enum Tab2ViewController: String {
-		case tab2button = "tab2button"
+	struct Tab2ViewController: RawRepresentable {
+		let rawValue: String
+		static let tab2button = Tab2ViewController(rawValue: "tab2button")
 	}
 }
