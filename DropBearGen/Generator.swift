@@ -40,7 +40,8 @@ public class Generator {
             guard !identifiers.isEmpty else { return nil }
 
             let output = """
-            \tenum \(className): String {
+            \tstruct \(className): RawRepresentable {
+            \t\tlet rawValue: String
             {{content}}
             \t}
             """
@@ -48,7 +49,7 @@ public class Generator {
             let sortedIdentifiers = identifiers.sorted(by: { $0.rawValue < $1.rawValue })
 
             let cases = sortedIdentifiers.map { identifier in
-                return "\t\tcase \(identifier.identifier) = \"\(identifier.rawValue)\""
+                return "\t\tstatic let \(identifier.identifier) = \(className)(rawValue: \"\(identifier.rawValue)\")"
             }
 
             return output.replacingOccurrences(of: "{{content}}", with: cases.joined(separator: "\n"))
