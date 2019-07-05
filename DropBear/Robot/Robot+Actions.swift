@@ -7,9 +7,7 @@ extension Robot {
         file: StaticString = #file, line: UInt = #line
         ) -> XCUIElement
     {
-        return app
-            .element(identifier: identifier, in: hierarchy, file: file, line: line)
-            .required(file: file, line: line)
+        return app.element(identifier: identifier, in: hierarchy, file: file, line: line)
     }
     
     public func tap(
@@ -64,13 +62,30 @@ extension Robot {
         return self
     }
 
+    public func type(
+        identifier: String,
+        in hierarchy: [XCUIElement.ElementType] = [.any],
+        text: String,
+        tapFirst: Bool = true,
+        clearFirst: Bool = true,
+        file: StaticString = #file, line: UInt = #line
+        ) -> Self
+    {
+        let element = self.element(identifier: identifier, in: hierarchy, file: file, line: line)
+        if tapFirst { element.tap() }
+        if clearFirst { element.clearText(file: file, line: line) }
+        element.typeText(text)
+        return self
+    }
+
     public func clearText(
         identifier: String,
         in hierarchy: [XCUIElement.ElementType] = [.any],
         file: StaticString = #file, line: UInt = #line
         ) -> Self
     {
-        element(identifier: identifier, in: hierarchy, file: file, line: line).clearText()
+        element(identifier: identifier, in: hierarchy, file: file, line: line)
+            .clearText(file: file, line: line)
         return self
     }
 
