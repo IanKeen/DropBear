@@ -7,40 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		328A670E2284F050009C9C1D /* ContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A670D2284F050009C9C1D /* ContainerType.swift */; };
+		32B7BE1D22CECEE900931646 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFA22CECEE800931646 /* Alert.swift */; };
+		32B7BE1E22CECEE900931646 /* Alert+RunningRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFB22CECEE800931646 /* Alert+RunningRobot.swift */; };
+		32B7BE1F22CECEE900931646 /* AlertRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFC22CECEE800931646 /* AlertRobot.swift */; };
+		32B7BE2022CECEE900931646 /* Alert+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFD22CECEE800931646 /* Alert+Presets.swift */; };
+		32B7BE2122CECEE900931646 /* ContainerType+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0122CECEE800931646 /* ContainerType+TabBarController.swift */; };
+		32B7BE2222CECEE900931646 /* ContainerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0222CECEE800931646 /* ContainerType.swift */; };
+		32B7BE2322CECEE900931646 /* ContainerType+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0322CECEE800931646 /* ContainerType+NavigationController.swift */; };
+		32B7BE2422CECEE900931646 /* XCUIApplication+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0522CECEE800931646 /* XCUIApplication+Configuration.swift */; };
+		32B7BE2522CECEE900931646 /* XCUIElement+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0622CECEE800931646 /* XCUIElement+Optional.swift */; };
+		32B7BE2622CECEE900931646 /* XCUIElement+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0722CECEE800931646 /* XCUIElement+Assert.swift */; };
+		32B7BE2722CECEE900931646 /* XCUIElement+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0822CECEE800931646 /* XCUIElement+Values.swift */; };
+		32B7BE2822CECEE900931646 /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0922CECEE800931646 /* XCUIElement+ClearText.swift */; };
+		32B7BE2922CECEE900931646 /* XCUIApplication+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0A22CECEE800931646 /* XCUIApplication+Element.swift */; };
+		32B7BE2A22CECEE900931646 /* RunningRobot+NextRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0C22CECEE800931646 /* RunningRobot+NextRobot.swift */; };
+		32B7BE2B22CECEE900931646 /* RunningRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0D22CECEE800931646 /* RunningRobot.swift */; };
+		32B7BE2C22CECEE900931646 /* CellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0F22CECEE900931646 /* CellController.swift */; };
+		32B7BE2D22CECEE900931646 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1022CECEE900931646 /* TabBarController.swift */; };
+		32B7BE2E22CECEE900931646 /* ElementAssertion+Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1222CECEE900931646 /* ElementAssertion+Equal.swift */; };
+		32B7BE2F22CECEE900931646 /* ElementAssertion+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1322CECEE900931646 /* ElementAssertion+Empty.swift */; };
+		32B7BE3022CECEE900931646 /* ElementAssertion+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1422CECEE900931646 /* ElementAssertion+Contains.swift */; };
+		32B7BE3122CECEE900931646 /* ElementAssertion+Enabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1522CECEE900931646 /* ElementAssertion+Enabled.swift */; };
+		32B7BE3222CECEE900931646 /* ElementAssertion+Exists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1622CECEE900931646 /* ElementAssertion+Exists.swift */; };
+		32B7BE3322CECEE900931646 /* ElementAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1722CECEE900931646 /* ElementAssertion.swift */; };
+		32B7BE3422CECEE900931646 /* Robot+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1922CECEE900931646 /* Robot+Assert.swift */; };
+		32B7BE3522CECEE900931646 /* Robot+Launch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1A22CECEE900931646 /* Robot+Launch.swift */; };
+		32B7BE3622CECEE900931646 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1B22CECEE900931646 /* Robot.swift */; };
+		32B7BE3722CECEE900931646 /* Robot+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1C22CECEE900931646 /* Robot+Actions.swift */; };
+		32B7BE3D22CECF5400931646 /* AccessibleRobot+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE3922CECF5300931646 /* AccessibleRobot+Assert.swift */; };
+		32B7BE3E22CECF5400931646 /* ElementSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE3A22CECF5300931646 /* ElementSet.swift */; };
+		32B7BE3F22CECF5400931646 /* AccessibleRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE3B22CECF5300931646 /* AccessibleRobot.swift */; };
+		32B7BE4022CECF5400931646 /* AccessibleRobot+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE3C22CECF5300931646 /* AccessibleRobot+Actions.swift */; };
 		32C39A09227A3092001DA20E /* DropBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C399FF227A3092001DA20E /* DropBear.framework */; };
 		32C39A0E227A3092001DA20E /* DropBearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39A0D227A3092001DA20E /* DropBearTests.swift */; };
 		32C39A10227A3092001DA20E /* DropBear.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C39A02227A3092001DA20E /* DropBear.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32C39A61227A4C51001DA20E /* DropBearSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C39A60227A4C51001DA20E /* DropBearSupport.framework */; };
-		32C39A66227A4CE5001DA20E /* XCUIApplication+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39A65227A4CE5001DA20E /* XCUIApplication+Element.swift */; };
-		32C39B8F227BA2BB001DA20E /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B8E227BA2BB001DA20E /* Robot.swift */; };
-		32C39B92227BA538001DA20E /* AccessibleRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B91227BA538001DA20E /* AccessibleRobot.swift */; };
-		32C39B94227BAFD9001DA20E /* XCUIElement+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B93227BAFD9001DA20E /* XCUIElement+Assert.swift */; };
-		32C39B96227BB159001DA20E /* XCUIElement+Optional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B95227BB159001DA20E /* XCUIElement+Optional.swift */; };
-		32C39B99227BB30F001DA20E /* ElementAssertion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B98227BB30F001DA20E /* ElementAssertion.swift */; };
 		32C39B9B227BB38F001DA20E /* DropBear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39B9A227BB38F001DA20E /* DropBear.swift */; };
-		32C39BA4227BBD07001DA20E /* ElementAssertion+Exists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BA3227BBD07001DA20E /* ElementAssertion+Exists.swift */; };
-		32C39BA6227BBE0B001DA20E /* XCUIApplication+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BA5227BBE0B001DA20E /* XCUIApplication+Configuration.swift */; };
-		32C39BAE227BC46F001DA20E /* LaunchingRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BA8227BC278001DA20E /* LaunchingRobot.swift */; };
-		32C39BB0227BC7A0001DA20E /* RunningRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BAF227BC7A0001DA20E /* RunningRobot.swift */; };
 		32C39BB2227BCCBB001DA20E /* UITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BB1227BCCBB001DA20E /* UITest.swift */; };
-		32C39BB4227BCE0A001DA20E /* AccessibleRobot+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BB3227BCE0A001DA20E /* AccessibleRobot+Assert.swift */; };
-		32C39BB6227BD5EB001DA20E /* Robot+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BB5227BD5EB001DA20E /* Robot+Assert.swift */; };
-		32C39BB8227BDA77001DA20E /* ElementAssertion+Enabled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BB7227BDA77001DA20E /* ElementAssertion+Enabled.swift */; };
-		32C39BBA227BDA8C001DA20E /* ElementAssertion+Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BB9227BDA8C001DA20E /* ElementAssertion+Equal.swift */; };
-		32C39BBC227BDAA2001DA20E /* ElementAssertion+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BBB227BDAA2001DA20E /* ElementAssertion+Empty.swift */; };
-		32C39BBE227CB48B001DA20E /* Robot+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BBD227CB48B001DA20E /* Robot+Actions.swift */; };
-		32C39BC0227CB7BC001DA20E /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BBF227CB7BC001DA20E /* XCUIElement+ClearText.swift */; };
-		32C39BC2227CD36D001DA20E /* AccessibleRobot+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BC1227CD36D001DA20E /* AccessibleRobot+Actions.swift */; };
-		32C39BCA227CE0DE001DA20E /* ElementSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BC9227CE0DE001DA20E /* ElementSet.swift */; };
 		32C39BCD227D290D001DA20E /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BCC227D290D001DA20E /* Springboard.swift */; };
-		32C39BCF227DF957001DA20E /* ElementAssertion+Contains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BCE227DF957001DA20E /* ElementAssertion+Contains.swift */; };
-		32C39BD2227E0386001DA20E /* AlertRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BD1227E0386001DA20E /* AlertRobot.swift */; };
-		32C39BD4227E039B001DA20E /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BD3227E039B001DA20E /* Alert.swift */; };
-		32C39BD6227E03C8001DA20E /* Alert+Presets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BD5227E03C8001DA20E /* Alert+Presets.swift */; };
-		32C39BD92280A3C1001DA20E /* XCUIElement+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BD82280A3C1001DA20E /* XCUIElement+Values.swift */; };
-		32C39BEA2282414A001DA20E /* TabBarControllerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BE92282414A001DA20E /* TabBarControllerRobot.swift */; };
-		32C39BEE22824A8D001DA20E /* CellContainerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39BED22824A8D001DA20E /* CellContainerRobot.swift */; };
 		B5AE80822285DBE10098CF95 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80812285DBE10098CF95 /* main.swift */; };
 		B5AE80982285DC210098CF95 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80862285DC210098CF95 /* Parser.swift */; };
 		B5AE80992285DC210098CF95 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80872285DC210098CF95 /* Generator.swift */; };
@@ -137,7 +141,37 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		328A670D2284F050009C9C1D /* ContainerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerType.swift; sourceTree = "<group>"; };
+		32B7BDFA22CECEE800931646 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		32B7BDFB22CECEE800931646 /* Alert+RunningRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alert+RunningRobot.swift"; sourceTree = "<group>"; };
+		32B7BDFC22CECEE800931646 /* AlertRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertRobot.swift; sourceTree = "<group>"; };
+		32B7BDFD22CECEE800931646 /* Alert+Presets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alert+Presets.swift"; sourceTree = "<group>"; };
+		32B7BE0122CECEE800931646 /* ContainerType+TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContainerType+TabBarController.swift"; sourceTree = "<group>"; };
+		32B7BE0222CECEE800931646 /* ContainerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerType.swift; sourceTree = "<group>"; };
+		32B7BE0322CECEE800931646 /* ContainerType+NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContainerType+NavigationController.swift"; sourceTree = "<group>"; };
+		32B7BE0522CECEE800931646 /* XCUIApplication+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Configuration.swift"; sourceTree = "<group>"; };
+		32B7BE0622CECEE800931646 /* XCUIElement+Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Optional.swift"; sourceTree = "<group>"; };
+		32B7BE0722CECEE800931646 /* XCUIElement+Assert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Assert.swift"; sourceTree = "<group>"; };
+		32B7BE0822CECEE800931646 /* XCUIElement+Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Values.swift"; sourceTree = "<group>"; };
+		32B7BE0922CECEE800931646 /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+ClearText.swift"; sourceTree = "<group>"; };
+		32B7BE0A22CECEE800931646 /* XCUIApplication+Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Element.swift"; sourceTree = "<group>"; };
+		32B7BE0C22CECEE800931646 /* RunningRobot+NextRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RunningRobot+NextRobot.swift"; sourceTree = "<group>"; };
+		32B7BE0D22CECEE800931646 /* RunningRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningRobot.swift; sourceTree = "<group>"; };
+		32B7BE0F22CECEE900931646 /* CellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellController.swift; sourceTree = "<group>"; };
+		32B7BE1022CECEE900931646 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		32B7BE1222CECEE900931646 /* ElementAssertion+Equal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Equal.swift"; sourceTree = "<group>"; };
+		32B7BE1322CECEE900931646 /* ElementAssertion+Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Empty.swift"; sourceTree = "<group>"; };
+		32B7BE1422CECEE900931646 /* ElementAssertion+Contains.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Contains.swift"; sourceTree = "<group>"; };
+		32B7BE1522CECEE900931646 /* ElementAssertion+Enabled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Enabled.swift"; sourceTree = "<group>"; };
+		32B7BE1622CECEE900931646 /* ElementAssertion+Exists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Exists.swift"; sourceTree = "<group>"; };
+		32B7BE1722CECEE900931646 /* ElementAssertion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementAssertion.swift; sourceTree = "<group>"; };
+		32B7BE1922CECEE900931646 /* Robot+Assert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Robot+Assert.swift"; sourceTree = "<group>"; };
+		32B7BE1A22CECEE900931646 /* Robot+Launch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Robot+Launch.swift"; sourceTree = "<group>"; };
+		32B7BE1B22CECEE900931646 /* Robot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
+		32B7BE1C22CECEE900931646 /* Robot+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Robot+Actions.swift"; sourceTree = "<group>"; };
+		32B7BE3922CECF5300931646 /* AccessibleRobot+Assert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessibleRobot+Assert.swift"; sourceTree = "<group>"; };
+		32B7BE3A22CECF5300931646 /* ElementSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementSet.swift; sourceTree = "<group>"; };
+		32B7BE3B22CECF5300931646 /* AccessibleRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibleRobot.swift; sourceTree = "<group>"; };
+		32B7BE3C22CECF5300931646 /* AccessibleRobot+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AccessibleRobot+Actions.swift"; sourceTree = "<group>"; };
 		32C399FF227A3092001DA20E /* DropBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C39A02227A3092001DA20E /* DropBear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropBear.h; sourceTree = "<group>"; };
 		32C39A03227A3092001DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,35 +179,9 @@
 		32C39A0D227A3092001DA20E /* DropBearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBearTests.swift; sourceTree = "<group>"; };
 		32C39A0F227A3092001DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32C39A60227A4C51001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		32C39A65227A4CE5001DA20E /* XCUIApplication+Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Element.swift"; sourceTree = "<group>"; };
-		32C39B8E227BA2BB001DA20E /* Robot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
-		32C39B91227BA538001DA20E /* AccessibleRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleRobot.swift; sourceTree = "<group>"; };
-		32C39B93227BAFD9001DA20E /* XCUIElement+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Assert.swift"; sourceTree = "<group>"; };
-		32C39B95227BB159001DA20E /* XCUIElement+Optional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Optional.swift"; sourceTree = "<group>"; };
-		32C39B98227BB30F001DA20E /* ElementAssertion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementAssertion.swift; sourceTree = "<group>"; };
 		32C39B9A227BB38F001DA20E /* DropBear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBear.swift; sourceTree = "<group>"; };
-		32C39BA3227BBD07001DA20E /* ElementAssertion+Exists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Exists.swift"; sourceTree = "<group>"; };
-		32C39BA5227BBE0B001DA20E /* XCUIApplication+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Configuration.swift"; sourceTree = "<group>"; };
-		32C39BA8227BC278001DA20E /* LaunchingRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingRobot.swift; sourceTree = "<group>"; };
-		32C39BAF227BC7A0001DA20E /* RunningRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningRobot.swift; sourceTree = "<group>"; };
 		32C39BB1227BCCBB001DA20E /* UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITest.swift; sourceTree = "<group>"; };
-		32C39BB3227BCE0A001DA20E /* AccessibleRobot+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibleRobot+Assert.swift"; sourceTree = "<group>"; };
-		32C39BB5227BD5EB001DA20E /* Robot+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Robot+Assert.swift"; sourceTree = "<group>"; };
-		32C39BB7227BDA77001DA20E /* ElementAssertion+Enabled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Enabled.swift"; sourceTree = "<group>"; };
-		32C39BB9227BDA8C001DA20E /* ElementAssertion+Equal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Equal.swift"; sourceTree = "<group>"; };
-		32C39BBB227BDAA2001DA20E /* ElementAssertion+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Empty.swift"; sourceTree = "<group>"; };
-		32C39BBD227CB48B001DA20E /* Robot+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Robot+Actions.swift"; sourceTree = "<group>"; };
-		32C39BBF227CB7BC001DA20E /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+ClearText.swift"; sourceTree = "<group>"; };
-		32C39BC1227CD36D001DA20E /* AccessibleRobot+Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AccessibleRobot+Actions.swift"; sourceTree = "<group>"; };
-		32C39BC9227CE0DE001DA20E /* ElementSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementSet.swift; sourceTree = "<group>"; };
 		32C39BCC227D290D001DA20E /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
-		32C39BCE227DF957001DA20E /* ElementAssertion+Contains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Contains.swift"; sourceTree = "<group>"; };
-		32C39BD1227E0386001DA20E /* AlertRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRobot.swift; sourceTree = "<group>"; };
-		32C39BD3227E039B001DA20E /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		32C39BD5227E03C8001DA20E /* Alert+Presets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+Presets.swift"; sourceTree = "<group>"; };
-		32C39BD82280A3C1001DA20E /* XCUIElement+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Values.swift"; sourceTree = "<group>"; };
-		32C39BE92282414A001DA20E /* TabBarControllerRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerRobot.swift; sourceTree = "<group>"; };
-		32C39BED22824A8D001DA20E /* CellContainerRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellContainerRobot.swift; sourceTree = "<group>"; };
 		B5AE807F2285DBE10098CF95 /* DropBearGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DropBearGen; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE80812285DBE10098CF95 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5AE80862285DC210098CF95 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -280,6 +288,93 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		32B7BDF922CECEE800931646 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BDFA22CECEE800931646 /* Alert.swift */,
+				32B7BDFD22CECEE800931646 /* Alert+Presets.swift */,
+				32B7BDFB22CECEE800931646 /* Alert+RunningRobot.swift */,
+				32B7BDFC22CECEE800931646 /* AlertRobot.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		32B7BE0022CECEE800931646 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE0222CECEE800931646 /* ContainerType.swift */,
+				32B7BE0322CECEE800931646 /* ContainerType+NavigationController.swift */,
+				32B7BE0122CECEE800931646 /* ContainerType+TabBarController.swift */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
+		32B7BE0422CECEE800931646 /* XCTest */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE0522CECEE800931646 /* XCUIApplication+Configuration.swift */,
+				32B7BE0A22CECEE800931646 /* XCUIApplication+Element.swift */,
+				32B7BE0722CECEE800931646 /* XCUIElement+Assert.swift */,
+				32B7BE0922CECEE800931646 /* XCUIElement+ClearText.swift */,
+				32B7BE0622CECEE800931646 /* XCUIElement+Optional.swift */,
+				32B7BE0822CECEE800931646 /* XCUIElement+Values.swift */,
+			);
+			path = XCTest;
+			sourceTree = "<group>";
+		};
+		32B7BE0B22CECEE800931646 /* RunningRobot */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE0D22CECEE800931646 /* RunningRobot.swift */,
+				32B7BE0C22CECEE800931646 /* RunningRobot+NextRobot.swift */,
+			);
+			path = RunningRobot;
+			sourceTree = "<group>";
+		};
+		32B7BE0E22CECEE900931646 /* Traits */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE0F22CECEE900931646 /* CellController.swift */,
+				32B7BE1022CECEE900931646 /* TabBarController.swift */,
+			);
+			path = Traits;
+			sourceTree = "<group>";
+		};
+		32B7BE1122CECEE900931646 /* ElementAssertions */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE1722CECEE900931646 /* ElementAssertion.swift */,
+				32B7BE1422CECEE900931646 /* ElementAssertion+Contains.swift */,
+				32B7BE1322CECEE900931646 /* ElementAssertion+Empty.swift */,
+				32B7BE1522CECEE900931646 /* ElementAssertion+Enabled.swift */,
+				32B7BE1222CECEE900931646 /* ElementAssertion+Equal.swift */,
+				32B7BE1622CECEE900931646 /* ElementAssertion+Exists.swift */,
+			);
+			path = ElementAssertions;
+			sourceTree = "<group>";
+		};
+		32B7BE1822CECEE900931646 /* Robot */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE1B22CECEE900931646 /* Robot.swift */,
+				32B7BE1C22CECEE900931646 /* Robot+Actions.swift */,
+				32B7BE1922CECEE900931646 /* Robot+Assert.swift */,
+				32B7BE1A22CECEE900931646 /* Robot+Launch.swift */,
+			);
+			path = Robot;
+			sourceTree = "<group>";
+		};
+		32B7BE3822CECF5300931646 /* AccessibleRobot */ = {
+			isa = PBXGroup;
+			children = (
+				32B7BE3B22CECF5300931646 /* AccessibleRobot.swift */,
+				32B7BE3C22CECF5300931646 /* AccessibleRobot+Actions.swift */,
+				32B7BE3922CECF5300931646 /* AccessibleRobot+Assert.swift */,
+				32B7BE3A22CECF5300931646 /* ElementSet.swift */,
+			);
+			path = AccessibleRobot;
+			sourceTree = "<group>";
+		};
 		32C399F5227A3092001DA20E = {
 			isa = PBXGroup;
 			children = (
@@ -312,11 +407,14 @@
 		32C39A01227A3092001DA20E /* DropBear */ = {
 			isa = PBXGroup;
 			children = (
-				32C39B90227BA520001DA20E /* AccessibleRobot */,
-				32C39B8D227BA2A5001DA20E /* Robot */,
-				32C39BD0227E0376001DA20E /* Alerts */,
-				32C39B97227BB2F9001DA20E /* ElementAssertions */,
-				32C39A1B227A4609001DA20E /* XCTest */,
+				32B7BE3822CECF5300931646 /* AccessibleRobot */,
+				32B7BDF922CECEE800931646 /* Alerts */,
+				32B7BE0022CECEE800931646 /* Containers */,
+				32B7BE1122CECEE900931646 /* ElementAssertions */,
+				32B7BE1822CECEE900931646 /* Robot */,
+				32B7BE0B22CECEE800931646 /* RunningRobot */,
+				32B7BE0E22CECEE900931646 /* Traits */,
+				32B7BE0422CECEE800931646 /* XCTest */,
 				32C39A02227A3092001DA20E /* DropBear.h */,
 				32C39B9A227BB38F001DA20E /* DropBear.swift */,
 				32C39BCC227D290D001DA20E /* Springboard.swift */,
@@ -335,74 +433,12 @@
 			path = DropBearTests;
 			sourceTree = "<group>";
 		};
-		32C39A1B227A4609001DA20E /* XCTest */ = {
-			isa = PBXGroup;
-			children = (
-				32C39B93227BAFD9001DA20E /* XCUIElement+Assert.swift */,
-				32C39BBF227CB7BC001DA20E /* XCUIElement+ClearText.swift */,
-				32C39B95227BB159001DA20E /* XCUIElement+Optional.swift */,
-				32C39BA5227BBE0B001DA20E /* XCUIApplication+Configuration.swift */,
-				32C39A65227A4CE5001DA20E /* XCUIApplication+Element.swift */,
-				32C39BD82280A3C1001DA20E /* XCUIElement+Values.swift */,
-			);
-			path = XCTest;
-			sourceTree = "<group>";
-		};
 		32C39A5F227A4C51001DA20E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				32C39A60227A4C51001DA20E /* DropBearSupport.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		32C39B8D227BA2A5001DA20E /* Robot */ = {
-			isa = PBXGroup;
-			children = (
-				32C39B8E227BA2BB001DA20E /* Robot.swift */,
-				328A670D2284F050009C9C1D /* ContainerType.swift */,
-				32C39BB5227BD5EB001DA20E /* Robot+Assert.swift */,
-				32C39BBD227CB48B001DA20E /* Robot+Actions.swift */,
-				32C39BA8227BC278001DA20E /* LaunchingRobot.swift */,
-				32C39BAF227BC7A0001DA20E /* RunningRobot.swift */,
-				32C39BE92282414A001DA20E /* TabBarControllerRobot.swift */,
-				32C39BED22824A8D001DA20E /* CellContainerRobot.swift */,
-			);
-			path = Robot;
-			sourceTree = "<group>";
-		};
-		32C39B90227BA520001DA20E /* AccessibleRobot */ = {
-			isa = PBXGroup;
-			children = (
-				32C39B91227BA538001DA20E /* AccessibleRobot.swift */,
-				32C39BB3227BCE0A001DA20E /* AccessibleRobot+Assert.swift */,
-				32C39BC1227CD36D001DA20E /* AccessibleRobot+Actions.swift */,
-				32C39BC9227CE0DE001DA20E /* ElementSet.swift */,
-			);
-			path = AccessibleRobot;
-			sourceTree = "<group>";
-		};
-		32C39B97227BB2F9001DA20E /* ElementAssertions */ = {
-			isa = PBXGroup;
-			children = (
-				32C39B98227BB30F001DA20E /* ElementAssertion.swift */,
-				32C39BA3227BBD07001DA20E /* ElementAssertion+Exists.swift */,
-				32C39BB7227BDA77001DA20E /* ElementAssertion+Enabled.swift */,
-				32C39BB9227BDA8C001DA20E /* ElementAssertion+Equal.swift */,
-				32C39BBB227BDAA2001DA20E /* ElementAssertion+Empty.swift */,
-				32C39BCE227DF957001DA20E /* ElementAssertion+Contains.swift */,
-			);
-			path = ElementAssertions;
-			sourceTree = "<group>";
-		};
-		32C39BD0227E0376001DA20E /* Alerts */ = {
-			isa = PBXGroup;
-			children = (
-				32C39BD1227E0386001DA20E /* AlertRobot.swift */,
-				32C39BD3227E039B001DA20E /* Alert.swift */,
-				32C39BD5227E03C8001DA20E /* Alert+Presets.swift */,
-			);
-			path = Alerts;
 			sourceTree = "<group>";
 		};
 		B5AE80802285DBE10098CF95 /* DropBearGen */ = {
@@ -854,36 +890,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32C39BB0227BC7A0001DA20E /* RunningRobot.swift in Sources */,
-				32C39B92227BA538001DA20E /* AccessibleRobot.swift in Sources */,
-				32C39B99227BB30F001DA20E /* ElementAssertion.swift in Sources */,
-				32C39BD4227E039B001DA20E /* Alert.swift in Sources */,
-				32C39BB8227BDA77001DA20E /* ElementAssertion+Enabled.swift in Sources */,
-				32C39BAE227BC46F001DA20E /* LaunchingRobot.swift in Sources */,
-				32C39A66227A4CE5001DA20E /* XCUIApplication+Element.swift in Sources */,
-				328A670E2284F050009C9C1D /* ContainerType.swift in Sources */,
-				32C39BBE227CB48B001DA20E /* Robot+Actions.swift in Sources */,
-				32C39BA6227BBE0B001DA20E /* XCUIApplication+Configuration.swift in Sources */,
-				32C39BC2227CD36D001DA20E /* AccessibleRobot+Actions.swift in Sources */,
-				32C39BEA2282414A001DA20E /* TabBarControllerRobot.swift in Sources */,
-				32C39BD92280A3C1001DA20E /* XCUIElement+Values.swift in Sources */,
-				32C39BB6227BD5EB001DA20E /* Robot+Assert.swift in Sources */,
-				32C39BBC227BDAA2001DA20E /* ElementAssertion+Empty.swift in Sources */,
+				32B7BE2B22CECEE900931646 /* RunningRobot.swift in Sources */,
+				32B7BE3E22CECF5400931646 /* ElementSet.swift in Sources */,
+				32B7BE1E22CECEE900931646 /* Alert+RunningRobot.swift in Sources */,
+				32B7BE2022CECEE900931646 /* Alert+Presets.swift in Sources */,
 				32C39B9B227BB38F001DA20E /* DropBear.swift in Sources */,
-				32C39B8F227BA2BB001DA20E /* Robot.swift in Sources */,
-				32C39BA4227BBD07001DA20E /* ElementAssertion+Exists.swift in Sources */,
-				32C39BD6227E03C8001DA20E /* Alert+Presets.swift in Sources */,
-				32C39BEE22824A8D001DA20E /* CellContainerRobot.swift in Sources */,
+				32B7BE2622CECEE900931646 /* XCUIElement+Assert.swift in Sources */,
+				32B7BE3F22CECF5400931646 /* AccessibleRobot.swift in Sources */,
+				32B7BE3522CECEE900931646 /* Robot+Launch.swift in Sources */,
 				32C39BB2227BCCBB001DA20E /* UITest.swift in Sources */,
-				32C39BCA227CE0DE001DA20E /* ElementSet.swift in Sources */,
-				32C39BC0227CB7BC001DA20E /* XCUIElement+ClearText.swift in Sources */,
-				32C39BD2227E0386001DA20E /* AlertRobot.swift in Sources */,
-				32C39BBA227BDA8C001DA20E /* ElementAssertion+Equal.swift in Sources */,
-				32C39B94227BAFD9001DA20E /* XCUIElement+Assert.swift in Sources */,
-				32C39B96227BB159001DA20E /* XCUIElement+Optional.swift in Sources */,
-				32C39BB4227BCE0A001DA20E /* AccessibleRobot+Assert.swift in Sources */,
+				32B7BE2722CECEE900931646 /* XCUIElement+Values.swift in Sources */,
+				32B7BE3322CECEE900931646 /* ElementAssertion.swift in Sources */,
+				32B7BE2F22CECEE900931646 /* ElementAssertion+Empty.swift in Sources */,
+				32B7BE1D22CECEE900931646 /* Alert.swift in Sources */,
+				32B7BE3122CECEE900931646 /* ElementAssertion+Enabled.swift in Sources */,
+				32B7BE3722CECEE900931646 /* Robot+Actions.swift in Sources */,
+				32B7BE3222CECEE900931646 /* ElementAssertion+Exists.swift in Sources */,
+				32B7BE2522CECEE900931646 /* XCUIElement+Optional.swift in Sources */,
 				32C39BCD227D290D001DA20E /* Springboard.swift in Sources */,
-				32C39BCF227DF957001DA20E /* ElementAssertion+Contains.swift in Sources */,
+				32B7BE2422CECEE900931646 /* XCUIApplication+Configuration.swift in Sources */,
+				32B7BE2922CECEE900931646 /* XCUIApplication+Element.swift in Sources */,
+				32B7BE1F22CECEE900931646 /* AlertRobot.swift in Sources */,
+				32B7BE2D22CECEE900931646 /* TabBarController.swift in Sources */,
+				32B7BE2E22CECEE900931646 /* ElementAssertion+Equal.swift in Sources */,
+				32B7BE3422CECEE900931646 /* Robot+Assert.swift in Sources */,
+				32B7BE2822CECEE900931646 /* XCUIElement+ClearText.swift in Sources */,
+				32B7BE2222CECEE900931646 /* ContainerType.swift in Sources */,
+				32B7BE2122CECEE900931646 /* ContainerType+TabBarController.swift in Sources */,
+				32B7BE2A22CECEE900931646 /* RunningRobot+NextRobot.swift in Sources */,
+				32B7BE3D22CECF5400931646 /* AccessibleRobot+Assert.swift in Sources */,
+				32B7BE3622CECEE900931646 /* Robot.swift in Sources */,
+				32B7BE2C22CECEE900931646 /* CellController.swift in Sources */,
+				32B7BE2322CECEE900931646 /* ContainerType+NavigationController.swift in Sources */,
+				32B7BE4022CECF5400931646 /* AccessibleRobot+Actions.swift in Sources */,
+				32B7BE3022CECEE900931646 /* ElementAssertion+Contains.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

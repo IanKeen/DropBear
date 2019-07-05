@@ -13,7 +13,7 @@ extension XCUIElement {
     }
 }
 
-/// Private `XCUIElement` subclass that is returned when an optional element is requested but not found.
+/// Internal `XCUIElement` subclass that is returned when an optional element is requested but not found.
 /// This prevents optional paths in test from failing when functions such as `tap()` are called on missing elements.
 class MissingXCUIElement: XCUIElement {
     override var exists: Bool { return false }

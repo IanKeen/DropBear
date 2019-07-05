@@ -53,6 +53,18 @@ extension AccessibleRobot {
         return press(identifier: element.rawValue, in: hierarchy, duration: duration, dragTo: other.rawValue, in: otherHierarchy, file: file, line: line)
     }
 
+    public func type(
+        _ element: Element,
+        in hierarchy: [XCUIElement.ElementType] = [.any],
+        text: String,
+        tapFirst: Bool = true,
+        clearFirst: Bool = true,
+        file: StaticString = #file, line: UInt = #line
+        ) -> Self
+    {
+        return type(identifier: element.rawValue, in: hierarchy, text: text, tapFirst: tapFirst, clearFirst: clearFirst, file: file, line: line)
+    }
+
     public func clearText(
         _ element: Element,
         in hierarchy: [XCUIElement.ElementType] = [.any],
