@@ -5,7 +5,7 @@ class Tests: UITest {
     func testContactsPermission() {
         Springboard.deleteApp(named: "DropBearApp", required: false)
 
-        ScrollableStackRobot()
+        ScrollableStackRobot.launch()
             .assert(.label, .equal(to: "Undecided"))
             .tap(.button)
             .alert(.contactsPermission, required: true)
@@ -13,14 +13,14 @@ class Tests: UITest {
             .assert(.label, .equal(to: "Allowed"))
     }
     func testSwitch() {
-        ScrollableStackRobot()
+        ScrollableStackRobot.launch()
             .assert(.switch, .equal(to: true))
             .tap(.switch)
             .assert(.switch, .equal(to: false))
     }
     func testSegment() {
         // hacked.. I added a11y id to xml directly.. IB doesn't appear to support it for some reason
-        ScrollableStackRobot()
+        ScrollableStackRobot.launch()
             .assert(.segment, .equal(to: "first"))
             .tap(.segment, index: 1)
             .assert(.segment, .equal(to: "second"))
@@ -28,7 +28,7 @@ class Tests: UITest {
             .assert(.segment, .equal(to: "first"))
     }
     func testSlider() {
-        ScrollableStackRobot()
+        ScrollableStackRobot.launch()
             .assert(.slider, .equal(to: "50%"))
             .adjust(.slider, to: 0)
             .assert(.slider, .equal(to: "0%"))
@@ -36,13 +36,13 @@ class Tests: UITest {
             .assert(.slider, .equal(to: "100%"))
     }
     func testTest() {
-        ScrollableStackRobot()
+        ScrollableStackRobot.launch()
             .assert(.button, .exists)
             .pushTabBar()
             .selectTab2()
             .assert(.tab2button, .exists)
             .pushTableViewController()
-            .tap(cell: 55)
+            .tapCell()
             .popNavigationController()
             .assert(.tab2button, .exists)
             .backToTabBarController()
