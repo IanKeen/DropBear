@@ -5,7 +5,7 @@ public enum Springboard {
 
     public static func deleteApp(named name: String, required: Bool = false, file: StaticString = #file, line: UInt = #line) {
         let icon = application.icons[name]
-        let iconAvailable = icon.waitForExistence(timeout: 2) && icon.isHittable
+        let iconAvailable = icon.waitForExistence(timeout: DropBear.defaultWaitTime) && icon.isHittable
 
         // Icon isn't there, but we don't need it to be.
         if !required && !iconAvailable { return }
@@ -27,7 +27,7 @@ public enum Springboard {
             .tap()
 
         let deleteButton = application.alerts.buttons["Delete"]
-        let deleteButtonAvailable = deleteButton.waitForExistence(timeout: 2) && deleteButton.isHittable
+        let deleteButtonAvailable = deleteButton.waitForExistence(timeout: DropBear.defaultWaitTime) && deleteButton.isHittable
 
         guard deleteButtonAvailable else {
             return XCTFail("Failed to tap the app icons delete button.", file: file, line: line)
