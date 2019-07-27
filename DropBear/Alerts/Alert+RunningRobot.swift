@@ -23,7 +23,7 @@ extension RunningRobot {
         file: StaticString = #file, line: UInt = #line
         ) -> NextRobot<AlertRobot<Alert<T>>>
     {
-        let dialog = Springboard.application.alerts.firstMatch
+        let dialog = alert.source(app).alerts.firstMatch
         let actualDialog: XCUIElement
         if required {
             actualDialog = dialog.assert(.exists, .contains(alert.text), file: file, line: line)

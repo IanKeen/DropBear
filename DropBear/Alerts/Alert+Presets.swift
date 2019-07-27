@@ -5,6 +5,9 @@ public enum ContactAlertButton: String, AlertButton {
 
 extension Alert {
     public static var contactsPermission: Alert<ContactAlertButton> {
-        return .init(text: "would like to access your contacts")
+        return .init(
+            source: { _ in Springboard.application },
+            containingText: "would like to access your contacts"
+        )
     }
 }
