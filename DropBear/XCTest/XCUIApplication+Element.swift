@@ -14,6 +14,6 @@ extension XCUIApplication {
 
         let root = descendants(matching: first)
         let container = hierarchy.dropFirst().reduce(root) { $0.descendants(matching: $1) }
-        return container.element(matching: .any, identifier: identifier).firstMatch
+        return container.element(matching: .any, identifier: identifier)
     }
 }
