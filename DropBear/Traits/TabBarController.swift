@@ -12,7 +12,7 @@ extension RunningRobot where Current: TabBarController {
 extension Robot where Self: TabBarController {
     public func tabButton(at index: Int, file: StaticString = #file, line: UInt = #line) -> XCUIElement {
         let firstTabBar = app.tabBars.firstMatch
-        if !firstTabBar.exists { firstTabBar.waitForExistence(timeout: DropBear.defaultWaitTime) }
+        if !firstTabBar.exists { _ = firstTabBar.waitForExistence(timeout: DropBear.defaultWaitTime) }
 
         guard index > -1 && index < app.tabBars.buttons.count else {
             XCTFail("Invalid tab index. Value should be between 0 and \(app.tabBars.buttons.count - 1)", file: file, line: line)
