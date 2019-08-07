@@ -27,9 +27,8 @@ public class Generator {
         let sortedData = data.sorted(by: { $0.key < $1.key })
 
         let output = """
-            // Generated using DropBearGen
-
             // swiftlint:disable all
+            // Generated using DropBearGen
 
             enum AccessibilityIdentifiers {
             {{content}}
