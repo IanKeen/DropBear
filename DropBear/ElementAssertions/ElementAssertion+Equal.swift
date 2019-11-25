@@ -1,6 +1,6 @@
 extension ElementAssertion {
-    public static func equal<T: UITestEquatable>(to value: T) -> ElementAssertion {
-        return .init(name: "equal(to: \(value))", assertion: { element in
+    public static func isEqual<T: UITestEquatable>(to value: T) -> ElementAssertion {
+        return .init(name: "isEqual(to: \(value))", assertion: { element in
             return element.values.contains(where: { elementValue in
                 return value.stringValues.contains(where: { $0.lowercased() == elementValue.lowercased() })
             })

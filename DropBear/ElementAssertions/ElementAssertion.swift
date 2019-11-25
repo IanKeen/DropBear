@@ -5,7 +5,7 @@ public struct ElementAssertion {
     let assertion: (XCUIElement) -> Bool
     let message: String?
 
-    public init(name: String, assertion: @escaping (XCUIElement) -> Bool, message: String? = nil) {
+    public init(name: String, message: String? = nil, assertion: @escaping (XCUIElement) -> Bool) {
         self.name = name
         self.assertion = assertion
         self.message = message

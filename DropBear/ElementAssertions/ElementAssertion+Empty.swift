@@ -1,6 +1,6 @@
 extension ElementAssertion {
-    public static var empty: ElementAssertion {
-        return .init(name: "empty", assertion: { element in
+    public static var isEmpty: ElementAssertion {
+        return .init(name: #function, assertion: { element in
             switch element.value {
             case nil:
                 return true

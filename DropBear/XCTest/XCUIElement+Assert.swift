@@ -2,6 +2,11 @@ import XCTest
 
 extension XCUIElement {
     @discardableResult
+    public func assert(_ assertion: ElementAssertion, file: StaticString = #file, line: UInt = #line) -> Self {
+        return assert([assertion], file: file, line: line)
+    }
+
+    @discardableResult
     public func assert(_ assertion: ElementAssertion, _ rest: ElementAssertion..., file: StaticString = #file, line: UInt = #line) -> Self {
         return assert([assertion] + rest, file: file, line: line)
     }

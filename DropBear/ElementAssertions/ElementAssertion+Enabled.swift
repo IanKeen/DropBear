@@ -1,6 +1,6 @@
 extension ElementAssertion {
-    public static var enabled: ElementAssertion {
-        return .init(name: "enabled", assertion: { element in
+    public static var isEnabled: ElementAssertion {
+        return .init(name: #function, assertion: { element in
             return element.isEnabled
         })
     }
