@@ -16,6 +16,4 @@ extension Robot {
     }
 }
 
-public class Root: RobotBase, Robot {
-    public typealias Container = Containers.None
-}
+public class Root: RobotBase, Robot { }

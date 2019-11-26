@@ -1,7 +1,8 @@
 import XCTest
 
-public class RunningRobot<Current: Robot, Previous: Robot>: RunningRobotType {
+public class RunningRobot<Current: Robot, Previous: Robot>: Robot {
     public typealias Container = Current.Container
+    public typealias Element = Current.Element
 
     public var app: XCUIApplication { return current.app }
 
@@ -18,16 +19,10 @@ public class RunningRobot<Current: Robot, Previous: Robot>: RunningRobotType {
     }
 }
 
-extension RunningRobot: AccessibleRobot where Current: AccessibleRobot {
-    public typealias Element = Current.Element
-}
-
-public protocol RunningRobotType: Robot {
-    associatedtype Current: Robot
-    associatedtype Previous: Robot
-
-    var current: Current { get }
-    var previous: Previous { get }
-
-    init(current: Current, previous: Previous)
+extension RunningRobot {
+    public typealias NextRobot<Next: Robot> = RunningRobot<Next, RunningRobot<Current, Previous>>
+    
+    public func nextRobot<T: Robot>() -> NextRobot<T> {
+        return NextRobot(current: .init(app: app), previous: .init(current: current, previous: previous))
+    }
 }

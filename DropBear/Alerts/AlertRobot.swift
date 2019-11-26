@@ -1,8 +1,6 @@
 import XCTest
 
 public class AlertRobot<A: AlertType>: RobotBase, AlertRobotType {
-    public typealias Container = Containers.None
-
     public let alert: XCUIElement
     public let required: Bool
 
