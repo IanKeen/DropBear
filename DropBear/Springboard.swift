@@ -3,9 +3,7 @@ import XCTest
 extension Springboard.DeleteAppButton {
     public static var `default`: Springboard.DeleteAppButton {
         return .init { application, icon in
-            let ios13button = iOS13.element(application, icon)
-            if ios13button.exists { return ios13button }
-            return iOS12.element(application, icon)
+            return iOS13.delete(application, icon) || iOS12.delete(application, icon)
         }
     }
 
@@ -22,13 +20,18 @@ extension Springboard.DeleteAppButton {
                 .coordinate(withNormalizedOffset: iconDeleteOffset)
                 .tap()
 
-            return application.alerts.buttons["Delete"]
+            return true
         }
     }
 
     public static var iOS13: Springboard.DeleteAppButton {
         return .init { application, _ in
-            return application.buttons["Delete App"]
+            let button = application.buttons["Delete App"]
+
+            guard button.waitForExistence(timeout: DropBear.defaultWaitTime) && button.isHittable else { return false }
+
+            button.tap()
+            return true
         }
     }
 }
@@ -36,7 +39,7 @@ extension Springboard.DeleteAppButton {
 public enum Springboard {
     static let application = XCUIApplication(bundleIdentifier: "com.apple.springboard")
 
-    public static func deleteApp(named name: String, using button: DeleteAppButton = .default, required: Bool = false, file: StaticString = #file, line: UInt = #line) {
+    public static func deleteApp(named name: String, using strategy: DeleteAppButton = .default, required: Bool = false, file: StaticString = #file, line: UInt = #line) {
         let icon = application.icons[name]
         let iconAvailable = icon.waitForExistence(timeout: DropBear.defaultWaitTime) && icon.isHittable
 
@@ -50,12 +53,17 @@ public enum Springboard {
         // Long press
         icon.press(forDuration: 1.5)
 
-        // find delete button
-        let deleteButton = button.element(application, icon)
+        // Start deletion
+        guard strategy.delete(application, icon) else {
+            return XCTFail("Failed to tap the app icons delete button.", file: file, line: line)
+        }
+
+        // Confirm
+        let deleteButton = application.alerts.buttons["Delete"]
         let deleteButtonAvailable = deleteButton.waitForExistence(timeout: DropBear.defaultWaitTime) && deleteButton.isHittable
 
         guard deleteButtonAvailable else {
-            return XCTFail("Failed to tap the app icons delete button.", file: file, line: line)
+            return XCTFail("Failed to confirm the delete.", file: file, line: line)
         }
 
         deleteButton.tap()
@@ -65,12 +73,12 @@ public enum Springboard {
 
 extension Springboard {
     public struct DeleteAppButton {
-        public typealias Input = (_ application: XCUIApplication, _ icon: XCUIElement) -> XCUIElement
+        public typealias Input = (_ application: XCUIApplication, _ icon: XCUIElement) -> Bool
 
-        let element: Input
+        let delete: Input
 
-        public init(element: @escaping Input) {
-            self.element = element
+        public init(delete: @escaping Input) {
+            self.delete = delete
         }
     }
 }
