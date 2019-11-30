@@ -1,22 +1,17 @@
 import XCTest
 
-public class AlertRobot<A: AlertType>: RobotBase, AlertRobotType {
-    public let alert: XCUIElement
-    public let required: Bool
+public class AlertRobot<Alert: AlertType, Previous: Robot>: RobotBase, Robot {
+    let previous: Previous
+    let alert: XCUIElement
+    let required: Bool
 
-    required public init(alert: XCUIElement, required: Bool, app: XCUIApplication) {
+    required public init(previous: Previous, alert: XCUIElement, required: Bool, app: XCUIApplication) {
+        self.previous = previous
         self.alert = alert
         self.required = required
         super.init(app: app)
     }
     public required init(app: XCUIApplication) {
-        fatalError("Please use init(alert:required:app:)")
+        fatalError("This Robot can not be created this way")
     }
-}
-
-public protocol AlertRobotType: Robot {
-    associatedtype A: AlertType
-
-    var alert: XCUIElement { get }
-    var required: Bool { get }
 }

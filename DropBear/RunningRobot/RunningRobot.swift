@@ -1,7 +1,8 @@
 import XCTest
 
-public class RunningRobot<Current: Robot, Previous: Robot>: Robot {
-    public typealias Container = Current.Container
+public protocol RobotContext { }
+
+public class RunningRobot<Context: RobotContext, Current: Robot, Previous: Robot>: Robot {
     public typealias Element = Current.Element
 
     public var app: XCUIApplication { return current.app }
@@ -15,14 +16,6 @@ public class RunningRobot<Current: Robot, Previous: Robot>: Robot {
     }
 
     public required convenience init(app: XCUIApplication) {
-        fatalError("This Robot should not be created this way")
-    }
-}
-
-extension RunningRobot {
-    public typealias NextRobot<Next: Robot> = RunningRobot<Next, RunningRobot<Current, Previous>>
-    
-    public func nextRobot<T: Robot>() -> NextRobot<T> {
-        return NextRobot(current: .init(app: app), previous: .init(current: current, previous: previous))
+        fatalError("This Robot can not be created this way")
     }
 }

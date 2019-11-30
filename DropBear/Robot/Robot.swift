@@ -2,7 +2,6 @@ import XCTest
 
 /// A `Robot` represents the actions that can be performed on a given screen
 public protocol Robot {
-    associatedtype Container: ContainerType = Containers.None
     associatedtype Element: RawRepresentable = String where Element.RawValue == String
 
     var app: XCUIApplication { get }
