@@ -1,7 +1,7 @@
 import XCTest
 
 extension XCUIElement {
-    var values: [String] {
+    public var values: [String] {
         var potentials = [label, value as Any]
         
         switch elementType {

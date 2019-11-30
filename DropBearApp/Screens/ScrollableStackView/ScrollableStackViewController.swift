@@ -5,6 +5,12 @@ class ScrollableStackViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private var label: UILabel!
 
+    // MARK: - Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Home"
+    }
+
     //  MARK: - Actions
     @IBAction private func buttonTouchUpInside(sender: UIButton) {
         CNContactStore().requestAccess(for: .contacts) { [weak self] success, _ in

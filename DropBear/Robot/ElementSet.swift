@@ -3,20 +3,24 @@ public enum Unused: RawRepresentable {
     public init?(rawValue: String) { return nil }
 }
 
-/// A type that can be uesd 
-public enum ElementSet<A: RawRepresentable, B: RawRepresentable, C: RawRepresentable>: RawRepresentable
-    where A.RawValue == String, B.RawValue == String, C.RawValue == String
+/// A type that can be used to combine multiple sets of elements
+public enum ElementSet<
+    A: RawRepresentable, B: RawRepresentable, C: RawRepresentable, D: RawRepresentable
+    >: RawRepresentable
+    where A.RawValue == String, B.RawValue == String, C.RawValue == String, D.RawValue == String
 {
     public typealias RawValue = String
 
     case a(A)
     case b(B)
     case c(C)
+    case d(D)
 
     public init?(rawValue: String) {
         let value = A(rawValue: rawValue).flatMap(ElementSet.a)
             ?? B(rawValue: rawValue).flatMap(ElementSet.b)
             ?? C(rawValue: rawValue).flatMap(ElementSet.c)
+            ?? D(rawValue: rawValue).flatMap(ElementSet.d)
 
         guard let result = value else { return nil }
 
@@ -28,6 +32,7 @@ public enum ElementSet<A: RawRepresentable, B: RawRepresentable, C: RawRepresent
         case .a(let value): return value.rawValue
         case .b(let value): return value.rawValue
         case .c(let value): return value.rawValue
+        case .d(let value): return value.rawValue
         }
     }
 }
