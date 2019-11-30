@@ -51,4 +51,9 @@ class Tests: UITest {
             .selectTab1()
             .assert(.tab1button, .exists)
     }
+    func testNavigationTitleMatcher() {
+        ScrollableStackRobot.launch()
+            .assert(.navigationTitle, .isEqual(to: "Home"))
+            .assert(.label, .exists)
+    }
 }
