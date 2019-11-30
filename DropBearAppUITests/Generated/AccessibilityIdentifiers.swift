@@ -1,6 +1,5 @@
-// Generated using DropBearGen
-
 // swiftlint:disable all
+// Generated using DropBearGen
 
 enum AccessibilityIdentifiers {
 	struct ScrollableStackViewController: RawRepresentable {
