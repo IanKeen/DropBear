@@ -1,10 +1,9 @@
 import Foundation
 
 func execute(input: Path, output: Path) throws {
-    let parser = Parser()
-    try parser.parse(path: input)
-
-    let generator = Generator(identifierData: parser.accessibilityIdentifiers)
+    let coordinator = ExtractorCoordinator(extractors: [InterfaceBuilderExtractor()])
+    let identifiers = try coordinator.extract(from: input)
+    let generator = Generator(identifiers: identifiers)
     try generator.generate(path: output)
 }
 

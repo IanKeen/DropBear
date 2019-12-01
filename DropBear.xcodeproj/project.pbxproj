@@ -3,11 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3211702D238C81DC007EB38C /* ContextElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3211702C238C81DC007EB38C /* ContextElement.swift */; };
+		321BC54A2394614000BFFD89 /* Extractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC5492394614000BFFD89 /* Extractor.swift */; };
+		321BC54C2394638000BFFD89 /* ExtractorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC54B2394638000BFFD89 /* ExtractorCoordinator.swift */; };
+		321BC54E2394667E00BFFD89 /* InterfaceBuilderExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC54D2394667E00BFFD89 /* InterfaceBuilderExtractor.swift */; };
 		32701CD32391AF49004283B5 /* RunningRobot+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD22391AF49004283B5 /* RunningRobot+Root.swift */; };
 		32701CD52391AF70004283B5 /* RunningRobot+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */; };
 		32701CD72391D38F004283B5 /* RunningRobot+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */; };
@@ -46,7 +49,6 @@
 		32E109BE238C9928002F9286 /* Robot+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109BD238C9928002F9286 /* Robot+Text.swift */; };
 		32E109C2238C9BE6002F9286 /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109C1238C9BE6002F9286 /* AlertButton.swift */; };
 		B5AE80822285DBE10098CF95 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80812285DBE10098CF95 /* main.swift */; };
-		B5AE80982285DC210098CF95 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80862285DC210098CF95 /* Parser.swift */; };
 		B5AE80992285DC210098CF95 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80872285DC210098CF95 /* Generator.swift */; };
 		B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80892285DC210098CF95 /* PathKit.swift */; };
 		B5AE809B2285DC210098CF95 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */; };
@@ -142,6 +144,9 @@
 
 /* Begin PBXFileReference section */
 		3211702C238C81DC007EB38C /* ContextElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextElement.swift; sourceTree = "<group>"; };
+		321BC5492394614000BFFD89 /* Extractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extractor.swift; sourceTree = "<group>"; };
+		321BC54B2394638000BFFD89 /* ExtractorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractorCoordinator.swift; sourceTree = "<group>"; };
+		321BC54D2394667E00BFFD89 /* InterfaceBuilderExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderExtractor.swift; sourceTree = "<group>"; };
 		32701CD22391AF49004283B5 /* RunningRobot+Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+Root.swift"; sourceTree = "<group>"; };
 		32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+NavigationController.swift"; sourceTree = "<group>"; };
 		32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+TabBarController.swift"; sourceTree = "<group>"; };
@@ -184,7 +189,6 @@
 		32E109C1238C9BE6002F9286 /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
 		B5AE807F2285DBE10098CF95 /* DropBearGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DropBearGen; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE80812285DBE10098CF95 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B5AE80862285DC210098CF95 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		B5AE80872285DC210098CF95 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
 		B5AE80892285DC210098CF95 /* PathKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathKit.swift; sourceTree = "<group>"; };
 		B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLNode.swift; sourceTree = "<group>"; };
@@ -288,6 +292,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		321BC5482394612D00BFFD89 /* Extractor */ = {
+			isa = PBXGroup;
+			children = (
+				321BC5492394614000BFFD89 /* Extractor.swift */,
+				321BC54B2394638000BFFD89 /* ExtractorCoordinator.swift */,
+				321BC54D2394667E00BFFD89 /* InterfaceBuilderExtractor.swift */,
+			);
+			path = Extractor;
+			sourceTree = "<group>";
+		};
 		32B7BDF922CECEE800931646 /* Alerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,11 +450,11 @@
 		B5AE80802285DBE10098CF95 /* DropBearGen */ = {
 			isa = PBXGroup;
 			children = (
+				321BC5482394612D00BFFD89 /* Extractor */,
 				B5AE80882285DC210098CF95 /* PathKit */,
 				B5AE808A2285DC210098CF95 /* Kanna */,
 				B5AE80932285DC210098CF95 /* Extensions */,
 				B5AE80872285DC210098CF95 /* Generator.swift */,
-				B5AE80862285DC210098CF95 /* Parser.swift */,
 				B5AE80812285DBE10098CF95 /* main.swift */,
 			);
 			path = DropBearGen;
@@ -933,12 +947,14 @@
 			files = (
 				B5AE80992285DC210098CF95 /* Generator.swift in Sources */,
 				B5AE809E2285DC210098CF95 /* libxmlParserOption.swift in Sources */,
+				321BC54A2394614000BFFD89 /* Extractor.swift in Sources */,
 				B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */,
 				B5AE80A12285DC210098CF95 /* Array+Extensions.swift in Sources */,
+				321BC54C2394638000BFFD89 /* ExtractorCoordinator.swift in Sources */,
 				B5AE80A22285DC210098CF95 /* String+Extensions.swift in Sources */,
+				321BC54E2394667E00BFFD89 /* InterfaceBuilderExtractor.swift in Sources */,
 				B5AE809D2285DC210098CF95 /* libxmlHTMLDocument.swift in Sources */,
 				B5AE809B2285DC210098CF95 /* libxmlHTMLNode.swift in Sources */,
-				B5AE80982285DC210098CF95 /* Parser.swift in Sources */,
 				B5AE80822285DBE10098CF95 /* main.swift in Sources */,
 				B5AE809C2285DC210098CF95 /* CSS.swift in Sources */,
 				B5AE80A32285DC210098CF95 /* Dictionary+Extensions.swift in Sources */,
