@@ -11,6 +11,8 @@
 		321BC54A2394614000BFFD89 /* Extractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC5492394614000BFFD89 /* Extractor.swift */; };
 		321BC54C2394638000BFFD89 /* ExtractorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC54B2394638000BFFD89 /* ExtractorCoordinator.swift */; };
 		321BC54E2394667E00BFFD89 /* InterfaceBuilderExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC54D2394667E00BFFD89 /* InterfaceBuilderExtractor.swift */; };
+		321BC5502394708E00BFFD89 /* SyntaxExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 321BC54F2394708E00BFFD89 /* SyntaxExtractor.swift */; };
+		3261FF7823944BFA00798993 /* SwiftSyntax in Frameworks */ = {isa = PBXBuildFile; productRef = 3261FF7723944BFA00798993 /* SwiftSyntax */; };
 		32701CD32391AF49004283B5 /* RunningRobot+Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD22391AF49004283B5 /* RunningRobot+Root.swift */; };
 		32701CD52391AF70004283B5 /* RunningRobot+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */; };
 		32701CD72391D38F004283B5 /* RunningRobot+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */; };
@@ -120,6 +122,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		3261FF752393602B00798993 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5AE807D2285DBE10098CF95 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +159,7 @@
 		321BC5492394614000BFFD89 /* Extractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extractor.swift; sourceTree = "<group>"; };
 		321BC54B2394638000BFFD89 /* ExtractorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractorCoordinator.swift; sourceTree = "<group>"; };
 		321BC54D2394667E00BFFD89 /* InterfaceBuilderExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderExtractor.swift; sourceTree = "<group>"; };
+		321BC54F2394708E00BFFD89 /* SyntaxExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxExtractor.swift; sourceTree = "<group>"; };
 		32701CD22391AF49004283B5 /* RunningRobot+Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+Root.swift"; sourceTree = "<group>"; };
 		32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+NavigationController.swift"; sourceTree = "<group>"; };
 		32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+TabBarController.swift"; sourceTree = "<group>"; };
@@ -255,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3261FF7823944BFA00798993 /* SwiftSyntax in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +312,7 @@
 				321BC5492394614000BFFD89 /* Extractor.swift */,
 				321BC54B2394638000BFFD89 /* ExtractorCoordinator.swift */,
 				321BC54D2394667E00BFFD89 /* InterfaceBuilderExtractor.swift */,
+				321BC54F2394708E00BFFD89 /* SyntaxExtractor.swift */,
 			);
 			path = Extractor;
 			sourceTree = "<group>";
@@ -673,15 +688,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5AE80852285DBE10098CF95 /* Build configuration list for PBXNativeTarget "DropBearGen" */;
 			buildPhases = (
+				3261FF7B2394531A00798993 /* [MSTRD] Fix linking issue */,
 				B5AE807B2285DBE10098CF95 /* Sources */,
 				B5AE807C2285DBE10098CF95 /* Frameworks */,
 				B5AE807D2285DBE10098CF95 /* CopyFiles */,
+				3261FF752393602B00798993 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DropBearGen;
+			packageProductDependencies = (
+				3261FF7723944BFA00798993 /* SwiftSyntax */,
+			);
 			productName = DropBearGen;
 			productReference = B5AE807F2285DBE10098CF95 /* DropBearGen */;
 			productType = "com.apple.product-type.tool";
@@ -805,6 +825,9 @@
 				Base,
 			);
 			mainGroup = 32C399F5227A3092001DA20E;
+			packageReferences = (
+				3261FF7623944BFA00798993 /* XCRemoteSwiftPackageReference "swift-syntax" */,
+			);
 			productRefGroup = 32C39A00227A3092001DA20E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -871,6 +894,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3261FF7B2394531A00798993 /* [MSTRD] Fix linking issue */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[MSTRD] Fix linking issue";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "ln -sf /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/lib_InternalSwiftSyntaxParser.dylib ${BUILT_PRODUCTS_DIR}/../Debug/\n";
+		};
 		B5AE81112285E0680098CF95 /* [MSTRD] DropBearGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -948,6 +989,7 @@
 				B5AE80992285DC210098CF95 /* Generator.swift in Sources */,
 				B5AE809E2285DC210098CF95 /* libxmlParserOption.swift in Sources */,
 				321BC54A2394614000BFFD89 /* Extractor.swift in Sources */,
+				321BC5502394708E00BFFD89 /* SyntaxExtractor.swift in Sources */,
 				B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */,
 				B5AE80A12285DC210098CF95 /* Array+Extensions.swift in Sources */,
 				321BC54C2394638000BFFD89 /* ExtractorCoordinator.swift in Sources */,
@@ -1570,6 +1612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3261FF7623944BFA00798993 /* XCRemoteSwiftPackageReference "swift-syntax" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-syntax";
+			requirement = {
+				kind = exactVersion;
+				version = 0.50100.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3261FF7723944BFA00798993 /* SwiftSyntax */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3261FF7623944BFA00798993 /* XCRemoteSwiftPackageReference "swift-syntax" */;
+			productName = SwiftSyntax;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 32C399F6227A3092001DA20E /* Project object */;
 }
