@@ -4,11 +4,13 @@ import Contacts
 class ScrollableStackViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet private var label: UILabel!
+    @IBOutlet private var segment: UISegmentedControl!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
+        segment.accessibilityIdentifier = "segment"
     }
 
     //  MARK: - Actions

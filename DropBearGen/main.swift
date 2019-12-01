@@ -1,7 +1,7 @@
 import Foundation
 
 func execute(input: Path, output: Path) throws {
-    let coordinator = ExtractorCoordinator(extractors: [InterfaceBuilderExtractor()])
+    let coordinator = ExtractorCoordinator(extractors: [InterfaceBuilderExtractor(), SyntaxExtractor()])
     let identifiers = try coordinator.extract(from: input)
     let generator = Generator(identifiers: identifiers)
     try generator.generate(path: output)
