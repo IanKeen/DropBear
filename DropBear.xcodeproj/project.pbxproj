@@ -45,19 +45,6 @@
 		32E109BC238C97C4002F9286 /* Robot+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109BB238C97C4002F9286 /* Robot+Tap.swift */; };
 		32E109BE238C9928002F9286 /* Robot+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109BD238C9928002F9286 /* Robot+Text.swift */; };
 		32E109C2238C9BE6002F9286 /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109C1238C9BE6002F9286 /* AlertButton.swift */; };
-		B5AE80822285DBE10098CF95 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80812285DBE10098CF95 /* main.swift */; };
-		B5AE80982285DC210098CF95 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80862285DC210098CF95 /* Parser.swift */; };
-		B5AE80992285DC210098CF95 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80872285DC210098CF95 /* Generator.swift */; };
-		B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80892285DC210098CF95 /* PathKit.swift */; };
-		B5AE809B2285DC210098CF95 /* libxmlHTMLNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */; };
-		B5AE809C2285DC210098CF95 /* CSS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808C2285DC210098CF95 /* CSS.swift */; };
-		B5AE809D2285DC210098CF95 /* libxmlHTMLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808D2285DC210098CF95 /* libxmlHTMLDocument.swift */; };
-		B5AE809E2285DC210098CF95 /* libxmlParserOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE808E2285DC210098CF95 /* libxmlParserOption.swift */; };
-		B5AE809F2285DC210098CF95 /* Kanna.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80922285DC210098CF95 /* Kanna.swift */; };
-		B5AE80A02285DC210098CF95 /* Kanna+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80942285DC210098CF95 /* Kanna+Extensions.swift */; };
-		B5AE80A12285DC210098CF95 /* Array+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80952285DC210098CF95 /* Array+Extensions.swift */; };
-		B5AE80A22285DC210098CF95 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80962285DC210098CF95 /* String+Extensions.swift */; };
-		B5AE80A32285DC210098CF95 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80972285DC210098CF95 /* Dictionary+Extensions.swift */; };
 		B5AE80AB2285DE6E0098CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */; };
 		B5AE80B22285DE6E0098CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B12285DE6E0098CF95 /* Assets.xcassets */; };
 		B5AE80B52285DE6E0098CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */; };
@@ -118,15 +105,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		B5AE807D2285DBE10098CF95 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		B5AE81122285E2820098CF95 /* [MSTRD] Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,25 +157,21 @@
 		32C39B9A227BB38F001DA20E /* DropBear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropBear.swift; sourceTree = "<group>"; };
 		32C39BB1227BCCBB001DA20E /* UITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITest.swift; sourceTree = "<group>"; };
 		32C39BCC227D290D001DA20E /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
+		32C892A523982B450082DCE0 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		32C892A823982B450082DCE0 /* Generator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
+		32C892AA23982B450082DCE0 /* InterfaceBuilderExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceBuilderExtractor.swift; sourceTree = "<group>"; };
+		32C892AB23982B450082DCE0 /* SyntaxExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntaxExtractor.swift; sourceTree = "<group>"; };
+		32C892AC23982B450082DCE0 /* Extractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extractor.swift; sourceTree = "<group>"; };
+		32C892AD23982B450082DCE0 /* ExtractorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtractorCoordinator.swift; sourceTree = "<group>"; };
+		32C892AF23982B450082DCE0 /* Kanna+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Kanna+Extensions.swift"; sourceTree = "<group>"; };
+		32C892B023982B450082DCE0 /* Array+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
+		32C892B123982B450082DCE0 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		32C892B223982B450082DCE0 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		32C892B323982B450082DCE0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		32C892B523982B450082DCE0 /* PathKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathKit.swift; sourceTree = "<group>"; };
 		32E109BB238C97C4002F9286 /* Robot+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Robot+Tap.swift"; sourceTree = "<group>"; };
 		32E109BD238C9928002F9286 /* Robot+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Robot+Text.swift"; sourceTree = "<group>"; };
 		32E109C1238C9BE6002F9286 /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
-		B5AE807F2285DBE10098CF95 /* DropBearGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DropBearGen; sourceTree = BUILT_PRODUCTS_DIR; };
-		B5AE80812285DBE10098CF95 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B5AE80862285DC210098CF95 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		B5AE80872285DC210098CF95 /* Generator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Generator.swift; sourceTree = "<group>"; };
-		B5AE80892285DC210098CF95 /* PathKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathKit.swift; sourceTree = "<group>"; };
-		B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLNode.swift; sourceTree = "<group>"; };
-		B5AE808C2285DC210098CF95 /* CSS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSS.swift; sourceTree = "<group>"; };
-		B5AE808D2285DC210098CF95 /* libxmlHTMLDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlHTMLDocument.swift; sourceTree = "<group>"; };
-		B5AE808E2285DC210098CF95 /* libxmlParserOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libxmlParserOption.swift; sourceTree = "<group>"; };
-		B5AE80902285DC210098CF95 /* libxml2-kanna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libxml2-kanna.h"; sourceTree = "<group>"; };
-		B5AE80912285DC210098CF95 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		B5AE80922285DC210098CF95 /* Kanna.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kanna.swift; sourceTree = "<group>"; };
-		B5AE80942285DC210098CF95 /* Kanna+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Kanna+Extensions.swift"; sourceTree = "<group>"; };
-		B5AE80952285DC210098CF95 /* Array+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extensions.swift"; sourceTree = "<group>"; };
-		B5AE80962285DC210098CF95 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
-		B5AE80972285DC210098CF95 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		B5AE80A82285DE6E0098CF95 /* DropBearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5AE80B12285DE6E0098CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -244,13 +218,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C39A09227A3092001DA20E /* DropBear.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE807C2285DBE10098CF95 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +357,6 @@
 			children = (
 				32C399FF227A3092001DA20E /* DropBear.framework */,
 				32C39A08227A3092001DA20E /* DropBearTests.xctest */,
-				B5AE807F2285DBE10098CF95 /* DropBearGen */,
 				B5AE80A82285DE6E0098CF95 /* DropBearApp.app */,
 				B5AE80BB2285DE6F0098CF95 /* DropBearAppUITests.xctest */,
 				B5AE80F42285DF990098CF95 /* DropBearSupport.framework */,
@@ -433,58 +399,63 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		B5AE80802285DBE10098CF95 /* DropBearGen */ = {
+		32C892A623982B450082DCE0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B5AE80882285DC210098CF95 /* PathKit */,
-				B5AE808A2285DC210098CF95 /* Kanna */,
-				B5AE80932285DC210098CF95 /* Extensions */,
-				B5AE80872285DC210098CF95 /* Generator.swift */,
-				B5AE80862285DC210098CF95 /* Parser.swift */,
-				B5AE80812285DBE10098CF95 /* main.swift */,
+				32C892A723982B450082DCE0 /* DropBearGen */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		32C892A723982B450082DCE0 /* DropBearGen */ = {
+			isa = PBXGroup;
+			children = (
+				32C892AE23982B450082DCE0 /* Extensions */,
+				32C892A923982B450082DCE0 /* Extractor */,
+				32C892B423982B450082DCE0 /* PathKit */,
+				32C892A823982B450082DCE0 /* Generator.swift */,
+				32C892B323982B450082DCE0 /* main.swift */,
 			);
 			path = DropBearGen;
 			sourceTree = "<group>";
 		};
-		B5AE80882285DC210098CF95 /* PathKit */ = {
+		32C892A923982B450082DCE0 /* Extractor */ = {
 			isa = PBXGroup;
 			children = (
-				B5AE80892285DC210098CF95 /* PathKit.swift */,
+				32C892AA23982B450082DCE0 /* InterfaceBuilderExtractor.swift */,
+				32C892AB23982B450082DCE0 /* SyntaxExtractor.swift */,
+				32C892AC23982B450082DCE0 /* Extractor.swift */,
+				32C892AD23982B450082DCE0 /* ExtractorCoordinator.swift */,
+			);
+			path = Extractor;
+			sourceTree = "<group>";
+		};
+		32C892AE23982B450082DCE0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32C892AF23982B450082DCE0 /* Kanna+Extensions.swift */,
+				32C892B023982B450082DCE0 /* Array+Extensions.swift */,
+				32C892B123982B450082DCE0 /* String+Extensions.swift */,
+				32C892B223982B450082DCE0 /* Dictionary+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		32C892B423982B450082DCE0 /* PathKit */ = {
+			isa = PBXGroup;
+			children = (
+				32C892B523982B450082DCE0 /* PathKit.swift */,
 			);
 			path = PathKit;
 			sourceTree = "<group>";
 		};
-		B5AE808A2285DC210098CF95 /* Kanna */ = {
+		B5AE80802285DBE10098CF95 /* DropBearGen */ = {
 			isa = PBXGroup;
 			children = (
-				B5AE808F2285DC210098CF95 /* Modules */,
-				B5AE808B2285DC210098CF95 /* libxmlHTMLNode.swift */,
-				B5AE808C2285DC210098CF95 /* CSS.swift */,
-				B5AE808D2285DC210098CF95 /* libxmlHTMLDocument.swift */,
-				B5AE808E2285DC210098CF95 /* libxmlParserOption.swift */,
-				B5AE80922285DC210098CF95 /* Kanna.swift */,
+				32C892A523982B450082DCE0 /* Package.swift */,
+				32C892A623982B450082DCE0 /* Sources */,
 			);
-			path = Kanna;
-			sourceTree = "<group>";
-		};
-		B5AE808F2285DC210098CF95 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				B5AE80902285DC210098CF95 /* libxml2-kanna.h */,
-				B5AE80912285DC210098CF95 /* module.modulemap */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		B5AE80932285DC210098CF95 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				B5AE80942285DC210098CF95 /* Kanna+Extensions.swift */,
-				B5AE80952285DC210098CF95 /* Array+Extensions.swift */,
-				B5AE80962285DC210098CF95 /* String+Extensions.swift */,
-				B5AE80972285DC210098CF95 /* Dictionary+Extensions.swift */,
-			);
-			path = Extensions;
+			path = DropBearGen;
 			sourceTree = "<group>";
 		};
 		B5AE80A92285DE6E0098CF95 /* DropBearApp */ = {
@@ -655,23 +626,6 @@
 			productReference = 32C39A08227A3092001DA20E /* DropBearTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B5AE807E2285DBE10098CF95 /* DropBearGen */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B5AE80852285DBE10098CF95 /* Build configuration list for PBXNativeTarget "DropBearGen" */;
-			buildPhases = (
-				B5AE807B2285DBE10098CF95 /* Sources */,
-				B5AE807C2285DBE10098CF95 /* Frameworks */,
-				B5AE807D2285DBE10098CF95 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = DropBearGen;
-			productName = DropBearGen;
-			productReference = B5AE807F2285DBE10098CF95 /* DropBearGen */;
-			productType = "com.apple.product-type.tool";
-		};
 		B5AE80A72285DE6E0098CF95 /* DropBearApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5AE80C22285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearApp" */;
@@ -763,9 +717,6 @@
 					32C39A07227A3092001DA20E = {
 						CreatedOnToolsVersion = 10.2;
 					};
-					B5AE807E2285DBE10098CF95 = {
-						CreatedOnToolsVersion = 10.2.1;
-					};
 					B5AE80A72285DE6E0098CF95 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
@@ -791,6 +742,8 @@
 				Base,
 			);
 			mainGroup = 32C399F5227A3092001DA20E;
+			packageReferences = (
+			);
 			productRefGroup = 32C39A00227A3092001DA20E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -801,7 +754,6 @@
 				32C39A07227A3092001DA20E /* DropBearTests */,
 				B5AE80F32285DF990098CF95 /* DropBearSupport */,
 				B5AE80FB2285DF990098CF95 /* DropBearSupportTests */,
-				B5AE807E2285DBE10098CF95 /* DropBearGen */,
 			);
 		};
 /* End PBXProject section */
@@ -873,7 +825,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${BUILT_PRODUCTS_DIR}/../Debug/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
+			shellScript = "${SRCROOT}/DropBearGen/.build/x86_64-apple-macosx/release/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -924,26 +876,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				32C39A0E227A3092001DA20E /* DropBearTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B5AE807B2285DBE10098CF95 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B5AE80992285DC210098CF95 /* Generator.swift in Sources */,
-				B5AE809E2285DC210098CF95 /* libxmlParserOption.swift in Sources */,
-				B5AE809A2285DC210098CF95 /* PathKit.swift in Sources */,
-				B5AE80A12285DC210098CF95 /* Array+Extensions.swift in Sources */,
-				B5AE80A22285DC210098CF95 /* String+Extensions.swift in Sources */,
-				B5AE809D2285DC210098CF95 /* libxmlHTMLDocument.swift in Sources */,
-				B5AE809B2285DC210098CF95 /* libxmlHTMLNode.swift in Sources */,
-				B5AE80982285DC210098CF95 /* Parser.swift in Sources */,
-				B5AE80822285DBE10098CF95 /* main.swift in Sources */,
-				B5AE809C2285DC210098CF95 /* CSS.swift in Sources */,
-				B5AE80A32285DC210098CF95 /* Dictionary+Extensions.swift in Sources */,
-				B5AE809F2285DC210098CF95 /* Kanna.swift in Sources */,
-				B5AE80A02285DC210098CF95 /* Kanna+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,48 +1193,6 @@
 			};
 			name = Release;
 		};
-		B5AE80832285DBE10098CF95 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLYBQY25EM;
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/DropBearGen/Kanna/Modules";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		B5AE80842285DBE10098CF95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VLYBQY25EM;
-				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
-				OTHER_LDFLAGS = "-lxml2";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/DropBearGen/Kanna/Modules";
-				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
 		B5AE80C32285DE6F0098CF95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1504,15 +1394,6 @@
 			buildConfigurations = (
 				32C39A17227A3092001DA20E /* Debug */,
 				32C39A18227A3092001DA20E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B5AE80852285DBE10098CF95 /* Build configuration list for PBXNativeTarget "DropBearGen" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B5AE80832285DBE10098CF95 /* Debug */,
-				B5AE80842285DBE10098CF95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -6,11 +6,11 @@ public class Generator {
     }
 
     // MARK: - Private Properties
-    private let data: Parser.IdentifiersData
+    private let data: [String : [(identifier: String, rawValue: String)]] // Class, Sanitized ID, Raw ID
 
     // MARK: - Lifecycle
-    public init(identifierData: Parser.IdentifiersData) {
-        self.data = identifierData
+    public init(identifiers: [AccessibilityIdentifierPair]) {
+        self.data = identifiers.grouped(key: { $0.parent }, value: { ($0.identifier.sanitized(), $0.identifier) })
     }
 
     // MARK: - Public Functions

@@ -1,3 +1,5 @@
+import Kanna
+
 extension XMLElement {
     func parent(tagNames: [String]) -> XMLElement? {
         var current: XMLElement = self

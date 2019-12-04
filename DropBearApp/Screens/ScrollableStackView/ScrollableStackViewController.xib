@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollableStackViewController" customModule="DropBearApp" customModuleProvider="target">
             <connections>
                 <outlet property="label" destination="I4C-QY-Pp9" id="ulJ-x2-aZB"/>
+                <outlet property="segment" destination="cOn-0Q-2SO" id="mLG-e7-CRY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -25,7 +24,7 @@
                     <rect key="frame" x="10" y="54" width="394" height="808"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fVx-UV-u5I">
-                            <rect key="frame" x="0.0" y="0.0" width="394" height="1119"/>
+                            <rect key="frame" x="0.0" y="0.0" width="394" height="1122"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Contact Permissions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLE-Ta-sq8">
                                     <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
@@ -46,7 +45,6 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="80" id="pao-AP-MA2"/>
                                     </constraints>
-                                    <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -77,19 +75,18 @@
                                     </constraints>
                                 </view>
                                 <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cOn-0Q-2SO">
-                                    <rect key="frame" x="0.0" y="421" width="394" height="29"/>
-                                    <accessibility key="accessibilityConfiguration" identifier="segment"/>
+                                    <rect key="frame" x="0.0" y="421" width="394" height="32"/>
                                     <segments>
                                         <segment title="First"/>
                                         <segment title="Second"/>
                                     </segments>
                                 </segmentedControl>
                                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="YtG-ba-4w4">
-                                    <rect key="frame" x="-2" y="459" width="398" height="31"/>
+                                    <rect key="frame" x="-2" y="462" width="398" height="31"/>
                                     <accessibility key="accessibilityConfiguration" identifier="slider"/>
                                 </slider>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SUM-lJ-Pmt">
-                                    <rect key="frame" x="0.0" y="499" width="394" height="200"/>
+                                    <rect key="frame" x="0.0" y="502" width="394" height="200"/>
                                     <accessibility key="accessibilityConfiguration" identifier="button1"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="dWi-RE-GbV"/>
@@ -97,7 +94,7 @@
                                     <state key="normal" title="Button 1"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugY-r7-b4V">
-                                    <rect key="frame" x="0.0" y="709" width="394" height="200"/>
+                                    <rect key="frame" x="0.0" y="712" width="394" height="200"/>
                                     <accessibility key="accessibilityConfiguration" identifier="button2"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="DuR-wY-2Go"/>
@@ -105,7 +102,7 @@
                                     <state key="normal" title="Button 2"/>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJY-2W-7G8">
-                                    <rect key="frame" x="0.0" y="919" width="394" height="200"/>
+                                    <rect key="frame" x="0.0" y="922" width="394" height="200"/>
                                     <accessibility key="accessibilityConfiguration" identifier="button3"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="200" id="KUP-25-zAV"/>
@@ -135,6 +132,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MYs-3S-JPy" secondAttribute="trailing" constant="10" id="qug-hw-0Dh"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
         </view>
     </objects>
 </document>
