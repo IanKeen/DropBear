@@ -1,4 +1,5 @@
 import Foundation
+import Kanna
 
 private enum Constants {
     static let identifierXPath = "//accessibility/@identifier"
@@ -40,7 +41,7 @@ public final class InterfaceBuilderExtractor: Extractor {
     }
 
     // MARK: - Private Functions
-    private func customClassFor(element: XMLElement, in file: Path) -> String? {
+    private func customClassFor(element: Kanna.XMLElement, in file: Path) -> String? {
         switch file.extension {
         case Constants.storyboard?, Constants.xib?:
             guard let parent = element.parent(tagNames: Constants.containerTags) else { return nil }
