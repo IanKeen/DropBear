@@ -10,7 +10,7 @@ class Tests: UITest {
             .tap(.button)
             .alert(.contactsPermission)
             .tap(.ok)
-            .alert(.contactsPermission, required: true)
+            .alert(.contactsPermission, required: false)
             .tap(.ok)
             .assert(.label, .isEqual(to: "Allowed"))
     }

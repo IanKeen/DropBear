@@ -7,7 +7,7 @@ extension Alert {
     public static var contactsPermission: Alert<ContactAlertButton> {
         return .init(
             source: { _ in Springboard.application },
-            containingText: "would like to access your contacts"
+            assertion: .contains("would like to access your contacts")
         )
     }
 }

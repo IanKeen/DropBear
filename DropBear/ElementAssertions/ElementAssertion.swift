@@ -24,7 +24,7 @@ public func &&(lhs: ElementAssertion, rhs: ElementAssertion) -> ElementAssertion
     })
 }
 
-public func  ||(lhs: ElementAssertion, rhs: ElementAssertion) -> ElementAssertion {
+public func ||(lhs: ElementAssertion, rhs: ElementAssertion) -> ElementAssertion {
     return .init(name: "(\(lhs.name) || \(rhs.name))", assertion: { element in
         return lhs.assertion(element) || rhs.assertion(element)
     })

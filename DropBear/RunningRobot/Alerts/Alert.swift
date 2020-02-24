@@ -4,18 +4,18 @@ public struct Alert<Button: AlertButton> {
     public typealias ApplicationSource = (_ current: XCUIApplication) -> XCUIApplication
 
     public let source: ApplicationSource
-    public let text: String
+    public let assertion: ElementAssertion
 
-    public init(source: @escaping ApplicationSource, containingText text: String) {
+    public init(source: @escaping ApplicationSource, assertion: ElementAssertion) {
         self.source = source
-        self.text = text
+        self.assertion = assertion
     }
 }
 
 public protocol AlertType {
     associatedtype AlertButtonType: AlertButton
 
-    var text: String { get }
+    var assertion: ElementAssertion { get }
 }
 
 extension Alert: AlertType {

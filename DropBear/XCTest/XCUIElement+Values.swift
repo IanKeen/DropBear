@@ -8,7 +8,13 @@ extension XCUIElement {
         case .segmentedControl:
             potentials.append(contentsOf: buttons.allElementsBoundByIndex
                 .filter({ $0.isSelected })
-                .flatMap({ [$0.label, $0.value as Any] }))
+                .flatMap({ [$0.label, $0.value as Any] })
+            )
+
+        case .alert:
+            potentials.append(contentsOf: staticTexts.allElementsBoundByIndex
+                .flatMap({ [$0.label, $0.value as Any] })
+            )
             
         default:
             break

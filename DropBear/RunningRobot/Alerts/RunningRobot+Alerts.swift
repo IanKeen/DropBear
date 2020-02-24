@@ -7,7 +7,7 @@ extension RunningRobot {
         let dialog = alert.source(app).alerts.firstMatch
         let actualDialog: XCUIElement
         if required {
-            actualDialog = dialog.assert(.exists, .contains(alert.text), file: file, line: line)
+            actualDialog = dialog.assert(.exists, alert.assertion, file: file, line: line)
         } else {
             actualDialog = dialog.optional()
         }
