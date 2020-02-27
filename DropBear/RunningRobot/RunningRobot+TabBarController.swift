@@ -5,7 +5,7 @@ public protocol TabBarRobot: Robot { }
 public enum TabBarItem: RobotContext { }
 
 extension RunningRobot where Current: TabBarRobot {
-    public typealias TabItemRobot<Next: Robot> = RunningRobot<TabBarItem, Next, RunningRobot<Context, Current, Previous>>
+    public typealias TabItemRobot<Next: Robot> = RunningRobot<Configuration, Tree, TabBarItem, Next, RunningRobot<Configuration, Tree, Context, Current, Previous>>
 
     public enum TabItemAction { case tab(Int) }
 
@@ -24,7 +24,7 @@ extension RunningRobot where Current: TabBarRobot {
 
         app.tabBars.buttons.element(boundBy: index).tap()
 
-        return .init(current: .init(app: app), previous: self)
+        return .init(configuration: configuration, current: .init(app: app), previous: self)
     }
 }
 

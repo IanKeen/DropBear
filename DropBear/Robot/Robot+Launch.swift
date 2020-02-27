@@ -2,17 +2,17 @@ import XCTest
 
 extension Robot {
     /// Launch the application for testing passing the provided configuration
-    public static func launch<T: Codable>(using configuration: T) -> RunningRobot<None, Self, Root> {
+    public static func launch<T: Codable>(using configuration: T) -> RunningRobot<T, Base, None, Self, Root> {
         let app = XCUIApplication()
         app.launchForTesting(with: configuration)
-        return .init(current: .init(app: app), previous: .init(app: app))
+        return .init(configuration: configuration, current: .init(app: app), previous: .init(app: app))
     }
 
     /// Launch the application for testing
-    public static func launch() -> RunningRobot<None, Self, Root> {
+    public static func launch() -> RunningRobot<NoConfiguration, Base, None, Self, Root> {
         let app = XCUIApplication()
         app.launchForTesting()
-        return .init(current: .init(app: app), previous: .init(app: app))
+        return .init(configuration: .init(), current: .init(app: app), previous: .init(app: app))
     }
 }
 

@@ -3,12 +3,12 @@ import XCTest
 public enum NavigationController: RobotContext { }
 
 extension RunningRobot {
-    public typealias NavigationRobot<Next: Robot> = RunningRobot<NavigationController, Next, RunningRobot<Context, Current, Previous>>
+    public typealias NavigationRobot<Next: Robot> = RunningRobot<Configuration, Tree, NavigationController, Next, RunningRobot<Configuration, Tree, Context, Current, Previous>>
 
     public enum NavigationAction { case push }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: NavigationAction) -> NavigationRobot<T> {
-        return .init(current: .init(app: app), previous: self)
+        return .init(configuration: configuration, current: .init(app: app), previous: self)
     }
 }
 
