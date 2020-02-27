@@ -45,6 +45,7 @@
 		32E109BC238C97C4002F9286 /* Robot+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109BB238C97C4002F9286 /* Robot+Tap.swift */; };
 		32E109BE238C9928002F9286 /* Robot+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109BD238C9928002F9286 /* Robot+Text.swift */; };
 		32E109C2238C9BE6002F9286 /* AlertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E109C1238C9BE6002F9286 /* AlertButton.swift */; };
+		32F965F3240743D800353112 /* RunningRobot+Modal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F965F2240743D800353112 /* RunningRobot+Modal.swift */; };
 		B5AE80AB2285DE6E0098CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */; };
 		B5AE80B22285DE6E0098CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B12285DE6E0098CF95 /* Assets.xcassets */; };
 		B5AE80B52285DE6E0098CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */; };
@@ -172,6 +173,7 @@
 		32E109BB238C97C4002F9286 /* Robot+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Robot+Tap.swift"; sourceTree = "<group>"; };
 		32E109BD238C9928002F9286 /* Robot+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Robot+Text.swift"; sourceTree = "<group>"; };
 		32E109C1238C9BE6002F9286 /* AlertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertButton.swift; sourceTree = "<group>"; };
+		32F965F2240743D800353112 /* RunningRobot+Modal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+Modal.swift"; sourceTree = "<group>"; };
 		B5AE80A82285DE6E0098CF95 /* DropBearApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBearApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B5AE80B12285DE6E0098CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				32701CD22391AF49004283B5 /* RunningRobot+Root.swift */,
 				32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */,
 				32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */,
+				32F965F2240743D800353112 /* RunningRobot+Modal.swift */,
 			);
 			path = RunningRobot;
 			sourceTree = "<group>";
@@ -868,6 +871,7 @@
 				32B7BE2C22CECEE900931646 /* CellContainerRobot.swift in Sources */,
 				32701CD32391AF49004283B5 /* RunningRobot+Root.swift in Sources */,
 				32B7BE3022CECEE900931646 /* ElementAssertion+Contains.swift in Sources */,
+				32F965F3240743D800353112 /* RunningRobot+Modal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
