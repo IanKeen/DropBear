@@ -3,9 +3,19 @@ import XCTest
 public protocol CellContainerRobot: Robot { }
 
 extension RunningRobot where Current: CellContainerRobot {
-    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, file: StaticString = #file, line: UInt = #line) -> NavigationRobot<T> {
+    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: RootAction, file: StaticString = #file, line: UInt = #line) -> RootRobot<T> {
         _ = current.tap(cell: index, file: file, line: line)
-        return nextRobot(action: .push)
+        return nextRobot(action: action)
+    }
+
+    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: NavigationAction, file: StaticString = #file, line: UInt = #line) -> NavigationRobot<T> {
+        _ = current.tap(cell: index, file: file, line: line)
+        return nextRobot(action: action)
+    }
+
+    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: ModalAction, file: StaticString = #file, line: UInt = #line) -> ModalRobot<T> {
+        _ = current.tap(cell: index, file: file, line: line)
+        return nextRobot(action: action)
     }
 }
 
