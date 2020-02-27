@@ -5,7 +5,7 @@ public protocol TabBarRobot: Robot { }
 public enum TabBarItem: RobotContext { }
 
 extension RunningRobot where Current: TabBarRobot {
-    public typealias TabItemRobot<Next: Robot> = RunningRobot<TabBarItem, Configuration, Next, RunningRobot<Context, Configuration, Current, Previous>>
+    public typealias TabItemRobot<Next: Robot> = RunningRobot<Configuration, Tree, TabBarItem, Next, RunningRobot<Configuration, Tree, Context, Current, Previous>>
 
     public enum TabItemAction { case tab(Int) }
 

@@ -3,7 +3,7 @@ import XCTest
 public enum NavigationController: RobotContext { }
 
 extension RunningRobot {
-    public typealias NavigationRobot<Next: Robot> = RunningRobot<NavigationController, Configuration, Next, RunningRobot<Context, Configuration, Current, Previous>>
+    public typealias NavigationRobot<Next: Robot> = RunningRobot<Configuration, Tree, NavigationController, Next, RunningRobot<Configuration, Tree, Context, Current, Previous>>
 
     public enum NavigationAction { case push }
 

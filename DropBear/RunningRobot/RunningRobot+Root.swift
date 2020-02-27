@@ -1,7 +1,7 @@
 public enum None: RobotContext { }
 
 extension RunningRobot {
-    public typealias RootRobot<Current: Robot> = RunningRobot<None, Configuration, Current, Root>
+    public typealias RootRobot<Current: Robot> = RunningRobot<Configuration, Tree, None, Current, Root>
     
     public enum RootAction { case root }
 

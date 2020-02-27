@@ -1,7 +1,7 @@
 import XCTest
 
 extension RunningRobot {
-    public typealias ActiveAlertRobot<T: AlertButton> = AlertRobot<Alert<T>, RunningRobot<Context, Configuration, Current, Previous>>
+    public typealias ActiveAlertRobot<T: AlertButton> = AlertRobot<Alert<T>, RunningRobot<Configuration, Tree, Context, Current, Previous>>
 
     public func alert<T: AlertButton>(_ alert: Alert<T>, required: Bool = true, file: StaticString = #file, line: UInt = #line) -> ActiveAlertRobot<T> {
         let dialog = alert.source(app).alerts.firstMatch
