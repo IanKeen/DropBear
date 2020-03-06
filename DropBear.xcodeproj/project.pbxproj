@@ -12,6 +12,8 @@
 		32701CD52391AF70004283B5 /* RunningRobot+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */; };
 		32701CD72391D38F004283B5 /* RunningRobot+TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */; };
 		32701CD923920115004283B5 /* ContextElement+NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32701CD823920115004283B5 /* ContextElement+NavigationController.swift */; };
+		32AC7005240AFD2D00672D86 /* ContextElement+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC7004240AFD2D00672D86 /* ContextElement+Assert.swift */; };
+		32AC700A240B003F00672D86 /* ContextElement+Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AC7009240B003F00672D86 /* ContextElement+Tap.swift */; };
 		32B7BE1D22CECEE900931646 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFA22CECEE800931646 /* Alert.swift */; };
 		32B7BE1E22CECEE900931646 /* RunningRobot+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFB22CECEE800931646 /* RunningRobot+Alerts.swift */; };
 		32B7BE1F22CECEE900931646 /* AlertRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BDFC22CECEE800931646 /* AlertRobot.swift */; };
@@ -125,6 +127,8 @@
 		32701CD42391AF70004283B5 /* RunningRobot+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+NavigationController.swift"; sourceTree = "<group>"; };
 		32701CD62391D38F004283B5 /* RunningRobot+TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RunningRobot+TabBarController.swift"; sourceTree = "<group>"; };
 		32701CD823920115004283B5 /* ContextElement+NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContextElement+NavigationController.swift"; sourceTree = "<group>"; };
+		32AC7004240AFD2D00672D86 /* ContextElement+Assert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContextElement+Assert.swift"; sourceTree = "<group>"; };
+		32AC7009240B003F00672D86 /* ContextElement+Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContextElement+Tap.swift"; sourceTree = "<group>"; };
 		32B7BDFA22CECEE800931646 /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		32B7BDFB22CECEE800931646 /* RunningRobot+Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RunningRobot+Alerts.swift"; sourceTree = "<group>"; };
 		32B7BDFC22CECEE800931646 /* AlertRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertRobot.swift; sourceTree = "<group>"; };
@@ -274,6 +278,8 @@
 			children = (
 				3211702C238C81DC007EB38C /* ContextElement.swift */,
 				32701CD823920115004283B5 /* ContextElement+NavigationController.swift */,
+				32AC7004240AFD2D00672D86 /* ContextElement+Assert.swift */,
+				32AC7009240B003F00672D86 /* ContextElement+Tap.swift */,
 			);
 			path = ContextElement;
 			sourceTree = "<group>";
@@ -860,9 +866,11 @@
 				32B7BE2522CECEE900931646 /* XCUIElement+Optional.swift in Sources */,
 				32C39BCD227D290D001DA20E /* Springboard.swift in Sources */,
 				32B7BE2422CECEE900931646 /* XCUIApplication+Configuration.swift in Sources */,
+				32AC700A240B003F00672D86 /* ContextElement+Tap.swift in Sources */,
 				32B7BE2922CECEE900931646 /* XCUIApplication+Element.swift in Sources */,
 				32E109C2238C9BE6002F9286 /* AlertButton.swift in Sources */,
 				32B7BE1F22CECEE900931646 /* AlertRobot.swift in Sources */,
+				32AC7005240AFD2D00672D86 /* ContextElement+Assert.swift in Sources */,
 				32B7BE2E22CECEE900931646 /* ElementAssertion+Equal.swift in Sources */,
 				32B7BE3422CECEE900931646 /* Robot+Assert.swift in Sources */,
 				32B7BE2822CECEE900931646 /* XCUIElement+ClearText.swift in Sources */,

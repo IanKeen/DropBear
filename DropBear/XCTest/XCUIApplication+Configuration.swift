@@ -10,6 +10,12 @@ extension XCUIApplication {
         launchForTesting()
     }
     public func useConfiguration<T: Codable>(_ configuration: T) {
-        launchEnvironment["UITestConfiguration"] = String(data: try! JSONEncoder().encode(configuration), encoding: .utf8)!
+        let temporaryDirectoryURL = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent(UUID().uuidString)
+        try! FileManager.default.createDirectory(at: temporaryDirectoryURL, withIntermediateDirectories: true, attributes: nil)
+
+        let configurationURL = temporaryDirectoryURL.appendingPathComponent("configuration.json", isDirectory: false)
+        try! JSONEncoder().encode(configuration).write(to: configurationURL, options: .atomic)
+
+        launchEnvironment["UITestingFolder"] = temporaryDirectoryURL.absoluteString
     }
 }

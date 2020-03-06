@@ -1,11 +1,11 @@
-public enum None: RobotContext { }
+public struct None: RobotContext { }
 
 extension RunningRobot {
-    public typealias RootRobot<Current: Robot> = RunningRobot<Configuration, Tree, None, Current, Root>
+    public typealias RootRobot<Current: Robot> = RunningRobot<Configuration, None, Current, Root>
     
     public enum RootAction { case root }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: RootAction) -> RootRobot<T> {
-        return RootRobot(configuration: configuration, current: .init(app: app), previous: .init(app: app))
+        return RootRobot(configuration: configuration, context: .init(), current: .init(app: app), previous: .init(app: app))
     }
 }
