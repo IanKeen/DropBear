@@ -1,24 +1,30 @@
-public protocol ModalRobotTree: RobotTree {
-    associatedtype Tree: RobotTree
-    associatedtype Context: RobotContext
-    associatedtype Current: Robot
-    associatedtype Previous: Robot
+public protocol ModalContext: RobotContext {
+    associatedtype PresenterConfiguration
+    associatedtype PresenterContext: RobotContext
+    associatedtype PresenterCurrent: Robot
+    associatedtype PresenterPrevious: Robot
+
+    typealias Presenter = RunningRobot<PresenterConfiguration, PresenterContext, PresenterCurrent, PresenterPrevious>
+
+    var presenter: Presenter { get }
 }
 
-public enum Modal<Tree: RobotTree, Context: RobotContext, Current: Robot, Previous: Robot>: ModalRobotTree { }
+public struct Modal<PresenterConfiguration, PresenterContext: RobotContext, PresenterCurrent: Robot, PresenterPrevious: Robot>: ModalContext {
+    public let presenter: Presenter
+}
 
 extension RunningRobot {
-    public typealias ModalRobot<Next: Robot> = RunningRobot<Configuration, Modal<Tree, Context, Current, Previous>, None, Next, Root>
+    public typealias ModalRobot<Next: Robot> = RunningRobot<Configuration, Modal<Configuration, Context, Current, Previous>, Next, Root>
 
     public enum ModalAction { case modal }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: ModalAction) -> ModalRobot<T> {
-        return .init(configuration: configuration, current: .init(app: app), previous: .init(app: app))
+        return .init(configuration: configuration, context: .init(presenter: self), current: .init(app: app), previous: .init(app: app))
     }
 }
 
-extension RunningRobot where Tree: ModalRobotTree {
-    public func dismissModal(file: StaticString = #file, line: UInt = #line) -> RunningRobot<Configuration, Tree.Tree, Tree.Context, Tree.Current, Tree.Previous> {
-        return .init(configuration: configuration, current: .init(app: app), previous: .init(app: app))
+extension RunningRobot where Context: ModalContext {
+    public func dismissModal() -> Context.Presenter {
+        return context.presenter
     }
 }

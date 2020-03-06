@@ -11,10 +11,7 @@ public enum ElementSet<
 {
     public typealias RawValue = String
 
-    case a(A)
-    case b(B)
-    case c(C)
-    case d(D)
+    case a(A), b(B), c(C), d(D)
 
     public init?(rawValue: String) {
         let value = A(rawValue: rawValue).flatMap(ElementSet.a)
