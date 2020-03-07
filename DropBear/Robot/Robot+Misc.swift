@@ -11,7 +11,7 @@ extension Robot where Self: Actionable {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .adjust(toNormalizedSliderPosition: position)
 
         return self

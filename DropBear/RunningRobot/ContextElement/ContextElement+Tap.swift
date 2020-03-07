@@ -31,7 +31,7 @@ extension RunningRobot {
         file: StaticString = #file, line: UInt = #line
         ) -> Self
     {
-        element.element(app).assert(.exists, file: file, line: line).tap()
+        element.element(source).assert(.exists, file: file, line: line).tap()
         return self
     }
 }

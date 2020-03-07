@@ -34,7 +34,7 @@ extension Robot where Self: Assertable {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .assert(assertions, file: file, line: line)
 
         return self

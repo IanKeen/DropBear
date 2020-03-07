@@ -4,9 +4,9 @@ import XCTest
 public protocol Robot {
     associatedtype Element: RawRepresentable = String where Element.RawValue == String
 
-    var app: XCUIApplication { get }
+    var source: XCUIElement { get }
 
-    init(app: XCUIApplication)
+    init(source: XCUIElement)
 }
 
 extension Robot {
@@ -37,8 +37,8 @@ public class RestrictedRobotBase {
 }
 
 extension RawRepresentable where RawValue == String {
-    public func element(in application: XCUIApplication, hierarchy: [XCUIElement.ElementType], file: StaticString, line: UInt) -> XCUIElement {
-        return application.element(identifier: rawValue, in: hierarchy, file: file, line: line)
+    public func element(in source: XCUIElement, hierarchy: [XCUIElement.ElementType], file: StaticString, line: UInt) -> XCUIElement {
+        return source.element(identifier: rawValue, in: hierarchy, file: file, line: line)
     }
 }
 
@@ -46,7 +46,7 @@ extension String: RawRepresentable {
     public init?(rawValue: String) { self = rawValue }
     public var rawValue: String { return self }
 
-    public func element(in application: XCUIApplication, hierarchy: [XCUIElement.ElementType], file: StaticString, line: UInt) -> XCUIElement {
-        return application.element(identifier: self, in: hierarchy, file: file, line: line)
+    public func element(in source: XCUIElement, hierarchy: [XCUIElement.ElementType], file: StaticString, line: UInt) -> XCUIElement {
+        return source.element(identifier: self, in: hierarchy, file: file, line: line)
     }
 }

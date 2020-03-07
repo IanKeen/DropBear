@@ -9,7 +9,7 @@ extension Robot where Self: Actionable {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .tap(withNumberOfTaps: numberOfTaps, numberOfTouches: numberOfTouches)
 
         return self
@@ -24,7 +24,7 @@ extension Robot where Self: Actionable {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .buttons.element(boundBy: index)
             .tap(withNumberOfTaps: numberOfTaps, numberOfTouches: numberOfTouches)
 
@@ -39,7 +39,7 @@ extension Robot where Self: Actionable {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .press(forDuration: duration)
 
         return self
@@ -54,9 +54,9 @@ extension Robot where Self: Actionable {
         file: StaticString = #file, line: UInt = #line
         ) -> Self
     {
-        let source = element.element(in: app, hierarchy: hierarchy, file: file, line: line)
-        let destination = other.element(in: app, hierarchy: hierarchy, file: file, line: line)
-        source.press(forDuration: duration, thenDragTo: destination)
+        let element = element.element(in: source, hierarchy: hierarchy, file: file, line: line)
+        let destination = other.element(in: source, hierarchy: hierarchy, file: file, line: line)
+        element.press(forDuration: duration, thenDragTo: destination)
 
         return self
     }

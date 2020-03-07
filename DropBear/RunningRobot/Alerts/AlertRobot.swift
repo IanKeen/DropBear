@@ -9,9 +9,9 @@ public class AlertRobot<Alert: AlertType, Previous: Robot>: RestrictedRobotBase,
         self.previous = previous
         self.alert = alert
         self.required = required
-        super.init(app: app)
+        super.init(source: source)
     }
-    public required init(app: XCUIApplication) {
+    public required init(source: XCUIElement) {
         fatalError("This Robot can not be created this way")
     }
 }

@@ -19,7 +19,7 @@ extension RunningRobot {
     public enum ModalAction { case modal }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: ModalAction) -> ModalRobot<T> {
-        return .init(configuration: configuration, context: .init(presenter: self), current: .init(app: app), previous: .init(app: app))
+        return .init(configuration: configuration, context: .init(presenter: self), current: .init(source: source), previous: .init(source: source))
     }
 }
 

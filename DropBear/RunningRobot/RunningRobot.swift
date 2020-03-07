@@ -7,7 +7,7 @@ public struct NoConfiguration { }
 public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, Previous: Robot>: Robot {
     public typealias Element = Current.Element
 
-    public var app: XCUIApplication { return current.app }
+    public var source: XCUIElement { return current.source }
 
     public let configuration: Configuration
     public let context: Context
@@ -21,7 +21,7 @@ public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, 
         self.previous = previous
     }
 
-    public required convenience init(app: XCUIApplication) {
+    public required convenience init(source: XCUIElement) {
         fatalError("This Robot can not be created this way")
     }
 }

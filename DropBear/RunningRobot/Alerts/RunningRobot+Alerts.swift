@@ -4,7 +4,7 @@ extension RunningRobot {
     public typealias ActiveAlertRobot<T: AlertButton> = AlertRobot<Alert<T>, RunningRobot<Configuration, Context, Current, Previous>>
 
     public func alert<T: AlertButton>(_ alert: Alert<T>, required: Bool = true, file: StaticString = #file, line: UInt = #line) -> ActiveAlertRobot<T> {
-        let dialog = alert.source(app).alerts.firstMatch
+        let dialog = alert.source(source).alerts.firstMatch
         let actualDialog: XCUIElement
         if required {
             actualDialog = dialog.assert(.exists, alert.assertion, file: file, line: line)
@@ -12,7 +12,7 @@ extension RunningRobot {
             actualDialog = dialog.optional()
         }
 
-        return .init(previous: self, alert: actualDialog, required: required, app: app)
+        return .init(previous: self, alert: actualDialog, required: required, source: source)
     }
 }
 

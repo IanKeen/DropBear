@@ -25,19 +25,19 @@ extension RunningRobot where Current: TabBarRobot {
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<T> {
         guard case .tab(let index) = action else { fatalError("Something has gone horribly wrong") }
 
-        let tabBar = app.tabBars.firstMatch
+        let tabBar = source.tabBars.firstMatch
 
         if tabBar.buttons.count == 0 {
             XCTFail("Unable to find any tab buttons", file: file, line: line)
         }
 
-        if index < 0 || index >= app.tabBars.buttons.count {
-            XCTFail("Invalid tab index. Value should be between 0 and \(app.tabBars.buttons.count - 1)", file: file, line: line)
+        if index < 0 || index >= source.tabBars.buttons.count {
+            XCTFail("Invalid tab index. Value should be between 0 and \(source.tabBars.buttons.count - 1)", file: file, line: line)
         }
 
-        app.tabBars.buttons.element(boundBy: index).tap()
+        source.tabBars.buttons.element(boundBy: index).tap()
 
-        return .init(configuration: configuration, context: .init(tabBar: self), current: .init(app: app), previous: self)
+        return .init(configuration: configuration, context: .init(tabBar: self), current: .init(source: source), previous: self)
     }
 }
 

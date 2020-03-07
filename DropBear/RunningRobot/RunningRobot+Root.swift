@@ -6,6 +6,6 @@ extension RunningRobot {
     public enum RootAction { case root }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: RootAction) -> RootRobot<T> {
-        return RootRobot(configuration: configuration, context: .init(), current: .init(app: app), previous: .init(app: app))
+        return RootRobot(configuration: configuration, context: .init(), current: .init(source: source), previous: .init(source: source))
     }
 }

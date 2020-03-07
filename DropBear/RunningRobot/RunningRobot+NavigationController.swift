@@ -20,7 +20,7 @@ extension RunningRobot {
     public enum NavigationAction { case push }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: NavigationAction) -> NavigationRobot<T> {
-        return .init(configuration: configuration, context: .init(inner: context), current: .init(app: app), previous: self)
+        return .init(configuration: configuration, context: .init(inner: context), current: .init(source: source), previous: self)
     }
 }
 
@@ -30,17 +30,17 @@ extension RunningRobot { //} where Context: TabBarItemContext {
     public enum FullScreenNavigationAction { case pushFullScreen }
 
     public func nextRobot<T: Robot>(_: T.Type = T.self, action: FullScreenNavigationAction) -> FullScreenNavigationRobot<T> {
-        return .init(configuration: configuration, context: .init(inner: .init()), current: .init(app: app), previous: self)
+        return .init(configuration: configuration, context: .init(inner: .init()), current: .init(source: source), previous: self)
     }
 }
 
 extension RunningRobot where Context: NavigationControllerContext {
     public func popNavigationController(file: StaticString = #file, line: UInt = #line) -> Previous {
-        if app.navigationBars.buttons.count == 0 {
+        if source.navigationBars.buttons.count == 0 {
             XCTFail("Unable to find a navigation button", file: file, line: line)
         }
 
-        app.navigationBars.buttons.element(boundBy: 0).tap()
+        source.navigationBars.buttons.element(boundBy: 0).tap()
 
         return previous
     }

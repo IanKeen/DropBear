@@ -10,7 +10,7 @@ extension Robot where Self: Actionable {
         file: StaticString = #file, line: UInt = #line
         ) -> Self
     {
-        let element = element.element(in: app, hierarchy: hierarchy, file: file, line: line)
+        let element = element.element(in: source, hierarchy: hierarchy, file: file, line: line)
         if tapFirst { element.tap() }
         if clearFirst { element.clearText(file: file, line: line) }
         element.typeText(text)
@@ -25,7 +25,7 @@ extension Robot where Self: Actionable {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .clearText(file: file, line: line)
 
         return self
