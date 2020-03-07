@@ -23,7 +23,7 @@
 		32B7BE2622CECEE900931646 /* XCUIElement+Assert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0722CECEE800931646 /* XCUIElement+Assert.swift */; };
 		32B7BE2722CECEE900931646 /* XCUIElement+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0822CECEE800931646 /* XCUIElement+Values.swift */; };
 		32B7BE2822CECEE900931646 /* XCUIElement+ClearText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0922CECEE800931646 /* XCUIElement+ClearText.swift */; };
-		32B7BE2922CECEE900931646 /* XCUIApplication+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0A22CECEE800931646 /* XCUIApplication+Element.swift */; };
+		32B7BE2922CECEE900931646 /* XCUIElement+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0A22CECEE800931646 /* XCUIElement+Element.swift */; };
 		32B7BE2B22CECEE900931646 /* RunningRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0D22CECEE800931646 /* RunningRobot.swift */; };
 		32B7BE2C22CECEE900931646 /* CellContainerRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE0F22CECEE900931646 /* CellContainerRobot.swift */; };
 		32B7BE2E22CECEE900931646 /* ElementAssertion+Equal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1222CECEE900931646 /* ElementAssertion+Equal.swift */; };
@@ -37,6 +37,7 @@
 		32B7BE3622CECEE900931646 /* Robot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1B22CECEE900931646 /* Robot.swift */; };
 		32B7BE3722CECEE900931646 /* Robot+Misc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE1C22CECEE900931646 /* Robot+Misc.swift */; };
 		32B7BE3E22CECF5400931646 /* ElementSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B7BE3A22CECF5300931646 /* ElementSet.swift */; };
+		32C332FF24142FC200033009 /* CellRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C332FE24142FC100033009 /* CellRobot.swift */; };
 		32C39A09227A3092001DA20E /* DropBear.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C399FF227A3092001DA20E /* DropBear.framework */; };
 		32C39A0E227A3092001DA20E /* DropBearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C39A0D227A3092001DA20E /* DropBearTests.swift */; };
 		32C39A10227A3092001DA20E /* DropBear.h in Headers */ = {isa = PBXBuildFile; fileRef = 32C39A02227A3092001DA20E /* DropBear.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -138,7 +139,7 @@
 		32B7BE0722CECEE800931646 /* XCUIElement+Assert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Assert.swift"; sourceTree = "<group>"; };
 		32B7BE0822CECEE800931646 /* XCUIElement+Values.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Values.swift"; sourceTree = "<group>"; };
 		32B7BE0922CECEE800931646 /* XCUIElement+ClearText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+ClearText.swift"; sourceTree = "<group>"; };
-		32B7BE0A22CECEE800931646 /* XCUIApplication+Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIApplication+Element.swift"; sourceTree = "<group>"; };
+		32B7BE0A22CECEE800931646 /* XCUIElement+Element.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCUIElement+Element.swift"; sourceTree = "<group>"; };
 		32B7BE0D22CECEE800931646 /* RunningRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunningRobot.swift; sourceTree = "<group>"; };
 		32B7BE0F22CECEE900931646 /* CellContainerRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContainerRobot.swift; sourceTree = "<group>"; };
 		32B7BE1222CECEE900931646 /* ElementAssertion+Equal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ElementAssertion+Equal.swift"; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		32B7BE1B22CECEE900931646 /* Robot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Robot.swift; sourceTree = "<group>"; };
 		32B7BE1C22CECEE900931646 /* Robot+Misc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Robot+Misc.swift"; sourceTree = "<group>"; };
 		32B7BE3A22CECF5300931646 /* ElementSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementSet.swift; sourceTree = "<group>"; };
+		32C332FE24142FC100033009 /* CellRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellRobot.swift; sourceTree = "<group>"; };
 		32C399FF227A3092001DA20E /* DropBear.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropBear.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32C39A02227A3092001DA20E /* DropBear.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropBear.h; sourceTree = "<group>"; };
 		32C39A03227A3092001DA20E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -288,7 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				32B7BE0522CECEE800931646 /* XCUIApplication+Configuration.swift */,
-				32B7BE0A22CECEE800931646 /* XCUIApplication+Element.swift */,
+				32B7BE0A22CECEE800931646 /* XCUIElement+Element.swift */,
 				32B7BE0722CECEE800931646 /* XCUIElement+Assert.swift */,
 				32B7BE0922CECEE800931646 /* XCUIElement+ClearText.swift */,
 				32B7BE0622CECEE800931646 /* XCUIElement+Optional.swift */,
@@ -300,6 +302,7 @@
 		32B7BE0B22CECEE800931646 /* RunningRobot */ = {
 			isa = PBXGroup;
 			children = (
+				32B7BE0E22CECEE900931646 /* Cells */,
 				32B7BE0022CECEE800931646 /* ContextElement */,
 				32B7BDF922CECEE800931646 /* Alerts */,
 				32B7BE0D22CECEE800931646 /* RunningRobot.swift */,
@@ -311,12 +314,13 @@
 			path = RunningRobot;
 			sourceTree = "<group>";
 		};
-		32B7BE0E22CECEE900931646 /* Traits */ = {
+		32B7BE0E22CECEE900931646 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				32B7BE0F22CECEE900931646 /* CellContainerRobot.swift */,
+				32C332FE24142FC100033009 /* CellRobot.swift */,
 			);
-			path = Traits;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		32B7BE1122CECEE900931646 /* ElementAssertions */ = {
@@ -380,7 +384,6 @@
 				32B7BE1122CECEE900931646 /* ElementAssertions */,
 				32B7BE1822CECEE900931646 /* Robot */,
 				32B7BE0B22CECEE800931646 /* RunningRobot */,
-				32B7BE0E22CECEE900931646 /* Traits */,
 				32B7BE0422CECEE800931646 /* XCTest */,
 				32C39A02227A3092001DA20E /* DropBear.h */,
 				32C39B9A227BB38F001DA20E /* DropBear.swift */,
@@ -857,6 +860,7 @@
 				32B7BE3322CECEE900931646 /* ElementAssertion.swift in Sources */,
 				32B7BE2F22CECEE900931646 /* ElementAssertion+Empty.swift in Sources */,
 				32B7BE1D22CECEE900931646 /* Alert.swift in Sources */,
+				32C332FF24142FC200033009 /* CellRobot.swift in Sources */,
 				32B7BE3122CECEE900931646 /* ElementAssertion+Enabled.swift in Sources */,
 				3211702D238C81DC007EB38C /* ContextElement.swift in Sources */,
 				32B7BE3722CECEE900931646 /* Robot+Misc.swift in Sources */,
@@ -867,7 +871,7 @@
 				32C39BCD227D290D001DA20E /* Springboard.swift in Sources */,
 				32B7BE2422CECEE900931646 /* XCUIApplication+Configuration.swift in Sources */,
 				32AC700A240B003F00672D86 /* ContextElement+Tap.swift in Sources */,
-				32B7BE2922CECEE900931646 /* XCUIApplication+Element.swift in Sources */,
+				32B7BE2922CECEE900931646 /* XCUIElement+Element.swift in Sources */,
 				32E109C2238C9BE6002F9286 /* AlertButton.swift in Sources */,
 				32B7BE1F22CECEE900931646 /* AlertRobot.swift in Sources */,
 				32AC7005240AFD2D00672D86 /* ContextElement+Assert.swift in Sources */,
