@@ -2,7 +2,7 @@ import XCTest
 
 /// A `Robot` represents the actions that can be performed on a given screen
 public protocol Robot {
-    associatedtype Element: RawRepresentable = String where Element.RawValue == String
+    associatedtype Element: RawRepresentable = StringElement where Element.RawValue == String
 
     var source: XCUIElement { get }
 
@@ -36,17 +36,14 @@ public class RestrictedRobotBase {
     }
 }
 
+public struct StringElement: RawRepresentable, ExpressibleByStringLiteral {
+    public let rawValue: String
+    public init(rawValue: String) { self.rawValue = rawValue }
+    public init(stringLiteral value: String) { self.rawValue = value }
+}
+
 extension RawRepresentable where RawValue == String {
     public func element(in source: XCUIElement, hierarchy: [XCUIElement.ElementType], file: StaticString, line: UInt) -> XCUIElement {
         return source.element(identifier: rawValue, in: hierarchy, file: file, line: line)
-    }
-}
-
-extension String: RawRepresentable {
-    public init?(rawValue: String) { self = rawValue }
-    public var rawValue: String { return self }
-
-    public func element(in source: XCUIElement, hierarchy: [XCUIElement.ElementType], file: StaticString, line: UInt) -> XCUIElement {
-        return source.element(identifier: self, in: hierarchy, file: file, line: line)
     }
 }
