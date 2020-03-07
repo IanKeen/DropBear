@@ -1,6 +1,8 @@
 import XCTest
 
-extension Robot {
+public protocol Assertable { }
+
+extension Robot where Self: Assertable {
     @discardableResult
     public func assert(
         _ element: Element,

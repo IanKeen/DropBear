@@ -20,11 +20,19 @@ extension Robot {
 
 /// A pre-made base class you can use to avoid some `Robot` boilerplate code
 /// It does not conform to `Robot` so consumers are still required to do so
-open class RobotBase {
-    public let app: XCUIApplication
+open class RobotBase: Launchable, Assertable, Actionable {
+    public let source: XCUIElement
 
-    public required init(app: XCUIApplication) {
-        self.app = app
+    public required init(source: XCUIElement) {
+        self.source = source
+    }
+}
+
+public class RestrictedRobotBase {
+    public let source: XCUIElement
+
+    public required init(source: XCUIElement) {
+        self.source = source
     }
 }
 

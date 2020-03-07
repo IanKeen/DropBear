@@ -1,6 +1,8 @@
 import XCTest
 
-extension Robot {
+public protocol Launchable { }
+
+extension Robot where Self: Launchable {
     /// Launch the application for testing passing the provided configuration
     public static func launch<T: Codable>(using configuration: T) -> RunningRobot<T, None, Self, Root> {
         let app = XCUIApplication()

@@ -25,3 +25,6 @@ public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, 
         fatalError("This Robot can not be created this way")
     }
 }
+
+extension RunningRobot: Assertable where Current: Assertable { }
+extension RunningRobot: Actionable where Current: Actionable { }

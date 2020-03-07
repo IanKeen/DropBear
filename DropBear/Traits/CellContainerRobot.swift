@@ -2,7 +2,9 @@ import XCTest
 
 public protocol CellContainerRobot: Robot { }
 
-extension RunningRobot: CellContainerRobot where Current: CellContainerRobot {
+extension RunningRobot: CellContainerRobot where Current: CellContainerRobot { }
+
+extension RunningRobot where Current: CellContainerRobot {
     public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: RootAction, file: StaticString = #file, line: UInt = #line) -> RootRobot<T> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
