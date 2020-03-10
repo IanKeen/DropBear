@@ -2,6 +2,8 @@ import XCTest
 
 public protocol RobotContext { }
 
+public struct NoContext: RobotContext { }
+
 public struct NoConfiguration { }
 
 public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, Previous: Robot>: Robot {

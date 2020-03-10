@@ -1,6 +1,6 @@
 import XCTest
 
-extension ContextElement where Context == None {
+extension ContextElement where Context == NoContext {
     public static var navigationTitle: ContextElement {
         return .init { $0.navigationBars.staticTexts.firstMatch }
     }

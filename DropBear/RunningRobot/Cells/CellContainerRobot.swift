@@ -5,15 +5,15 @@ public protocol CellContainerRobot: Robot { }
 extension RunningRobot: CellContainerRobot where Current: CellContainerRobot { }
 
 extension RunningRobot where Current: CellContainerRobot {
-    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: RootAction, file: StaticString = #file, line: UInt = #line) -> RootRobot<T> {
+    public func nextRobot<Next: Robot>(_: Next.Type = Next.self, forCell index: Int, action: RootAction, file: StaticString = #file, line: UInt = #line) -> RootRobot<Next> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
 
-    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: NavigationAction, file: StaticString = #file, line: UInt = #line) -> NavigationRobot<T> {
+    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, forCell index: Int, action: NavigationAction, file: StaticString = #file, line: UInt = #line) -> NavigationRobot<NavigationElement, Next> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
 
-    public func nextRobot<T: Robot>(_: T.Type = T.self, forCell index: Int, action: ModalAction, file: StaticString = #file, line: UInt = #line) -> ModalRobot<T> {
+    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, forCell index: Int, action: ModalAction, file: StaticString = #file, line: UInt = #line) -> ModalRobot<NavigationElement, Next> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
 }

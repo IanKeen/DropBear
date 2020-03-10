@@ -2,7 +2,7 @@ import XCTest
 
 public protocol TabBarRobot: Robot { }
 
-public protocol TabBarItemContext: RobotContext {
+public protocol TabBarItemContext: NavigationControllerContext {
     associatedtype TabBarConfiguration
     associatedtype TabBarContext: RobotContext
     associatedtype TabBarCurrent: Robot
@@ -13,16 +13,21 @@ public protocol TabBarItemContext: RobotContext {
     var tabBar: TabBar { get }
 }
 
-public struct TabBarItem<TabBarConfiguration, TabBarContext: RobotContext, TabBarCurrent: Robot, TabBarPrevious: Robot>: TabBarItemContext {
+public struct TabBarItem<NavigationElement, TabBarConfiguration, TabBarContext: RobotContext, TabBarCurrent: Robot, TabBarPrevious: Robot>: TabBarItemContext {
     public let tabBar: TabBar
 }
 
 extension RunningRobot where Current: TabBarRobot {
-    public typealias TabItemRobot<Next: Robot> = RunningRobot<Configuration, TabBarItem<Configuration, Context, Current, Previous>, Next, RunningRobot<Configuration, Context, Current, Previous>>
+    public typealias TabItemRobot<NavigationElement, Next: Robot> = RunningRobot<
+        Configuration,
+        TabBarItem<NavigationElement, Configuration, Context, Current, Previous>,
+        Next,
+        RunningRobot<Configuration, Context, Current, Previous>
+    >
 
     public enum TabItemAction { case tab(Int) }
 
-    public func nextRobot<T: Robot>(_: T.Type = T.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<T> {
+    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<NavigationElement, Next> {
         guard case .tab(let index) = action else { fatalError("Something has gone horribly wrong") }
 
         let tabBar = source.tabBars.firstMatch
