@@ -1,8 +1,12 @@
 import XCTest
 
-public protocol NavigationControllerContext: RobotContext { }
+public enum NoNavigationElement { }
 
-public struct NavigationController<Inner: RobotContext>: NavigationControllerContext {
+public protocol NavigationControllerContext: RobotContext {
+    associatedtype NavigationElement
+}
+
+public struct NavigationController<NavigationElement, Inner: RobotContext>: NavigationControllerContext {
     let inner: Inner
 }
 
@@ -15,32 +19,37 @@ extension NavigationController: ModalContext where Inner: ModalContext {
 }
 
 extension RunningRobot {
-    public typealias NavigationRobot<Next: Robot> = RunningRobot<Configuration, NavigationController<Context>, Next, RunningRobot<Configuration, Context, Current, Previous>>
+    public typealias NavigationRobot<NavigationElement, Next: Robot> = RunningRobot<
+        Configuration,
+        NavigationController<NavigationElement, Context>,
+        Next,
+        RunningRobot<Configuration, Context, Current, Previous>
+    >
 
     public enum NavigationAction { case push }
 
-    public func nextRobot<T: Robot>(_: T.Type = T.self, action: NavigationAction) -> NavigationRobot<T> {
-        return .init(configuration: configuration, context: .init(inner: context), current: .init(app: app), previous: self)
+    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: NavigationAction) -> NavigationRobot<NavigationElement, Next> {
+        return .init(configuration: configuration, context: .init(inner: context), current: .init(source: source), previous: self)
     }
 }
 
 extension RunningRobot { //} where Context: TabBarItemContext {
-    public typealias FullScreenNavigationRobot<Next: Robot> = RunningRobot<Configuration, NavigationController<None>, Next, RunningRobot<Configuration, Context, Current, Previous>>
+    public typealias FullScreenNavigationRobot<NavigationElement, Next: Robot> = RunningRobot<Configuration, NavigationController<NavigationElement, NoContext>, Next, RunningRobot<Configuration, Context, Current, Previous>>
 
-    public enum FullScreenNavigationAction { case pushFullScreen }
+    public enum FullScreenNavigationAction { case push }
 
-    public func nextRobot<T: Robot>(_: T.Type = T.self, action: FullScreenNavigationAction) -> FullScreenNavigationRobot<T> {
-        return .init(configuration: configuration, context: .init(inner: .init()), current: .init(app: app), previous: self)
+    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: FullScreenNavigationAction) -> FullScreenNavigationRobot<NavigationElement, Next> {
+        return .init(configuration: configuration, context: .init(inner: .init()), current: .init(source: source), previous: self)
     }
 }
 
 extension RunningRobot where Context: NavigationControllerContext {
     public func popNavigationController(file: StaticString = #file, line: UInt = #line) -> Previous {
-        if app.navigationBars.buttons.count == 0 {
+        if source.navigationBars.buttons.count == 0 {
             XCTFail("Unable to find a navigation button", file: file, line: line)
         }
 
-        app.navigationBars.buttons.element(boundBy: 0).tap()
+        source.navigationBars.buttons.element(boundBy: 0).tap()
 
         return previous
     }

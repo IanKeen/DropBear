@@ -2,12 +2,14 @@ import XCTest
 
 public protocol RobotContext { }
 
+public struct NoContext: RobotContext { }
+
 public struct NoConfiguration { }
 
 public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, Previous: Robot>: Robot {
     public typealias Element = Current.Element
 
-    public var app: XCUIApplication { return current.app }
+    public var source: XCUIElement { return current.source }
 
     public let configuration: Configuration
     public let context: Context
@@ -21,7 +23,10 @@ public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, 
         self.previous = previous
     }
 
-    public required convenience init(app: XCUIApplication) {
+    public required convenience init(source: XCUIElement) {
         fatalError("This Robot can not be created this way")
     }
 }
+
+extension RunningRobot: Assertable where Current: Assertable { }
+extension RunningRobot: Actionable where Current: Actionable { }

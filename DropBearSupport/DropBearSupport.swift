@@ -25,7 +25,8 @@ public func UITestConfiguration<T: Codable>(_: T.Type = T.self) -> TestConfigura
         print(
             """
             No UI test configuration has been provided.
-            Please preload one using `XCUIApplication.launchForTesting(with:)` or `XCUIApplication.useConfiguration(_:)`
+            Please preload one using `XCUIApplication.launchForTesting(with:)`, `XCUIApplication.useConfiguration(_:)`
+            or by launching a robot with `YourRobot.launch(using:)`
             """
         )
         return nil

@@ -1,9 +1,9 @@
 import XCTest
 
 public struct ContextElement<Context: RobotContext> {
-    let element: (XCUIApplication) -> XCUIElement
+    let element: (XCUIElement) -> XCUIElement
 
-    public init(element: @escaping (XCUIApplication) -> XCUIElement) {
+    public init(element: @escaping (XCUIElement) -> XCUIElement) {
         self.element = element
     }
 }

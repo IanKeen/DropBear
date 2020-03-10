@@ -1,6 +1,6 @@
 import XCTest
 
-extension RunningRobot {
+extension RunningRobot where Current: Assertable {
     @discardableResult
     public func assert(
         _ element: ContextElement<Context>,
@@ -31,7 +31,7 @@ extension RunningRobot {
         file: StaticString = #file, line: UInt = #line
         ) -> Self
     {
-        _ = element.element(app).assert(assertions, file: file, line: line)
+        _ = element.element(source).assert(assertions, file: file, line: line)
         return self
     }
 }

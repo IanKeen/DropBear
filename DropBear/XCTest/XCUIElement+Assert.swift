@@ -16,7 +16,7 @@ extension XCUIElement {
         for assertion in assertions {
             if !assertion.assertion(self) {
                 let customMessage = assertion.message.map({ ":\n\($0)" }) ?? ""
-                let message = "Assertion '\(assertion.name)' failed\(customMessage)"
+                let message = "Assertion '\(assertion.name)' failed\(customMessage) on element '\(identifier)'"
                 XCTFail(message, file: file, line: line)
                 break
             }

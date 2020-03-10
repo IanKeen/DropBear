@@ -1,17 +1,17 @@
 import XCTest
 
-public class AlertRobot<Alert: AlertType, Previous: Robot>: RobotBase, Robot {
+public class AlertRobot<Alert: AlertType, Previous: Robot>: RestrictedRobotBase, Robot {
     let previous: Previous
     let alert: XCUIElement
     let required: Bool
 
-    required public init(previous: Previous, alert: XCUIElement, required: Bool, app: XCUIApplication) {
+    public required init(previous: Previous, alert: XCUIElement, required: Bool, source: XCUIElement) {
         self.previous = previous
         self.alert = alert
         self.required = required
-        super.init(app: app)
+        super.init(source: source)
     }
-    public required init(app: XCUIApplication) {
+    public required init(source: XCUIElement) {
         fatalError("This Robot can not be created this way")
     }
 }

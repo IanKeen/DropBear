@@ -1,6 +1,6 @@
 import XCTest
 
-extension XCUIApplication {
+extension XCUIElement {
     public func element(
         identifier: String,
         in hierarchy: [XCUIElement.ElementType] = [.any],

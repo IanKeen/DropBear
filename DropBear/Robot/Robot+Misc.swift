@@ -1,6 +1,8 @@
 import XCTest
 
-extension Robot {
+public protocol Actionable { }
+
+extension Robot where Self: Actionable {
     public func adjust(
         _ element: Element,
         in hierarchy: [XCUIElement.ElementType] = [.any],
@@ -9,7 +11,7 @@ extension Robot {
         ) -> Self
     {
         element
-            .element(in: app, hierarchy: hierarchy, file: file, line: line)
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
             .adjust(toNormalizedSliderPosition: position)
 
         return self
