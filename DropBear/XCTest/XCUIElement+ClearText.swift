@@ -3,7 +3,9 @@ import XCTest
 extension XCUIElement {
     /// Clears the text from the element
     public func clearText(file: StaticString = #file, line: UInt = #line) {
-        guard let value = value as? String else {
+        guard let anyValue = value else { return }
+
+        guard let value = anyValue as? String else {
             return XCTFail("Element \(identifier) does not hold text", file: file, line: line)
         }
 
