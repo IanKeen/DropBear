@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.name = 'DropBearGen'
-  spec.version = '0.6.0'
+  spec.version = '0.10.0'
   spec.homepage = 'https://github.com/IanKeen/DropBear'
   spec.summary = 'A companion framework for DropBear that generates code for accessibility identifiers.'
   spec.description = <<-DESC
