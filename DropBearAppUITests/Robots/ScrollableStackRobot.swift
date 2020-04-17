@@ -5,7 +5,7 @@ class ScrollableStackRobot: RobotBase, Robot {
 }
 
 extension RunningRobot where Current == ScrollableStackRobot {
-    func pushTabBar() -> NavigationRobot<TabRobot> {
+    func pushTabBar() -> NavigationRobot<NoNavigationElement, TabRobot> {
         return tap(.button3).nextRobot(action: .push)
     }
 }

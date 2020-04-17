@@ -9,7 +9,7 @@ class Tab2ViewControllerRobot: RobotBase, Robot {
 }
 
 extension RunningRobot where Current == Tab2ViewControllerRobot {
-    func pushTableViewController() -> NavigationRobot<TableViewRobot> {
+    func pushTableViewController() -> NavigationRobot<NoNavigationElement, TableViewRobot> {
         return tap(.tab2button).nextRobot(action: .push)
     }
 }
@@ -17,10 +17,10 @@ extension RunningRobot where Current == Tab2ViewControllerRobot {
 class TabRobot: RobotBase, TabBarRobot { }
 
 extension RunningRobot where Current == TabRobot {
-    func selectTab1() -> TabItemRobot<Tab1ViewControllerRobot> {
+    func selectTab1() -> TabItemRobot<NoNavigationElement, Tab1ViewControllerRobot> {
         return nextRobot(action: .tab(0))
     }
-    func selectTab2() -> TabItemRobot<Tab2ViewControllerRobot> {
+    func selectTab2() -> TabItemRobot<NoNavigationElement, Tab2ViewControllerRobot> {
         return nextRobot(action: .tab(1))
     }
 }
