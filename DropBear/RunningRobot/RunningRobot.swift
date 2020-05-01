@@ -16,7 +16,7 @@ public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, 
     public let current: Current
     public let previous: Previous
 
-    required init(configuration: Configuration, context: Context, current: Current, previous: Previous) {
+    public required init(configuration: Configuration, context: Context, current: Current, previous: Previous) {
         self.configuration = configuration
         self.context = context
         self.current = current
