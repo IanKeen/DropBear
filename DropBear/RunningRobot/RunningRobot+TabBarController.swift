@@ -25,22 +25,36 @@ extension RunningRobot where Current: TabBarRobot {
         RunningRobot<Configuration, Context, Current, Previous>
     >
 
-    public enum TabItemAction { case tab(Int) }
+    public struct TabItemAction {
+        let element: (_ tabBar: XCUIElement) -> XCUIElement
+
+        public static func tab(_ index: Int, file: StaticString = #file, line: UInt = #line) -> TabItemAction {
+            return .init { tabBar in
+                if index < 0 || index >= tabBar.buttons.count {
+                    XCTFail("Invalid tab index. Value should be between 0 and \(tabBar.buttons.count - 1)", file: file, line: line)
+                }
+
+                return tabBar.buttons.element(boundBy: index)
+            }
+        }
+
+        public static func tab(_ element: Element, file: StaticString = #file, line: UInt = #line) -> TabItemAction {
+            return .init { tabBar in
+                return tabBar.buttons[element.rawValue]
+            }
+        }
+    }
 
     public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<NavigationElement, Next> {
-        guard case .tab(let index) = action else { fatalError("Something has gone horribly wrong") }
-
         let tabBar = source.tabBars.firstMatch
 
         if tabBar.buttons.count == 0 {
             XCTFail("Unable to find any tab buttons", file: file, line: line)
         }
 
-        if index < 0 || index >= source.tabBars.buttons.count {
-            XCTFail("Invalid tab index. Value should be between 0 and \(source.tabBars.buttons.count - 1)", file: file, line: line)
-        }
+        let tabItem = action.element(tabBar)
 
-        source.tabBars.buttons.element(boundBy: index).tap()
+        tabItem.tap()
 
         return .init(configuration: configuration, context: .init(tabBar: self), current: .init(source: source), previous: self)
     }
