@@ -1,7 +1,7 @@
 import Foundation
 
 public enum DropBear {
-    public static let defaultWaitTime: TimeInterval = 5
+    public static var defaultWaitTime: TimeInterval = 5
 
     public static func poll(until predicate: @escaping () -> Bool, timeout: TimeInterval) {
         var fulfilled = false
