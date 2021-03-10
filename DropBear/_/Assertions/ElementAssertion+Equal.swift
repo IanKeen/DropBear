@@ -3,7 +3,7 @@
 //  DropBear
 //
 //  Created by Ian Keen on 2021-03-10.
-//  Copyright © 2021 Mustard. All rights reserved.
+//  Copyright © 2021 Timberlane Labs. All rights reserved.
 //
 
 extension ElementAssertion {
@@ -16,9 +16,9 @@ extension ElementAssertion {
             })
 
             if match {
-                return .success("\"\(value)\" was equal to one of \(elementValues)")
+                return .success("\"\(value)\" is equal to one of \(elementValues)")
             } else {
-                return .failure("\"\(value)\" was not equal to any of \(elementValues)")
+                return .failure("\"\(value)\" is not equal to any of \(elementValues)")
             }
         })
     }
@@ -30,9 +30,9 @@ extension ElementAssertion {
             let match = value.stringValues.contains(where: { equality.equal($0, elementValue) })
 
             if match {
-                return .success("\"\(value)\" was equal to \"\(elementValue)\"")
+                return .success("\"\(value)\" is equal to \"\(elementValue)\"")
             } else {
-                return .failure("\"\(value)\" was not equal to \"\(elementValue)\"")
+                return .failure("\"\(value)\" is not equal to \"\(elementValue)\"")
             }
         })
     }

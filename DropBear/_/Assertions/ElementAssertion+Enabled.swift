@@ -3,7 +3,7 @@
 //  DropBear
 //
 //  Created by Ian Keen on 2021-03-10.
-//  Copyright © 2021 Mustard. All rights reserved.
+//  Copyright © 2021 Timberlane Labs. All rights reserved.
 //
 
 extension ElementAssertion {

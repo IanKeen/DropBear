@@ -3,7 +3,7 @@
 //  DropBear
 //
 //  Created by Ian Keen on 2021-03-10.
-//  Copyright © 2021 Mustard. All rights reserved.
+//  Copyright © 2021 Timberlane Labs. All rights reserved.
 //
 
 /// Represents a value provided by the user and converts it to the representation `XCUIElement`s use so they can be compared.

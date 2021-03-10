@@ -3,7 +3,7 @@
 //  DropBear
 //
 //  Created by Ian Keen on 2021-03-10.
-//  Copyright © 2021 Mustard. All rights reserved.
+//  Copyright © 2021 Timberlane Labs. All rights reserved.
 //
 
 extension ElementAssertion {
@@ -16,9 +16,9 @@ extension ElementAssertion {
             })
 
             if match {
-                return .success("\"\(value)\" was contained in one of \(elementValues)")
+                return .success("\"\(value)\" is contained in one of \(elementValues)")
             } else {
-                return .failure("\"\(value)\" was not contained in any of \(elementValues)")
+                return .failure("\"\(value)\" is not contained in any of \(elementValues)")
             }
         })
     }
