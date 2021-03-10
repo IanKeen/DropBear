@@ -23,6 +23,15 @@ public struct ElementAssertion {
     }
 }
 
+extension ElementAssertion {
+    public static var always: ElementAssertion {
+        return .init(name: "always", assert: { _ in .success("Always succeeds") })
+    }
+    public static var never: ElementAssertion {
+        return .init(name: "never", assert: { _ in .failure("Never succeeds") })
+    }
+}
+
 public prefix func !(assertion: ElementAssertion) -> ElementAssertion {
     return .init(name: "!\(assertion.name)", assert: { element in
         switch assertion.assert(element) {
