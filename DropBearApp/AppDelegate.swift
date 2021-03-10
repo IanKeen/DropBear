@@ -1,13 +1,25 @@
+import Combine
 import UIKit
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
+    private var bag = Set<AnyCancellable>()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        let nav = UINavigationController(rootViewController: ScrollableStackViewController())
-        window.rootViewController = nav
-        window.makeKeyAndVisible()
+        Dependencies.session.publisher
+            .removeDuplicates()
+            .sink { value in
+                switch value {
+                case .loggedOut:
+                    Dependencies.reset()
+                case .loggedIn:
+                    break
+                }
+            }
+            .store(in: &bag)
+
+        let window = RootWindow()
+        window.rootViewController = .init()
         self.window = window
         return true
     }
