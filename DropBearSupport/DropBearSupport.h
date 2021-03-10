@@ -3,7 +3,7 @@
 //  DropBearSupport
 //
 //  Created by Ian Keen on 2019-05-02.
-//  Copyright © 2019 Mustard. All rights reserved.
+//  Copyright © 2019 Timberlane Labs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
