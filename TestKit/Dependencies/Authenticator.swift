@@ -12,7 +12,7 @@ import DomainKit
 public class MockAuthenticator: Authenticator, Codable {
     private let result: Result<Authentication, MockError>
 
-    public init(_ result: Result<Authentication, Error>) {
+    public init(_ result: Result<Authentication, Error> = .success(.init(token: "_valid_token_"))) {
         self.result = result.mock
     }
 
