@@ -58,7 +58,7 @@ public func ||(lhs: ElementAssertion, rhs: ElementAssertion) -> ElementAssertion
                 return .success(value)
 
             case .failure(let rhsError):
-                return .failure("Assertions failed '\(lhsError)' && '\(rhsError)'")
+                return .failure("Multiple failures: '\(lhsError)' && '\(rhsError)'")
             }
         }
     })

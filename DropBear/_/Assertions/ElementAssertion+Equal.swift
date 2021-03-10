@@ -7,7 +7,7 @@
 //
 
 extension ElementAssertion {
-    public static func equals<T: TestValue>(_ value: T, equality: TestValueEquality = .caseInsensitive) -> ElementAssertion {
+    public static func equals<T: TestValue>(_ value: T, using equality: TestValueEquality = .caseInsensitive) -> ElementAssertion {
         return .init(name: "equals(\"\(value)\")", assert: { element in
             let elementValues = element.values
 
@@ -23,7 +23,7 @@ extension ElementAssertion {
         })
     }
 
-    public static func placeholderEquals<T: TestValue>(_ value: T, equality: TestValueEquality = .caseInsensitive) -> ElementAssertion {
+    public static func placeholderEquals<T: TestValue>(_ value: T, using equality: TestValueEquality = .caseInsensitive) -> ElementAssertion {
         return .init(name: "placeholderEquals(\"\(value)\")", assert: { element in
             let elementValue = element.placeholderValue ?? ""
 
