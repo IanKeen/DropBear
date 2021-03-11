@@ -1,3 +1,11 @@
+//
+//  XCUIElement+Optional.swift
+//  DropBear
+//
+//  Created by Ian Keen on 2021-03-09.
+//  Copyright © 2021 Timberlane Labs. All rights reserved.
+//
+
 import XCTest
 
 extension XCUIElement {
