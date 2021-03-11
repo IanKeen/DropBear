@@ -39,3 +39,4 @@ public class RunningRobot<
 }
 
 extension RunningRobot: Assertable where Current: Assertable { }
+extension RunningRobot: Actionable where Current: Actionable { }
