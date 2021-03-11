@@ -28,6 +28,22 @@ extension XCUIElement {
             break
         }
 
-        return potentials.compactMap({ $0 as? String }).filter({ !$0.isEmpty })
+        return potentials.compactMap({ $0 as? String }).deduplicate().filter({ !$0.isEmpty })
+    }
+}
+
+extension Collection where Element: Hashable {
+    func deduplicate() -> [Element] {
+        var result: [Element] = []
+        result.reserveCapacity(count)
+
+        var elements: Set<Element> = []
+        for element in self {
+            if elements.insert(element).inserted {
+                result.append(element)
+            }
+        }
+
+        return result
     }
 }
