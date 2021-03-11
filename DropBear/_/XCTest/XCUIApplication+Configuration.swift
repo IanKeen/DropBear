@@ -32,8 +32,8 @@ extension XCUIApplication {
     ///
     /// The configuration can be obtained by the application using [UITestConfiguration](x-source-tag://UITestConfiguration)
     public func useConfiguration<T: TestConfigurationSource>(_ configuration: TestConfiguration<T>) {
-        let testConfiguration = configuration.testDirectory.appendingPathComponent("_configuration.json", isDirectory: false)
-        try! JSONEncoder().encode(configuration).write(to: testConfiguration, options: .atomic)
-        launchEnvironment["UITestingFolder"] = testConfiguration.absoluteString
+        let testConfiguration = configuration.testDirectory.appendingPathComponent(configurationFile, isDirectory: false)
+        try! JSONEncoder().encode(configuration.source).write(to: testConfiguration, options: .atomic)
+        launchEnvironment["UITestingFolder"] = configuration.testDirectory.path
     }
 }

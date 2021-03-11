@@ -8,35 +8,61 @@
 
 import Foundation
 
+/// Retrieve the configuration that was defined by the UI test
+///
+/// - Tag: UITestConfiguration
+public func UITestConfiguration<T: TestConfigurationSource>(_: T.Type = T.self) -> TestConfiguration<T>? {
+    guard let folder = ProcessInfo.processInfo.environment["UITestingFolder"] else {
+        print(
+            """
+
+            No UI test configuration has been provided.
+            Please preload one using `XCUIApplication.launchForTesting(with:)`, `XCUIApplication.useConfiguration(_:)`
+            or by launching a robot with `YourRobot.launch(using:)`
+
+            """
+        )
+        return nil
+    }
+
+    return TestConfiguration(testDirectory: URL(fileURLWithPath: folder))
+}
+
 public protocol TestConfigurationSource: Codable {
     init()
 }
 
+public let configurationFile = "_configuration.json"
+
 @dynamicMemberLookup
-public struct TestConfiguration<Source: TestConfigurationSource>: Codable {
-    public let testId: String
+public struct TestConfiguration<Source: TestConfigurationSource> {
     public let testDirectory: URL
 
     public var source: Source
 
     public init() {
-        func pair() -> (String, URL) {
+        func temporaryFolder() -> URL {
             let id = UUID().uuidString
             let testDirectory = URL(fileURLWithPath: NSTemporaryDirectory(), isDirectory: true).appendingPathComponent(id)
-            return (id, testDirectory)
+            return testDirectory
         }
 
-        var (id, testDirectory) = pair()
+        var testDirectory = temporaryFolder()
 
         while FileManager.default.fileExists(atPath: testDirectory.absoluteString) {
-            (id, testDirectory) = pair()
+            testDirectory = temporaryFolder()
         }
 
         try! FileManager.default.createDirectory(at: testDirectory, withIntermediateDirectories: true, attributes: nil)
 
-        self.testId = id
         self.testDirectory = testDirectory
         self.source = .init()
+    }
+
+    public init?(testDirectory: URL) {
+        let configuration = testDirectory.appendingPathComponent(configurationFile, isDirectory: false)
+        self.source = try! JSONDecoder().decode(Source.self, from: Data(contentsOf: configuration))
+        self.testDirectory = testDirectory
     }
 
     public subscript<T>(dynamicMember keyPath: KeyPath<Source, T>) -> T {
