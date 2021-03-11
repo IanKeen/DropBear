@@ -14,7 +14,7 @@ public struct Alert<Buttons: AlertButtons> {
     public let source: Source
     public let assertion: ElementAssertion
 
-    public init(source: @escaping Source, assertion: ElementAssertion) {
+    public init(source: @escaping Source = { $0 }, assertion: ElementAssertion) {
         self.source = source
         self.assertion = assertion
     }
