@@ -3,7 +3,9 @@ import XCTest
 extension Springboard.DeleteAppButton {
     public static var `default`: Springboard.DeleteAppButton {
         return .init { application, icon in
-            return iOS13.delete(application, icon) || iOS12.delete(application, icon)
+            return iOS14.delete(application, icon)
+                || iOS13.delete(application, icon)
+                || iOS12.delete(application, icon)
         }
     }
 
@@ -34,6 +36,30 @@ extension Springboard.DeleteAppButton {
             return true
         }
     }
+
+    public static var iOS14: Springboard.DeleteAppButton {
+        return .init { application, _ in
+            let button = application.buttons["Remove App"]
+
+            guard button.waitForExistence(timeout: DropBear.defaultWaitTime) && button.isHittable else { return false }
+
+            button.tap()
+
+            // iOS 14 has _two_ confirmation dialogs
+
+            let confirmationButton = application.alerts.buttons.allElementsBoundByIndex.first(where: { element in
+                element.label.localizedCaseInsensitiveContains("delete")
+            })
+            guard let confirmation = confirmationButton else { return false }
+
+            let deleteButtonAvailable = confirmation.waitForExistence(timeout: DropBear.defaultWaitTime) && confirmation.isHittable
+            guard deleteButtonAvailable else { return false }
+
+            confirmation.tap()
+
+            return true
+        }
+    }
 }
 
 public enum Springboard {
@@ -55,11 +81,16 @@ public enum Springboard {
 
         // Start deletion
         guard strategy.delete(application, icon) else {
-            return XCTFail("Failed to tap the app icons delete button.", file: file, line: line)
+            return XCTFail("Failed to begin the deletion process.", file: file, line: line)
         }
 
         // Confirm
-        let deleteButton = application.alerts.buttons["Delete"]
+        let button = application.alerts.buttons.allElementsBoundByIndex.first(where: { element in
+            element.label.localizedCaseInsensitiveContains("delete")
+        })
+        guard let deleteButton = button else {
+            return XCTFail("Failed to find the delete button.", file: file, line: line)
+        }
         let deleteButtonAvailable = deleteButton.waitForExistence(timeout: DropBear.defaultWaitTime) && deleteButton.isHittable
 
         guard deleteButtonAvailable else {
