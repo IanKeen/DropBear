@@ -29,3 +29,7 @@ public protocol Robot {
 
     init(source: XCUIElement)
 }
+
+public protocol Launchable { }
+public protocol Actionable { }
+public protocol Assertable { }

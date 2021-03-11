@@ -8,8 +8,6 @@
 
 import XCTest
 
-public protocol Assertable { }
-
 extension Robot where Self: Assertable {
     // MARK: - Single Element Assertions
 
