@@ -8,6 +8,8 @@
 
 import DropBearSupport
 
+public typealias TestConfig = TestConfiguration<DropBearTestConfiguration>
+
 public struct DropBearTestConfiguration: TestConfigurationSource {
     public var authenticator = MockAuthenticator()
     public var keyValueStore = MockKeyValueStorage()

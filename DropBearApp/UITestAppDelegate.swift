@@ -11,15 +11,17 @@ class UITestAppDelegate: AppDelegate {
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Speed up tests
         application.keyWindow!.layer.speed = 100
+
+        requireSoftwareKeyboard()
     }
 }
 
 extension Dependencies {
     static func configure(_ config: TestConfiguration<DropBearTestConfiguration>?) {
-        guard let config = config else { return print("⚠️ No TestConfiguration was found, test may not be deterministic") }
+        guard let config = config else { return }
 
         Dependencies.authenticator = config.authenticator
         Dependencies.keyValueStorage = config.keyValueStore
-        Dependencies.listDataSource = config.listDataSource
+        Dependencies.$listDataSource.updateFactory { config.listDataSource }
     }
 }

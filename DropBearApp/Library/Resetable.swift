@@ -21,6 +21,7 @@ class Resetable<T> {
             current = newValue
         }
     }
+    var projectedValue: Resetable { self }
 
     func reset() {
         current = nil
