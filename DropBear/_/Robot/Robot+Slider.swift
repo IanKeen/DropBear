@@ -1,12 +1,17 @@
-import XCTest
+//
+//  Robot+Slider.swift
+//  DropBear
+//
+//  Created by Ian Keen on 2021-03-10.
+//  Copyright © 2021 Mustard. All rights reserved.
+//
 
-public protocol Actionable { }
+import XCTest
 
 extension Robot where Self: Actionable {
     public func adjust(
-        _ element: Element,
-        in hierarchy: [XCUIElement.ElementType] = [.any],
-        to position:  CGFloat,
+        _ element: Element, in hierarchy: [XCUIElement.ElementType] = [.any],
+        to position: CGFloat,
         file: StaticString = #file, line: UInt = #line
         ) -> Self
     {
