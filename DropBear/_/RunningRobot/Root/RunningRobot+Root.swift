@@ -7,7 +7,7 @@
 //
 
 extension RunningRobot {
-    public typealias RootRobot<Next: Robot> = RunningRobot<Configuration, NoViewHierarchy, Next, Root>
+    public typealias RootRobot<Next: Robot> = RunningRobot<Configuration, ViewHierarchy<Window>, Next, Root>
     
     public enum RootAction {
         case root

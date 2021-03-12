@@ -14,7 +14,7 @@ extension Robot where Self: Launchable {
     public static func launch<T: TestConfigurationSource>(
         using configuration: TestConfiguration<T>,
         beforeLaunch: (XCUIApplication) -> Void = { _ in }
-    ) -> RunningRobot<T, NoViewHierarchy, Self, Root> {
+    ) -> RunningRobot<T, ViewHierarchy<Window>, Self, Root> {
         let app = XCUIApplication()
         beforeLaunch(app)
         app.launchForTesting(with: configuration)
@@ -24,7 +24,7 @@ extension Robot where Self: Launchable {
     /// Launch the application for testing
     public static func launch(
         beforeLaunch: (XCUIApplication) -> Void = { _ in }
-    ) -> RunningRobot<NoConfiguration, NoViewHierarchy, Self, Root> {
+    ) -> RunningRobot<NoConfiguration, ViewHierarchy<Window>, Self, Root> {
         let app = XCUIApplication()
         beforeLaunch(app)
         app.launchForTesting()

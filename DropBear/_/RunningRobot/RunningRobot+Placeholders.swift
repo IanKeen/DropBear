@@ -12,7 +12,9 @@ public struct NoConfiguration: TestConfigurationSource {
     public init() { }
 }
 
-public struct NoViewHierarchy { }
+public struct ViewHierarchy<T> { }
+
+public enum Window { }
 
 public enum NoElements: RawRepresentable {
     public init?(rawValue: String) {
