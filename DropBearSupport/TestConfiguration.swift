@@ -35,7 +35,7 @@ public protocol TestConfigurationSource: Codable {
 public let configurationFile = "_configuration.json"
 
 @dynamicMemberLookup
-public struct TestConfiguration<Source: TestConfigurationSource> {
+public class TestConfiguration<Source: TestConfigurationSource> {
     public let testDirectory: URL
 
     public var source: Source

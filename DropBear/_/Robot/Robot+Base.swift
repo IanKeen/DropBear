@@ -18,6 +18,16 @@ open class RobotBase: Launchable, Assertable, Actionable {
     }
 }
 
+public class AnyRobot<Content: Robot>: Robot, Assertable, Actionable {
+    public typealias Element = Content.Element
+
+    public let source: XCUIElement
+
+    public required init(source: XCUIElement) {
+        self.source = source
+    }
+}
+
 public class RestrictedRobotBase {
     public let source: XCUIElement
 

@@ -22,11 +22,11 @@ extension RunningRobot {
         Next,
         RunningRobot
     >
+}
 
-    public enum TabBarAction { case tabBar }
-
-    public func nextRobot<T: Robot>(_: T.Type = T.self, action: TabBarAction) -> TabBarRobot<T> {
-        return .init(app: app, configuration: configuration, viewHierarchy: .init(), current: .init(source: source), previous: self)
+extension RunningRobot.NextRobotAction {
+    public static var tabBar: RunningRobot.NextRobotAction<TabBarController<ViewHierarchyContext>, Next, RunningRobot> {
+        return .init(hierarchy: .init(), next: Next.init)
     }
 }
 

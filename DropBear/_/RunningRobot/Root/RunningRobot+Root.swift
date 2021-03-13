@@ -8,12 +8,10 @@
 
 extension RunningRobot {
     public typealias RootRobot<Next: Robot> = RunningRobot<Configuration, ViewHierarchy<Window>, Next, Root>
-    
-    public enum RootAction {
-        case root
-    }
+}
 
-    public func nextRobot<Next: Robot>(_: Next.Type = Next.self, action: RootAction) -> RootRobot<Next> {
-        return RootRobot(app: app, configuration: configuration, viewHierarchy: .init(), current: .init(source: source), previous: .init(source: source))
+extension RunningRobot.NextRobotAction {
+    public static var root: RunningRobot.NextRobotAction<ViewHierarchy<Window>, Next, Root> {
+        return .init(hierarchy: .init(), next: Next.init, previous: Root.init)
     }
 }

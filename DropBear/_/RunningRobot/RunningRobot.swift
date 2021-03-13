@@ -38,5 +38,30 @@ public class RunningRobot<
     }
 }
 
+extension RunningRobot {
+    public struct NextRobotAction<Hierarchy, Next: Robot, Previous: Robot> {
+        let hierarchy: Hierarchy
+        let next: (RunningRobot) -> Next
+        let previous: (RunningRobot) -> Previous
+    }
+
+    public func nextRobot<Hierarchy, Next: Robot, Previous: Robot>(
+        _: Next.Type = Next.self,
+        action: NextRobotAction<Hierarchy, Next, Previous>
+    ) -> RunningRobot<Configuration, Hierarchy, Next, Previous> {
+        return .init(app: app, configuration: configuration, viewHierarchy: action.hierarchy, current: action.next(self), previous: action.previous(self))
+    }
+}
+extension RunningRobot.NextRobotAction {
+    init(hierarchy: Hierarchy, next: @escaping (XCUIElement) -> Next, previous: @escaping (XCUIElement) -> Previous) {
+        self.init(hierarchy: hierarchy, next: { next($0.source) }, previous: { previous($0.source) })
+    }
+}
+extension RunningRobot.NextRobotAction where Previous == RunningRobot {
+    init(hierarchy: Hierarchy, next: @escaping (XCUIElement) -> Next) {
+        self.init(hierarchy: hierarchy, next: { next($0.source) }, previous: { $0 })
+    }
+}
+
 extension RunningRobot: Assertable where Current: Assertable { }
 extension RunningRobot: Actionable where Current: Actionable { }
