@@ -12,9 +12,7 @@ public struct NoConfiguration: TestConfigurationSource {
     public init() { }
 }
 
-public struct ViewHierarchy<T> { }
-
-public enum Window { }
+public struct Window { }
 
 public enum NoElements: RawRepresentable {
     public init?(rawValue: String) {
@@ -23,8 +21,4 @@ public enum NoElements: RawRepresentable {
     public var rawValue: String {
         switch self { }
     }
-}
-
-public class Root: RestrictedRobotBase, Robot {
-    public typealias Element = NoElements
 }

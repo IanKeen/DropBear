@@ -9,29 +9,32 @@
 import DropBearSupport
 import XCTest
 
-public protocol TabBarHierarchy { }
+public protocol TabBarHierarchy {
+    associatedtype Parent
 
-public struct TabBarController<Parent>: TabBarHierarchy { }
+    var parent: Parent { get }
+}
 
-extension ViewHierarchy: TabBarHierarchy where T: TabBarHierarchy { }
+public struct TabBarController<Parent>: TabBarHierarchy {
+    public let parent: Parent
+}
 
 extension RunningRobot {
     public typealias TabBarRobot<Next: Robot> = RunningRobot<
         Configuration,
-        TabBarController<ViewHierarchyContext>,
-        Next,
-        RunningRobot
+        TabBarController<ViewHierarchy>,
+        Next
     >
 }
 
 extension RunningRobot.NextRobotAction {
-    public static var tabBar: RunningRobot.NextRobotAction<TabBarController<ViewHierarchyContext>, Next, RunningRobot> {
-        return .init(hierarchy: .init(), next: Next.init)
+    public static var tabs: RunningRobot.NextRobotAction<TabBarController<ViewHierarchy>, Next> {
+        return .init(hierarchy: { .init(parent: $0.viewHierarchy) }, next: Next.init)
     }
 }
 
 extension RunningRobot {
-    public func inTabController() -> RunningRobot<Configuration, TabBarController<ViewHierarchyContext>, Current, Previous> {
-        return .init(app: app, configuration: configuration, viewHierarchy: .init(), current: current, previous: previous)
+    public func inTabController() -> RunningRobot<Configuration, TabBarController<ViewHierarchy>, Current> {
+        return .init(app: app, configuration: configuration, viewHierarchy: .init(parent: viewHierarchy), current: current)
     }
 }

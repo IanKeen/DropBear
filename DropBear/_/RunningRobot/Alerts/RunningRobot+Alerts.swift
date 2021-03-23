@@ -9,7 +9,7 @@
 import XCTest
 
 extension RunningRobot {
-    public typealias ActiveAlertRobot<T: AlertButtons> = AlertRobot<Alert<T>, RunningRobot<Configuration, ViewHierarchyContext, Current, Previous>>
+    public typealias ActiveAlertRobot<T: AlertButtons> = AlertRobot<Alert<T>, RunningRobot<Configuration, ViewHierarchy, Current>>
 
     public func alert<T: AlertButtons>(_ alert: Alert<T>, required: Bool = true, file: StaticString = #file, line: UInt = #line) -> ActiveAlertRobot<T> {
         let dialog = alert.source(source).alerts.firstMatch

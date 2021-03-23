@@ -7,11 +7,11 @@
 //
 
 extension RunningRobot {
-    public typealias RootRobot<Next: Robot> = RunningRobot<Configuration, ViewHierarchy<Window>, Next, Root>
+    public typealias RootRobot<Next: Robot> = RunningRobot<Configuration, Window, Next>
 }
 
 extension RunningRobot.NextRobotAction {
-    public static var root: RunningRobot.NextRobotAction<ViewHierarchy<Window>, Next, Root> {
-        return .init(hierarchy: .init(), next: Next.init, previous: Root.init)
+    public static var root: RunningRobot.NextRobotAction<Window, Next> {
+        return .init(hierarchy: .init(), next: Next.init)
     }
 }

@@ -10,7 +10,7 @@ import XCTest
 
 extension Robot where Self: Actionable {
     public func type(
-        _ element: Element, in hierarchy: [XCUIElement.ElementType] = [.any], text: String,
+        _ text: String, in element: Element, hierarchy: [XCUIElement.ElementType] = [.any],
         tapFirst: Bool = true, clearFirst: Bool = true,
         file: StaticString = #file, line: UInt = #line
         ) -> Self
@@ -33,5 +33,17 @@ extension Robot where Self: Actionable {
             .clearText(file: file, line: line)
 
         return self
+    }
+}
+
+extension Robot where Self: Actionable {
+    @available(*, deprecated, message: "Please use type(_:in:) instead")
+    public func type(
+        _ element: Element, in hierarchy: [XCUIElement.ElementType] = [.any], text: String,
+        tapFirst: Bool = true, clearFirst: Bool = true,
+        file: StaticString = #file, line: UInt = #line
+    ) -> Self
+    {
+        return type(text, in: element, hierarchy: hierarchy, tapFirst: tapFirst, clearFirst: clearFirst, file: file, line: line)
     }
 }

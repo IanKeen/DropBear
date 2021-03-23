@@ -17,23 +17,23 @@ extension RunningRobot where Current: CellContainerRobot {
         }
     }
 
-    public struct CellItemAction<Hierarchy, Next: Robot, Previous: Robot> {
+    public struct CellItemAction<Hierarchy, Next: Robot> {
         let lookup: CellItemLookup
-        let action: NextRobotAction<Hierarchy, Next, Previous>
+        let action: NextRobotAction<Hierarchy, Next>
 
-        public static func cell(_ lookup: CellItemLookup, _ action: NextRobotAction<Hierarchy, Next, Previous>) -> CellItemAction {
+        public static func cell(_ lookup: CellItemLookup, _ action: NextRobotAction<Hierarchy, Next>) -> CellItemAction {
             return .init(lookup: lookup, action: action)
         }
     }
 
-    public func nextRobot<Hierarchy, Next: Robot, Previous: Robot>(
+    public func nextRobot<Hierarchy, Next: Robot>(
         _: Next.Type = Next.self,
-        action: CellItemAction<Hierarchy, Next, Previous>
-    ) -> RunningRobot<Configuration, Hierarchy, Next, Previous> {
+        action: CellItemAction<Hierarchy, Next>
+    ) -> RunningRobot<Configuration, Hierarchy, Next> {
         let cell = action.lookup.cell(source)
         cell.tap()
         let action = action.action
-        return .init(app: app, configuration: configuration, viewHierarchy: action.hierarchy, current: action.next(self), previous: action.previous(self))
+        return .init(app: app, configuration: configuration, viewHierarchy: action.hierarchy(self), current: action.next(self))
     }
 }
 
