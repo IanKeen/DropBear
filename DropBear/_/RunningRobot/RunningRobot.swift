@@ -49,11 +49,11 @@ extension RunningRobot {
     }
 }
 extension RunningRobot.NextRobotAction {
-    public init(hierarchy: @escaping (RunningRobot) -> Hierarchy, next: @escaping (XCUIElement) -> Next) {
+    init(hierarchy: @escaping (RunningRobot) -> Hierarchy, next: @escaping (XCUIElement) -> Next) {
         self.init(hierarchy: hierarchy, next: { next($0.source) })
     }
 
-    public init(hierarchy: Hierarchy, next: @escaping (XCUIElement) -> Next) {
+    init(hierarchy: Hierarchy, next: @escaping (XCUIElement) -> Next) {
         self.init(hierarchy: { _ in hierarchy }, next: { next($0.source) })
     }
 }

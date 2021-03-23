@@ -55,14 +55,10 @@ extension RunningRobot where ViewHierarchy: TabBarHierarchy {
         let lookup: TabItemLookup
         let action: NextRobotAction<Hierarchy, Next>
 
-        public static func tab(_ lookup: TabItemLookup) -> TabItemAction where Hierarchy == TabItem<Configuration, ViewHierarchy, Current> {
-            return .init(lookup: lookup, action: .init(hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) }, next: Next.init))
-        }
-
         public static func tab(
             _ lookup: TabItemLookup,
             in modifier: ViewHierarchyModifier<TabItem<Configuration, ViewHierarchy, Current>, Hierarchy>
-        ) -> TabItemAction where ViewHierarchy: TabBarHierarchy {
+        ) -> TabItemAction {
             return .init(lookup: lookup, action: .init(hierarchy: { modifier.modify(.init(parent: $0.viewHierarchy, tabController: $0)) }, next: Next.init))
         }
     }
@@ -86,6 +82,14 @@ extension RunningRobot where ViewHierarchy: TabBarHierarchy {
         let next = action.action.next(self)
 
         return .init(app: app, configuration: configuration, viewHierarchy: hierarchy, current: next)
+    }
+}
+
+extension RunningRobot.TabItemAction {
+    public static func tab(
+        _ lookup: RunningRobot.TabItemLookup
+    ) -> RunningRobot.TabItemAction<TabItem<Configuration, ViewHierarchy, Current>, Next> {
+        return .init(lookup: lookup, action: .init(hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) }, next: Next.init))
     }
 }
 
