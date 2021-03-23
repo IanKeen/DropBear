@@ -25,6 +25,15 @@ extension Robot where Self: Launchable {
         return launch(using: .init(), beforeLaunch: beforeLaunch)
     }
 
+    /// Launch the application for testing starting in the provided hierarchy
+    public static func launch<ViewHierarchy>(
+        in hierarchy: ViewHierarchyModifier<Window, ViewHierarchy>,
+        beforeLaunch: (XCUIApplication) -> Void = { _ in }
+    ) -> RunningRobot<NoConfiguration, ViewHierarchy, Self> {
+        return launch(using: .init(), in: hierarchy, beforeLaunch: beforeLaunch)
+    }
+
+    /// Launch the application for testing in the provided hierarchy passing the provided configuration
     public static func launch<T: TestConfigurationSource, ViewHierarchy>(
         using configuration: TestConfiguration<T>,
         in hierarchy: ViewHierarchyModifier<Window, ViewHierarchy>,

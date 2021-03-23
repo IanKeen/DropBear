@@ -63,19 +63,15 @@ extension RunningRobot where ViewHierarchy: NavigationItemHierarchy {
     }
 
     /// Go back to the previous `Robot` in the navigation stack
-    public func popNavigationController() -> ViewHierarchy.Previous {
+    public func popNavigationController(tapBackButton: Bool = true, file: StaticString = #file, line: UInt = #line) -> ViewHierarchy.Previous {
+        guard tapBackButton else { return viewHierarchy.previous }
+
+        if source.navigationBars.buttons.count == 0 {
+            XCTFail("Unable to find a navigation button", file: file, line: line)
+        }
+
+        source.navigationBars.buttons.element(boundBy: 0).tap()
+
         return viewHierarchy.previous
     }
 }
-
-//extension RunningRobot where ViewHierarchyContext: NavigationItemHierarchy {
-//    public func popNavigationController(file: StaticString = #file, line: UInt = #line) -> Previous {
-//        if source.navigationBars.buttons.count == 0 {
-//            XCTFail("Unable to find a navigation button", file: file, line: line)
-//        }
-//
-//        source.navigationBars.buttons.element(boundBy: 0).tap()
-//
-//        return previous
-//    }
-//}
