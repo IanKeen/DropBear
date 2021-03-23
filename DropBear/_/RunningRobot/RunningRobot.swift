@@ -37,24 +37,36 @@ public class RunningRobot<
 
 extension RunningRobot {
     public struct NextRobotAction<Hierarchy, Next: Robot> {
+        let actions: (RunningRobot) -> Void
         let hierarchy: (RunningRobot) -> Hierarchy
         let next: (RunningRobot) -> Next
     }
 
     public func nextRobot<Hierarchy, Next: Robot>(
         _: Next.Type = Next.self,
-        action: NextRobotAction<Hierarchy, Next>
+        action: NextRobotAction<Hierarchy, Next>,
+        file: StaticString = #file, line: UInt = #line
     ) -> RunningRobot<Configuration, Hierarchy, Next> {
-        return .init(app: app, configuration: configuration, viewHierarchy: action.hierarchy(self), current: action.next(self))
+        return nextRobot(Next.self, action: action, in: .init(modify: { $0 }))
+    }
+
+    public func nextRobot<Hierarchy, Next: Robot, ModifiedHierarchy>(
+        _: Next.Type = Next.self,
+        action: NextRobotAction<Hierarchy, Next>,
+        in modifier: ViewHierarchyModifier<Hierarchy, ModifiedHierarchy>,
+        file: StaticString = #file, line: UInt = #line
+    ) -> RunningRobot<Configuration, ModifiedHierarchy, Next> {
+        action.actions(self)
+        return .init(app: app, configuration: configuration, viewHierarchy: modifier.modify(action.hierarchy(self)), current: action.next(self))
     }
 }
 extension RunningRobot.NextRobotAction {
-    init(hierarchy: @escaping (RunningRobot) -> Hierarchy, next: @escaping (XCUIElement) -> Next) {
-        self.init(hierarchy: hierarchy, next: { next($0.source) })
+    init(actions: @escaping (RunningRobot) -> Void = { _ in }, hierarchy: @escaping (RunningRobot) -> Hierarchy, next: @escaping (XCUIElement) -> Next) {
+        self.init(actions: actions, hierarchy: hierarchy, next: { next($0.source) })
     }
 
-    init(hierarchy: Hierarchy, next: @escaping (XCUIElement) -> Next) {
-        self.init(hierarchy: { _ in hierarchy }, next: { next($0.source) })
+    init(actions: @escaping (RunningRobot) -> Void = { _ in }, hierarchy: Hierarchy, next: @escaping (XCUIElement) -> Next) {
+        self.init(actions: actions, hierarchy: { _ in hierarchy }, next: { next($0.source) })
     }
 }
 

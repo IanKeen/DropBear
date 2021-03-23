@@ -10,15 +10,6 @@ import DropBearSupport
 import XCTest
 
 extension RunningRobot where ViewHierarchy: TabBarHierarchy {
-//    public typealias TabItemNavigationRobot<NavigationElement, Next: Robot> = RunningRobot<
-//        Configuration,
-//        NavigationController<
-//            NavigationElement,
-//            ViewHierarchy
-//        >,
-//        Next
-//    >
-
     public typealias TabItemNavigationRobot<NavigationElement, Next: Robot> = RunningRobot<
         Configuration,
         NavigationController<

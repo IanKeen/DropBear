@@ -30,7 +30,9 @@ extension RunningRobot where ViewHierarchy: TabBarHierarchy {
         TabItem<Configuration, ViewHierarchy, Current>,
         Next
     >
+}
 
+extension RunningRobot.NextRobotAction where ViewHierarchy: TabBarHierarchy {
     public struct TabItemLookup {
         let tabItem: (_ tabBar: XCUIElement) -> XCUIElement
 
@@ -44,52 +46,33 @@ extension RunningRobot where ViewHierarchy: TabBarHierarchy {
             }
         }
 
-        public static func item(_ element: Element, file: StaticString = #file, line: UInt = #line) -> TabItemLookup {
+        public static func item(_ element: Current.Element, file: StaticString = #file, line: UInt = #line) -> TabItemLookup {
             return .init { tabBar in
                 return tabBar.buttons[element.rawValue]
             }
         }
     }
 
-    public struct TabItemAction<Hierarchy, Next: Robot> {
-        let lookup: TabItemLookup
-        let action: NextRobotAction<Hierarchy, Next>
-
-        public static func tab(
-            _ lookup: TabItemLookup,
-            in modifier: ViewHierarchyModifier<TabItem<Configuration, ViewHierarchy, Current>, Hierarchy>
-        ) -> TabItemAction {
-            return .init(lookup: lookup, action: .init(hierarchy: { modifier.modify(.init(parent: $0.viewHierarchy, tabController: $0)) }, next: Next.init))
-        }
-    }
-
-    public func nextRobot<Hierarchy, Next: Robot>(
-        _: Next.Type = Next.self,
-        action: TabItemAction<Hierarchy, Next>,
-        file: StaticString = #file, line: UInt = #line
-    ) -> RunningRobot<Configuration, Hierarchy, Next> {
-        let tabBar = source.tabBars.firstMatch
-
-        if tabBar.buttons.count == 0 {
-            XCTFail("Unable to find any tab buttons", file: file, line: line)
-        }
-
-        let tabItem = action.lookup.tabItem(source)
-
-        tabItem.tap()
-
-        let hierarchy = action.action.hierarchy(self)
-        let next = action.action.next(self)
-
-        return .init(app: app, configuration: configuration, viewHierarchy: hierarchy, current: next)
-    }
-}
-
-extension RunningRobot.TabItemAction {
+    /// Used to put the _next_ `Robot` into a tab item
     public static func tab(
-        _ lookup: RunningRobot.TabItemLookup
-    ) -> RunningRobot.TabItemAction<TabItem<Configuration, ViewHierarchy, Current>, Next> {
-        return .init(lookup: lookup, action: .init(hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) }, next: Next.init))
+        _ lookup: TabItemLookup,
+        file: StaticString = #file, line: UInt = #line
+    ) -> RunningRobot.NextRobotAction<TabItem<Configuration, ViewHierarchy, Current>, Next> {
+        return .init(
+            actions: { robot in
+                let tabBar = robot.source.tabBars.firstMatch
+
+                if tabBar.buttons.count == 0 {
+                    XCTFail("Unable to find any tab buttons", file: file, line: line)
+                }
+
+                let tabItem = lookup.tabItem(robot.source)
+
+                tabItem.tap()
+            },
+            hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) },
+            next: Next.init
+        )
     }
 }
 
