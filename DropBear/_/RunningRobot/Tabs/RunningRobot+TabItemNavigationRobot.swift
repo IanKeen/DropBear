@@ -14,7 +14,7 @@ extension RunningRobot where ViewHierarchy: TabBarHierarchy {
         Configuration,
         NavigationController<
             NavigationElement,
-            TabItem<Configuration, ViewHierarchy, Current>
+            TabItem<RunningRobot, ViewHierarchy>
         >,
         Next
     >

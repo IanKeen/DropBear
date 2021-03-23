@@ -10,24 +10,22 @@ import DropBearSupport
 import XCTest
 
 public protocol TabItemHierarchy {
-    associatedtype Configuration: TestConfigurationSource
-    associatedtype ViewHierarchy
-    associatedtype Current: Robot
-
-    typealias TabController = RunningRobot<Configuration, ViewHierarchy, Current>
+    associatedtype TabController
+    associatedtype Parent
 
     var tabController: TabController { get }
+    var parent: Parent { get }
 }
 
-public struct TabItem<Configuration: TestConfigurationSource, Parent, Current: Robot>: TabItemHierarchy, TabBarHierarchy {
+public struct TabItem<Parent, TabController>: TabItemHierarchy, TabBarHierarchy {
+    public let tabController: TabController
     public let parent: Parent
-    public let tabController: RunningRobot<Configuration, Parent, Current>
 }
 
 extension RunningRobot where ViewHierarchy: TabBarHierarchy {
     public typealias TabItemRobot<Next: Robot> = RunningRobot<
         Configuration,
-        TabItem<Configuration, ViewHierarchy, Current>,
+        TabItem<ViewHierarchy, RunningRobot>,
         Next
     >
 }
@@ -57,7 +55,7 @@ extension RunningRobot.NextRobotAction where ViewHierarchy: TabBarHierarchy {
     public static func tab(
         _ lookup: TabItemLookup,
         file: StaticString = #file, line: UInt = #line
-    ) -> RunningRobot.NextRobotAction<TabItem<Configuration, ViewHierarchy, Current>, Next> {
+    ) -> RunningRobot.NextRobotAction<TabItem<ViewHierarchy, RunningRobot>, Next> {
         return .init(
             actions: { robot in
                 let tabBar = robot.source.tabBars.firstMatch
@@ -70,7 +68,7 @@ extension RunningRobot.NextRobotAction where ViewHierarchy: TabBarHierarchy {
 
                 tabItem.tap()
             },
-            hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) },
+            hierarchy: { .init(tabController: $0, parent: $0.viewHierarchy) },
             next: Next.init
         )
     }
