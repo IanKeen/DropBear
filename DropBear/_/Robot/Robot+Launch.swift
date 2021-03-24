@@ -15,7 +15,7 @@ extension Robot where Self: Launchable {
         using configuration: TestConfiguration<T>,
         beforeLaunch: (XCUIApplication) -> Void = { _ in }
     ) -> RunningRobot<T, Window, Self> {
-        return launch(using: configuration, in: .root, beforeLaunch: beforeLaunch)
+        return launch(using: configuration, in: .init(modify: { $0 }), beforeLaunch: beforeLaunch)
     }
 
     /// Launch the application for testing
