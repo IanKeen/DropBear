@@ -10,16 +10,16 @@ import DropBearSupport
 import XCTest
 
 public protocol TabItemHierarchy {
-    associatedtype TabController
     associatedtype Parent
+    associatedtype TabController
 
-    var tabController: TabController { get }
     var parent: Parent { get }
+    var tabController: TabController { get }
 }
 
-public struct TabItem<Parent, TabController>: TabItemHierarchy, TabBarHierarchy {
-    public let tabController: TabController
+public struct TabItem<Parent, TabController>: TabItemHierarchy {
     public let parent: Parent
+    public let tabController: TabController
 }
 
 extension RunningRobot where ViewHierarchy: TabBarHierarchy {
@@ -68,7 +68,7 @@ extension RunningRobot.NextRobotAction where ViewHierarchy: TabBarHierarchy {
 
                 tabItem.tap()
             },
-            hierarchy: { .init(tabController: $0, parent: $0.viewHierarchy) },
+            hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) },
             next: Next.init
         )
     }
