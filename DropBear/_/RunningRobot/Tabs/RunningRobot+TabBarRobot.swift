@@ -18,13 +18,8 @@ extension RunningRobot {
 }
 
 extension RunningRobot.NextRobotAction {
+    /// Used to put the _next_ `Robot` into a tab hierarchy
     public static var tabs: RunningRobot.NextRobotAction<TabBarController, Next> {
         return .init(hierarchy: { _ in .init() }, next: Next.init)
-    }
-}
-
-extension RunningRobot {
-    public func inTabController() -> RunningRobot<Configuration, TabBarController, Current> {
-        return .init(app: app, configuration: configuration, viewHierarchy: .init(), current: current)
     }
 }
