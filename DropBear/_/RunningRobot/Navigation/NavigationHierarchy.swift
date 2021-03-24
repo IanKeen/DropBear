@@ -22,3 +22,7 @@ public struct NavigationController<NavigationElement, Parent>: NavigationHierarc
 extension NavigationController: TabItemHierarchy where Parent: TabItemHierarchy  {
     public var tabController: Parent.TabController { parent.tabController }
 }
+
+extension NavigationController: ModalHierarchy where Parent: ModalHierarchy {
+    public var presenter: Parent.Presenter { parent.presenter }
+}
