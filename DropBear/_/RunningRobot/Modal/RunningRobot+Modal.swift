@@ -7,21 +7,36 @@
 //
 
 extension RunningRobot {
-    public typealias ModalRobot<Content: Robot> = RunningRobot<
+    public typealias ModalNavigationRobot<NavigationElement, Next: Robot> = RunningRobot<
         Configuration,
-        Modal<RunningRobot>,
-        Content
+        Modal<
+            RunningRobot,
+            NavigationController<NavigationElement, ViewHierarchy>
+        >,
+        Next
     >
 }
 
 extension RunningRobot.NextRobotAction {
-    public static var modal: RunningRobot.NextRobotAction<Modal<RunningRobot>, Next> {
-        return .init(hierarchy: { .init(presenter: $0) }, next: Next.init)
+    public static func modal<NewHierarchy>(
+        _ containing: RunningRobot.NextRobotAction<NewHierarchy, Next>
+    ) -> RunningRobot.NextRobotAction<Modal<RunningRobot, NewHierarchy>, Next> {
+        return .init(
+            hierarchy: { robot in
+                let contentHierarchy = containing.hierarchy(robot)
+                return .init(presenter: robot, content: contentHierarchy)
+            },
+            next: Next.init
+        )
     }
 }
 
 extension RunningRobot where ViewHierarchy: ModalHierarchy {
-    public func dismissModal() -> ViewHierarchy.Presenter {
+    public func dismissModal(performDownwardSwipe: Bool = true, file: StaticString = #file, line: UInt = #line) -> ViewHierarchy.Presenter {
+        guard performDownwardSwipe else { return viewHierarchy.presenter }
+
+        source.swipeDown()
+
         return viewHierarchy.presenter
     }
 }

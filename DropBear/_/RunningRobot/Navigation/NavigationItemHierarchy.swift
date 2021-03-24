@@ -29,4 +29,5 @@ extension NavigationItem: TabItemHierarchy where Parent: TabItemHierarchy {
 
 extension NavigationItem: ModalHierarchy where Parent: ModalHierarchy {
     public var presenter: Parent.Presenter { parent.presenter }
+    public var content: Parent.Content { parent.content }
 }

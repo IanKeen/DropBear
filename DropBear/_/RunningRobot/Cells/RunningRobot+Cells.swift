@@ -17,6 +17,12 @@ public struct CellItemLookup {
 }
 
 extension RunningRobot.NextRobotAction where Current: CellContainerRobot {
+    public typealias CellRobot<Next: Robot> = RunningRobot<
+        Configuration,
+        ViewHierarchy,
+        Next
+    >
+
     public static func cell(
         _ lookup: CellItemLookup,
         file: StaticString = #file, line: UInt = #line

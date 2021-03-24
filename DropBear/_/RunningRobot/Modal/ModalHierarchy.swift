@@ -8,23 +8,25 @@
 
 public protocol ModalHierarchy {
     associatedtype Presenter
+    associatedtype Content
 
     var presenter: Presenter { get }
+    var content: Content { get }
 }
 
-public struct Modal<Presenter>: ModalHierarchy {
+public struct Modal<Presenter, Content>: ModalHierarchy {
     public let presenter: Presenter
+    public let content: Content
 }
 
-extension Modal: NavigationHierarchy where Presenter: RunningRobotType, Presenter.ViewHierarchy: NavigationHierarchy {
-    public typealias NavigationElement = Presenter.ViewHierarchy.NavigationElement
+extension Modal: NavigationHierarchy where Content: NavigationHierarchy {
+    public typealias NavigationElement = Content.NavigationElement
 
-    public var parent: Presenter.ViewHierarchy.Parent { presenter.viewHierarchy.parent }
+    public var parent: Content.Parent { content.parent }
 }
 
-extension Modal: NavigationItemHierarchy where Presenter: RunningRobotType, Presenter.ViewHierarchy: NavigationItemHierarchy {
-    public var parent: Presenter.ViewHierarchy.Parent { presenter.viewHierarchy.parent }
-    public var root: Presenter.ViewHierarchy.Root { presenter.viewHierarchy.root }
-    public var previous: Presenter.ViewHierarchy.Previous { presenter.viewHierarchy.previous }
-
+extension Modal: NavigationItemHierarchy where Content: NavigationItemHierarchy {
+    public var parent: Content.Parent { content.parent }
+    public var root: Content.Root { content.root }
+    public var previous: Content.Previous { content.previous }
 }

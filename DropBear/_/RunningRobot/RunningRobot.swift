@@ -55,32 +55,21 @@ extension RunningRobot {
         action: NextRobotAction<A, Next>,
         file: StaticString = #file, line: UInt = #line
     ) -> RunningRobot<Configuration, A, Next> {
-        return nextRobot(Next.self, action: action, in: .unchanged)
+        return apply(action)
     }
 
     public func nextRobot<A, B, Next: Robot>(
         _: Next.Type = Next.self,
-        action: NextRobotAction<A, Next>,
-        in modifier1: RunningRobot<Configuration, A, Next>.NextRobotAction<B, Next>,
+        action: NextRobotAction<A, Current>,
+        in modifier1: RunningRobot<Configuration, A, Current>.NextRobotAction<B, Next>,
         file: StaticString = #file, line: UInt = #line
     ) -> RunningRobot<Configuration, B, Next> {
-        return nextRobot(Next.self, action: action, in: modifier1, in: .unchanged)
-    }
-
-    public func nextRobot<A, B, C, Next: Robot>(
-        _: Next.Type = Next.self,
-        action: NextRobotAction<A, Next>,
-        in modifier1: RunningRobot<Configuration, A, Next>.NextRobotAction<B, Next>,
-        in modifier2: RunningRobot<Configuration, B, Next>.NextRobotAction<C, Next>,
-        file: StaticString = #file, line: UInt = #line
-    ) -> RunningRobot<Configuration, C, Next> {
         action.actions(self)
 
         let a = apply(action)
         let b = a.apply(modifier1)
-        let c = b.apply(modifier2)
 
-        return c
+        return b
     }
 }
 
