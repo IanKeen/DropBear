@@ -9,11 +9,19 @@
 import XCTest
 import DropBearSupport
 
+public protocol RunningRobotType {
+    associatedtype ViewHierarchy
+    associatedtype Current: Robot
+
+    var viewHierarchy: ViewHierarchy { get }
+    var current: Current { get }
+}
+
 public class RunningRobot<
     Configuration: TestConfigurationSource,
     ViewHierarchy,
     Current: Robot
->: Robot {
+>: Robot, RunningRobotType {
     public typealias Element = Current.Element
 
     public let app: XCUIApplication
@@ -42,25 +50,51 @@ extension RunningRobot {
         let next: (RunningRobot) -> Next
     }
 
-    public func nextRobot<Hierarchy, Next: Robot>(
+    public func nextRobot<A, Next: Robot>(
         _: Next.Type = Next.self,
-        action: NextRobotAction<Hierarchy, Next>,
+        action: NextRobotAction<A, Next>,
         file: StaticString = #file, line: UInt = #line
-    ) -> RunningRobot<Configuration, Hierarchy, Next> {
-        return nextRobot(Next.self, action: action, in: .init(modify: { $0 }))
+    ) -> RunningRobot<Configuration, A, Next> {
+        return nextRobot(Next.self, action: action, in: .unchanged)
     }
 
-    public func nextRobot<Hierarchy, Next: Robot, ModifiedHierarchy>(
+    public func nextRobot<A, B, Next: Robot>(
         _: Next.Type = Next.self,
-        action: NextRobotAction<Hierarchy, Next>,
-        in modifier: ViewHierarchyModifier<Hierarchy, ModifiedHierarchy>,
+        action: NextRobotAction<A, Next>,
+        in modifier1: RunningRobot<Configuration, A, Next>.NextRobotAction<B, Next>,
         file: StaticString = #file, line: UInt = #line
-    ) -> RunningRobot<Configuration, ModifiedHierarchy, Next> {
+    ) -> RunningRobot<Configuration, B, Next> {
+        return nextRobot(Next.self, action: action, in: modifier1, in: .unchanged)
+    }
+
+    public func nextRobot<A, B, C, Next: Robot>(
+        _: Next.Type = Next.self,
+        action: NextRobotAction<A, Next>,
+        in modifier1: RunningRobot<Configuration, A, Next>.NextRobotAction<B, Next>,
+        in modifier2: RunningRobot<Configuration, B, Next>.NextRobotAction<C, Next>,
+        file: StaticString = #file, line: UInt = #line
+    ) -> RunningRobot<Configuration, C, Next> {
         action.actions(self)
-        return .init(app: app, configuration: configuration, viewHierarchy: modifier.modify(action.hierarchy(self)), current: action.next(self))
+
+        let a = apply(action)
+        let b = a.apply(modifier1)
+        let c = b.apply(modifier2)
+
+        return c
     }
 }
+
+extension RunningRobot {
+    func apply<NewHierarchy, Next>(_ action: NextRobotAction<NewHierarchy, Next>) -> RunningRobot<Configuration, NewHierarchy, Next> {
+        return .init(app: app, configuration: configuration, viewHierarchy: action.hierarchy(self), current: .init(source: source))
+    }
+}
+
 extension RunningRobot.NextRobotAction {
+    static var unchanged: RunningRobot.NextRobotAction<ViewHierarchy, Current> {
+        return .init(hierarchy: { $0.viewHierarchy }, next: Current.init)
+    }
+
     init(actions: @escaping (RunningRobot) -> Void = { _ in }, hierarchy: @escaping (RunningRobot) -> Hierarchy, next: @escaping (XCUIElement) -> Next) {
         self.init(actions: actions, hierarchy: hierarchy, next: { next($0.source) })
     }

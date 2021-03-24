@@ -15,7 +15,7 @@ extension Robot where Self: Launchable {
         using configuration: TestConfiguration<T>,
         beforeLaunch: (XCUIApplication) -> Void = { _ in }
     ) -> RunningRobot<T, Window, Self> {
-        return launch(using: configuration, in: .init(modify: { $0 }), beforeLaunch: beforeLaunch)
+        return launch(using: configuration, in: .unchanged, beforeLaunch: beforeLaunch)
     }
 
     /// Launch the application for testing
@@ -27,7 +27,7 @@ extension Robot where Self: Launchable {
 
     /// Launch the application for testing starting in the provided hierarchy
     public static func launch<ViewHierarchy>(
-        in hierarchy: ViewHierarchyModifier<Window, ViewHierarchy>,
+        in hierarchy: RunningRobot<NoConfiguration, Window, Self>.NextRobotAction<ViewHierarchy, Self>,
         beforeLaunch: (XCUIApplication) -> Void = { _ in }
     ) -> RunningRobot<NoConfiguration, ViewHierarchy, Self> {
         return launch(using: .init(), in: hierarchy, beforeLaunch: beforeLaunch)
@@ -36,12 +36,14 @@ extension Robot where Self: Launchable {
     /// Launch the application for testing in the provided hierarchy passing the provided configuration
     public static func launch<T: TestConfigurationSource, ViewHierarchy>(
         using configuration: TestConfiguration<T>,
-        in hierarchy: ViewHierarchyModifier<Window, ViewHierarchy>,
+        in hierarchy: RunningRobot<T, Window, Self>.NextRobotAction<ViewHierarchy, Self>,
         beforeLaunch: (XCUIApplication) -> Void = { _ in }
     ) -> RunningRobot<T, ViewHierarchy, Self> {
         let app = XCUIApplication()
         beforeLaunch(app)
         app.launchForTesting(with: configuration)
-        return .init(app: app, configuration: configuration, viewHierarchy: hierarchy.modify(.init()), current: .init(source: app))
+
+        let source = RunningRobot.init(app: app, configuration: configuration, viewHierarchy: Window(), current: Self(source: app))
+        return source.apply(hierarchy)
     }
 }
