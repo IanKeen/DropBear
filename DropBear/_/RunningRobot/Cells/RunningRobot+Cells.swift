@@ -8,32 +8,29 @@
 
 import XCTest
 
-extension RunningRobot where Current: CellContainerRobot {
-    public struct CellItemLookup {
-        let cell: (XCUIElement) -> XCUIElement
+public struct CellItemLookup {
+    let cell: (XCUIElement) -> XCUIElement
 
-        public static func index(_ index: Int, file: StaticString = #file, line: UInt = #line) -> CellItemLookup {
-            return .init { $0.cell(index, file: file, line: line) }
-        }
+    public static func index(_ index: Int, file: StaticString = #file, line: UInt = #line) -> CellItemLookup {
+        return .init { $0.cell(index, file: file, line: line) }
     }
+}
 
-    public struct CellItemAction<Hierarchy, Next: Robot> {
-        let lookup: CellItemLookup
-        let action: NextRobotAction<Hierarchy, Next>
-
-        public static func cell(_ lookup: CellItemLookup, _ action: NextRobotAction<Hierarchy, Next>) -> CellItemAction {
-            return .init(lookup: lookup, action: action)
-        }
-    }
-
-    public func nextRobot<Hierarchy, Next: Robot>(
-        _: Next.Type = Next.self,
-        action: CellItemAction<Hierarchy, Next>
-    ) -> RunningRobot<Configuration, Hierarchy, Next> {
-        let cell = action.lookup.cell(source)
-        cell.tap()
-        let action = action.action
-        return .init(app: app, configuration: configuration, viewHierarchy: action.hierarchy(self), current: action.next(self))
+extension RunningRobot.NextRobotAction where Current: CellContainerRobot {
+    public static func cell(
+        _ lookup: CellItemLookup,
+        file: StaticString = #file, line: UInt = #line
+    ) -> RunningRobot.NextRobotAction<ViewHierarchy, Next> {
+        return .init(
+            actions: { robot in
+                let cell = lookup.cell(robot.source)
+                cell.tap()
+            },
+            hierarchy: { robot in
+                return robot.viewHierarchy
+            },
+            next: Next.init
+        )
     }
 }
 
