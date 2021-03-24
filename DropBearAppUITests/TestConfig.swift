@@ -22,4 +22,8 @@ extension TestConfig {
         )
         return self
     }
+    func showItemDetails(with mode: PresentationMode) -> TestConfig {
+        self.itemDetailPresentationMode = mode
+        return self
+    }
 }
