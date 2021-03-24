@@ -6,25 +6,16 @@
 //  Copyright © 2021 Mustard. All rights reserved.
 //
 
-public protocol TabBarHierarchy {
-    associatedtype Parent
+public protocol TabBarHierarchy { }
 
-    var parent: Parent { get }
-}
-
-public struct TabBarController<Parent>: TabBarHierarchy {
-    public let parent: Parent
-}
+public struct TabBarController: TabBarHierarchy { }
 
 public protocol TabItemHierarchy {
-    associatedtype Parent
     associatedtype TabController
 
-    var parent: Parent { get }
     var tabController: TabController { get }
 }
 
-public struct TabItem<Parent, TabController>: TabItemHierarchy {
-    public let parent: Parent
+public struct TabItem<TabController>: TabItemHierarchy {
     public let tabController: TabController
 }

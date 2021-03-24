@@ -12,7 +12,7 @@ import XCTest
 extension RunningRobot where ViewHierarchy: TabBarHierarchy {
     public typealias TabItemRobot<Next: Robot> = RunningRobot<
         Configuration,
-        TabItem<ViewHierarchy, RunningRobot>,
+        TabItem<RunningRobot>,
         Next
     >
 }
@@ -42,7 +42,7 @@ extension RunningRobot.NextRobotAction where ViewHierarchy: TabBarHierarchy {
     public static func tab(
         _ lookup: TabItemLookup,
         file: StaticString = #file, line: UInt = #line
-    ) -> RunningRobot.NextRobotAction<TabItem<ViewHierarchy, RunningRobot>, Next> {
+    ) -> RunningRobot.NextRobotAction<TabItem<RunningRobot>, Next> {
         return .init(
             actions: { robot in
                 let tabBar = robot.source.tabBars.firstMatch
@@ -55,7 +55,7 @@ extension RunningRobot.NextRobotAction where ViewHierarchy: TabBarHierarchy {
 
                 tabItem.tap()
             },
-            hierarchy: { .init(parent: $0.viewHierarchy, tabController: $0) },
+            hierarchy: { .init(tabController: $0) },
             next: Next.init
         )
     }

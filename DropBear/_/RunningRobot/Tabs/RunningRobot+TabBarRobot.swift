@@ -12,19 +12,19 @@ import XCTest
 extension RunningRobot {
     public typealias TabBarRobot<Next: Robot> = RunningRobot<
         Configuration,
-        TabBarController<ViewHierarchy>,
+        TabBarController,
         Next
     >
 }
 
 extension RunningRobot.NextRobotAction {
-    public static var tabs: RunningRobot.NextRobotAction<TabBarController<ViewHierarchy>, Next> {
-        return .init(hierarchy: { .init(parent: $0.viewHierarchy) }, next: Next.init)
+    public static var tabs: RunningRobot.NextRobotAction<TabBarController, Next> {
+        return .init(hierarchy: { _ in .init() }, next: Next.init)
     }
 }
 
 extension RunningRobot {
-    public func inTabController() -> RunningRobot<Configuration, TabBarController<ViewHierarchy>, Current> {
-        return .init(app: app, configuration: configuration, viewHierarchy: .init(parent: viewHierarchy), current: current)
+    public func inTabController() -> RunningRobot<Configuration, TabBarController, Current> {
+        return .init(app: app, configuration: configuration, viewHierarchy: .init(), current: current)
     }
 }

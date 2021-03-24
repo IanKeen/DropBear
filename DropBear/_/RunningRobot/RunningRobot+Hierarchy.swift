@@ -26,7 +26,7 @@ extension ViewHierarchyModifier {
 }
 
 extension ViewHierarchyModifier {
-    public static var tabs: ViewHierarchyModifier<In, TabBarController<In>> {
-        return .init { .init(parent: $0) }
+    public static var tabs: ViewHierarchyModifier<In, TabBarController> {
+        return .init { _ in .init() }
     }
 }
