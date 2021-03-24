@@ -6,16 +6,6 @@
 //  Copyright © 2021 Mustard. All rights reserved.
 //
 
-public protocol ModalHierarchy {
-    associatedtype Presenter
-
-    var presenter: Presenter { get }
-}
-
-public struct Modal<Presenter>: ModalHierarchy {
-    public let presenter: Presenter
-}
-
 extension RunningRobot {
     public typealias ModalRobot<Content: Robot> = RunningRobot<
         Configuration,
@@ -29,6 +19,7 @@ extension RunningRobot.NextRobotAction {
         return .init(hierarchy: { .init(presenter: $0) }, next: Next.init)
     }
 }
+
 extension RunningRobot where ViewHierarchy: ModalHierarchy {
     public func dismissModal() -> ViewHierarchy.Presenter {
         return viewHierarchy.presenter
