@@ -21,6 +21,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tX7-AB-4Vq">
                     <rect key="frame" x="179.5" y="438" width="55" height="30"/>
+                    <accessibility key="accessibilityConfiguration" identifier="logOut"/>
                     <state key="normal" title="Log Out"/>
                 </button>
             </subviews>

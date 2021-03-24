@@ -30,5 +30,6 @@ class ListItemDetailsViewController: UIViewController {
         super.viewDidLoad()
 
         date.date = viewModel.createdDate
+        date.accessibilityIdentifier = "date"
     }
 }

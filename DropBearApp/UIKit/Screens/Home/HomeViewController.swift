@@ -15,9 +15,11 @@ class HomeViewController: UITabBarController {
 
         let list = ListNavigationController()
         list.tabBarItem = .init(title: "List", image: nil, tag: 0)
+        list.tabBarItem.accessibilityIdentifier = "list"
 
         let settings = SettingsNavigationController()
         settings.tabBarItem = .init(title: "Settings", image: nil, tag: 0)
+        settings.tabBarItem.accessibilityIdentifier = "settings"
 
         setViewControllers([list, settings], animated: false)
     }

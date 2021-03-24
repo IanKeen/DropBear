@@ -22,6 +22,7 @@ class ListNavigationController: UINavigationController {
 
         viewController.title = "Items"
         viewController.navigationItem.rightBarButtonItem = .init(title: "Add", style: .done, target: self, action: #selector(addItem))
+        viewController.navigationItem.rightBarButtonItem?.accessibilityIdentifier = "add"
 
         setViewControllers([viewController], animated: false)
     }

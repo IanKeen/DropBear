@@ -28,6 +28,7 @@ class ListViewController: UITableViewController {
 
         ListItemCell.register(with: tableView)
         tableView.estimatedRowHeight = 90
+        tableView.accessibilityIdentifier = "tableView"
 
         refreshControl = UIRefreshControl()
         clearsSelectionOnViewWillAppear = false

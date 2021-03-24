@@ -15,9 +15,9 @@ class HomeRobot: RobotBase, Robot {
 }
 extension RunningRobot where Current == HomeRobot, ViewHierarchy: TabBarHierarchy {
     func list() -> TabItemNavigationRobot<NoNavigationElement, ListRobot> {
-        return nextRobot(action: .tab(.item(.list), in: .navigation))
+        return nextRobot(ListRobot.self, action: .tab(.item(.list)), in: .navigation)
     }
     func settings() -> TabItemNavigationRobot<NoNavigationElement, SettingsRobot> {
-        return nextRobot(action: .tab(.item(.settings), in: .navigation))
+        return nextRobot(action: .tab(.item(.settings)), in: .navigation)
     }
 }
