@@ -25,6 +25,8 @@ enum Dependencies {
         dataSource: Dependencies.listDataSource
     )
 
+    static var itemDetailPresentationMode: PresentationMode = .push
+
     static func reset() {
         _listDataSource.reset()
         _listItemRepository.reset()

@@ -23,5 +23,6 @@ extension Dependencies {
         Dependencies.authenticator = config.authenticator
         Dependencies.keyValueStorage = config.keyValueStore
         Dependencies.$listDataSource.updateFactory { config.listDataSource }
+        Dependencies.itemDetailPresentationMode = config.itemDetailPresentationMode
     }
 }

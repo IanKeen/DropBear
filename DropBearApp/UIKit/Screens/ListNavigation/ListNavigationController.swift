@@ -50,6 +50,12 @@ class ListNavigationController: UINavigationController {
     }
     override func showItemDetails(_ box: ResponderBox) {
         let viewController = ListItemDetailsViewController(viewModel: box.value())
-        pushViewController(viewController, animated: true)
+
+        switch Dependencies.itemDetailPresentationMode {
+        case .push:
+            pushViewController(viewController, animated: true)
+        case .present:
+            presentModal(viewController, animated: true)
+        }
     }
 }
