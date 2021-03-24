@@ -9,16 +9,6 @@
 import DropBearSupport
 import XCTest
 
-public protocol TabBarHierarchy {
-    associatedtype Parent
-
-    var parent: Parent { get }
-}
-
-public struct TabBarController<Parent>: TabBarHierarchy {
-    public let parent: Parent
-}
-
 extension RunningRobot {
     public typealias TabBarRobot<Next: Robot> = RunningRobot<
         Configuration,
