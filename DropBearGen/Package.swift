@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "DropBearGen",
     dependencies: [
-        .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.50200.0")),
+        .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.50400.0")),
         .package(url: "https://github.com/tid-kijyun/Kanna.git", from: "4.0.0")
     ],
     targets: [

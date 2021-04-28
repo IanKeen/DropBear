@@ -13,15 +13,15 @@ extension XCUIElement {
     }
 }
 
-/// Internal `XCUIElement` subclass that is returned when an optional element is requested but not found.
+/// Internal `XCUIApplication` subclass that is returned when an optional element is requested but not found.
 /// This prevents optional paths in test from failing when functions such as `tap()` are called on missing elements.
-class MissingXCUIElement: XCUIElement {
+class MissingXCUIElement: XCUIApplication {
     override var exists: Bool { return false }
     override var isHittable: Bool { return false }
     override func waitForExistence(timeout: TimeInterval) -> Bool { return false }
     override var debugDescription: String { return String(describing: MissingXCUIElement.self) }
 
-    init(element: XCUIElement) { }
+    init(element: XCUIElement) { super.init() }
 
     override func typeText(_ text: String) { }
     override func tap() { }
