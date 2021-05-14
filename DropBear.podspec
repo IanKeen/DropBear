@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.source_files = 'DropBear/**/*.swift'
+  spec.source_files = 'Sources/DropBear/**/*.swift'
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 

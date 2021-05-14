@@ -1,3 +1,5 @@
+import Foundation
+
 extension ElementAssertion {
     public static var exists: ElementAssertion {
         return exists(waiting: DropBear.defaultWaitTime)

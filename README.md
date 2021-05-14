@@ -127,3 +127,11 @@ The `||` operator evaluates two or more assertion results and asserts `true` if 
 FooRobot()
     .assert(.fooTextField, .exists || .contains("world"))
 ```
+
+# DropBear Generator
+
+### Compiling for Release
+
+```zsh
+$ swift build -c release --product DropBearGen --disable-sandbox -Xlinker -weak-l_InternalSwiftSyntaxParser -Xswiftc -suppress-warnings
+```
