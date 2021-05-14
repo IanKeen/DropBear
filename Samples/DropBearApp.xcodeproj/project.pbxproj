@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B5AE80AB2285DE6E0098CF95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */; };
+		B5AE80B22285DE6E0098CF95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B12285DE6E0098CF95 /* Assets.xcassets */; };
+		B5AE80B52285DE6E0098CF95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */; };
+		B5AE80CB2285DEB50098CF95 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80C92285DEB40098CF95 /* main.swift */; };
+		B5AE80CC2285DEB50098CF95 /* UITestAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80CA2285DEB50098CF95 /* UITestAppDelegate.swift */; };
+		B5AE80D92285DEFE0098CF95 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80CF2285DEFD0098CF95 /* TableViewCell.swift */; };
+		B5AE80DA2285DEFE0098CF95 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80D02285DEFD0098CF95 /* TableViewCell.xib */; };
+		B5AE80DB2285DEFE0098CF95 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D12285DEFD0098CF95 /* TableViewController.swift */; };
+		B5AE80DC2285DEFE0098CF95 /* ScrollableStackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80D32285DEFD0098CF95 /* ScrollableStackViewController.xib */; };
+		B5AE80DD2285DEFE0098CF95 /* ScrollableStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D42285DEFD0098CF95 /* ScrollableStackViewController.swift */; };
+		B5AE80DE2285DEFE0098CF95 /* Tab2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D62285DEFD0098CF95 /* Tab2ViewController.swift */; };
+		B5AE80DF2285DEFE0098CF95 /* Tab1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80D72285DEFD0098CF95 /* Tab1ViewController.swift */; };
+		B5AE80E02285DEFE0098CF95 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5AE80D82285DEFD0098CF95 /* TabBarController.storyboard */; };
+		B5AE80E92285DF500098CF95 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E12285DF500098CF95 /* Tests.swift */; };
+		B5AE80EA2285DF500098CF95 /* AccessibilityIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E32285DF500098CF95 /* AccessibilityIdentifiers.swift */; };
+		B5AE80EB2285DF500098CF95 /* ScrollableStackRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E52285DF500098CF95 /* ScrollableStackRobot.swift */; };
+		B5AE80EC2285DF500098CF95 /* TableViewRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E62285DF500098CF95 /* TableViewRobot.swift */; };
+		B5AE80ED2285DF500098CF95 /* TabRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E72285DF500098CF95 /* TabRobot.swift */; };
+		B5AE80EE2285DF500098CF95 /* UITestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AE80E82285DF500098CF95 /* UITestConfig.swift */; };
+		D12837D9264EC85600DC6417 /* DropBearSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D12837D8264EC85600DC6417 /* DropBearSupport */; };
+		D12837DB264EC85E00DC6417 /* DropBear in Frameworks */ = {isa = PBXBuildFile; productRef = D12837DA264EC85E00DC6417 /* DropBear */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5AE80BC2285DE6F0098CF95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32C399F6227A3092001DA20E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5AE80A72285DE6E0098CF95;
+			remoteInfo = DropBearApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5AE81122285E2820098CF95 /* [MSTRD] Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "[MSTRD] Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		32C39A60227A4C51001DA20E /* DropBearSupport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropBearSupport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80A82285DE6E0098CF95 /* DropBearAppApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DropBearAppApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B5AE80B12285DE6E0098CF95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5AE80B42285DE6E0098CF95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5AE80B62285DE6F0098CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE80BB2285DE6F0098CF95 /* DropBearAppAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropBearAppAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AE80C12285DE6F0098CF95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5AE80C92285DEB40098CF95 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B5AE80CA2285DEB50098CF95 /* UITestAppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestAppDelegate.swift; sourceTree = "<group>"; };
+		B5AE80CF2285DEFD0098CF95 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B5AE80D02285DEFD0098CF95 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		B5AE80D12285DEFD0098CF95 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B5AE80D32285DEFD0098CF95 /* ScrollableStackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableStackViewController.xib; sourceTree = "<group>"; };
+		B5AE80D42285DEFD0098CF95 /* ScrollableStackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableStackViewController.swift; sourceTree = "<group>"; };
+		B5AE80D62285DEFD0098CF95 /* Tab2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab2ViewController.swift; sourceTree = "<group>"; };
+		B5AE80D72285DEFD0098CF95 /* Tab1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tab1ViewController.swift; sourceTree = "<group>"; };
+		B5AE80D82285DEFD0098CF95 /* TabBarController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		B5AE80E12285DF500098CF95 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		B5AE80E32285DF500098CF95 /* AccessibilityIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessibilityIdentifiers.swift; sourceTree = "<group>"; };
+		B5AE80E52285DF500098CF95 /* ScrollableStackRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableStackRobot.swift; sourceTree = "<group>"; };
+		B5AE80E62285DF500098CF95 /* TableViewRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewRobot.swift; sourceTree = "<group>"; };
+		B5AE80E72285DF500098CF95 /* TabRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabRobot.swift; sourceTree = "<group>"; };
+		B5AE80E82285DF500098CF95 /* UITestConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITestConfig.swift; sourceTree = "<group>"; };
+		D12837D7264EC72200DC6417 /* DropBear */ = {isa = PBXFileReference; lastKnownFileType = folder; name = DropBear; path = ..; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5AE80A52285DE6E0098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12837D9264EC85600DC6417 /* DropBearSupport in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80B82285DE6F0098CF95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D12837DB264EC85E00DC6417 /* DropBear in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32C399F5227A3092001DA20E = {
+			isa = PBXGroup;
+			children = (
+				D12837D7264EC72200DC6417 /* DropBear */,
+				B5AE80A92285DE6E0098CF95 /* DropBearApp */,
+				B5AE80BE2285DE6F0098CF95 /* DropBearAppUITests */,
+				32C39A00227A3092001DA20E /* Products */,
+				32C39A5F227A4C51001DA20E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		32C39A00227A3092001DA20E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80A82285DE6E0098CF95 /* DropBearAppApp.app */,
+				B5AE80BB2285DE6F0098CF95 /* DropBearAppAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32C39A5F227A4C51001DA20E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32C39A60227A4C51001DA20E /* DropBearSupport.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5AE80A92285DE6E0098CF95 /* DropBearApp */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80C82285DE850098CF95 /* Resources */,
+				B5AE80CD2285DEFD0098CF95 /* Screens */,
+				B5AE80AA2285DE6E0098CF95 /* AppDelegate.swift */,
+				B5AE80CA2285DEB50098CF95 /* UITestAppDelegate.swift */,
+				B5AE80C92285DEB40098CF95 /* main.swift */,
+			);
+			path = DropBearApp;
+			sourceTree = "<group>";
+		};
+		B5AE80BE2285DE6F0098CF95 /* DropBearAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80E22285DF500098CF95 /* Generated */,
+				B5AE80E42285DF500098CF95 /* Robots */,
+				B5AE80E12285DF500098CF95 /* Tests.swift */,
+				B5AE80E82285DF500098CF95 /* UITestConfig.swift */,
+				B5AE80C12285DE6F0098CF95 /* Info.plist */,
+			);
+			path = DropBearAppUITests;
+			sourceTree = "<group>";
+		};
+		B5AE80C82285DE850098CF95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80B12285DE6E0098CF95 /* Assets.xcassets */,
+				B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */,
+				B5AE80B62285DE6F0098CF95 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5AE80CD2285DEFD0098CF95 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80CE2285DEFD0098CF95 /* TableView */,
+				B5AE80D22285DEFD0098CF95 /* ScrollableStackView */,
+				B5AE80D52285DEFD0098CF95 /* TabBarController */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B5AE80CE2285DEFD0098CF95 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80CF2285DEFD0098CF95 /* TableViewCell.swift */,
+				B5AE80D02285DEFD0098CF95 /* TableViewCell.xib */,
+				B5AE80D12285DEFD0098CF95 /* TableViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		B5AE80D22285DEFD0098CF95 /* ScrollableStackView */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80D32285DEFD0098CF95 /* ScrollableStackViewController.xib */,
+				B5AE80D42285DEFD0098CF95 /* ScrollableStackViewController.swift */,
+			);
+			path = ScrollableStackView;
+			sourceTree = "<group>";
+		};
+		B5AE80D52285DEFD0098CF95 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80D62285DEFD0098CF95 /* Tab2ViewController.swift */,
+				B5AE80D72285DEFD0098CF95 /* Tab1ViewController.swift */,
+				B5AE80D82285DEFD0098CF95 /* TabBarController.storyboard */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		B5AE80E22285DF500098CF95 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80E32285DF500098CF95 /* AccessibilityIdentifiers.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		B5AE80E42285DF500098CF95 /* Robots */ = {
+			isa = PBXGroup;
+			children = (
+				B5AE80E52285DF500098CF95 /* ScrollableStackRobot.swift */,
+				B5AE80E62285DF500098CF95 /* TableViewRobot.swift */,
+				B5AE80E72285DF500098CF95 /* TabRobot.swift */,
+			);
+			path = Robots;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5AE80A72285DE6E0098CF95 /* DropBearAppApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE80C22285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearAppApp" */;
+			buildPhases = (
+				B5AE81112285E0680098CF95 /* [MSTRD] DropBearGen */,
+				B5AE80A42285DE6E0098CF95 /* Sources */,
+				B5AE80A52285DE6E0098CF95 /* Frameworks */,
+				B5AE80A62285DE6E0098CF95 /* Resources */,
+				B5AE81122285E2820098CF95 /* [MSTRD] Copy Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DropBearAppApp;
+			packageProductDependencies = (
+				D12837D8264EC85600DC6417 /* DropBearSupport */,
+			);
+			productName = DropBearApp;
+			productReference = B5AE80A82285DE6E0098CF95 /* DropBearAppApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5AE80BA2285DE6F0098CF95 /* DropBearAppAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5AE80C52285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearAppAppUITests" */;
+			buildPhases = (
+				B5AE80B72285DE6F0098CF95 /* Sources */,
+				B5AE80B82285DE6F0098CF95 /* Frameworks */,
+				B5AE80B92285DE6F0098CF95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5AE80BD2285DE6F0098CF95 /* PBXTargetDependency */,
+			);
+			name = DropBearAppAppUITests;
+			packageProductDependencies = (
+				D12837DA264EC85E00DC6417 /* DropBear */,
+			);
+			productName = DropBearAppUITests;
+			productReference = B5AE80BB2285DE6F0098CF95 /* DropBearAppAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32C399F6227A3092001DA20E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Mustard;
+				TargetAttributes = {
+					B5AE80A72285DE6E0098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					B5AE80BA2285DE6F0098CF95 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = B5AE80A72285DE6E0098CF95;
+					};
+				};
+			};
+			buildConfigurationList = 32C399F9227A3092001DA20E /* Build configuration list for PBXProject "DropBearApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32C399F5227A3092001DA20E;
+			packageReferences = (
+			);
+			productRefGroup = 32C39A00227A3092001DA20E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5AE80A72285DE6E0098CF95 /* DropBearAppApp */,
+				B5AE80BA2285DE6F0098CF95 /* DropBearAppAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5AE80A62285DE6E0098CF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80B52285DE6E0098CF95 /* LaunchScreen.storyboard in Resources */,
+				B5AE80DA2285DEFE0098CF95 /* TableViewCell.xib in Resources */,
+				B5AE80E02285DEFE0098CF95 /* TabBarController.storyboard in Resources */,
+				B5AE80DC2285DEFE0098CF95 /* ScrollableStackViewController.xib in Resources */,
+				B5AE80B22285DE6E0098CF95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80B92285DE6F0098CF95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B5AE81112285E0680098CF95 /* [MSTRD] DropBearGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[MSTRD] DropBearGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${BUILD_DIR}/Debug/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5AE80A42285DE6E0098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80DD2285DEFE0098CF95 /* ScrollableStackViewController.swift in Sources */,
+				B5AE80CB2285DEB50098CF95 /* main.swift in Sources */,
+				B5AE80DF2285DEFE0098CF95 /* Tab1ViewController.swift in Sources */,
+				B5AE80D92285DEFE0098CF95 /* TableViewCell.swift in Sources */,
+				B5AE80DE2285DEFE0098CF95 /* Tab2ViewController.swift in Sources */,
+				B5AE80AB2285DE6E0098CF95 /* AppDelegate.swift in Sources */,
+				B5AE80DB2285DEFE0098CF95 /* TableViewController.swift in Sources */,
+				B5AE80CC2285DEB50098CF95 /* UITestAppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5AE80B72285DE6F0098CF95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5AE80ED2285DF500098CF95 /* TabRobot.swift in Sources */,
+				B5AE80EB2285DF500098CF95 /* ScrollableStackRobot.swift in Sources */,
+				B5AE80EA2285DF500098CF95 /* AccessibilityIdentifiers.swift in Sources */,
+				B5AE80EE2285DF500098CF95 /* UITestConfig.swift in Sources */,
+				B5AE80E92285DF500098CF95 /* Tests.swift in Sources */,
+				B5AE80EC2285DF500098CF95 /* TableViewRobot.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5AE80BD2285DE6F0098CF95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5AE80A72285DE6E0098CF95 /* DropBearAppApp */;
+			targetProxy = B5AE80BC2285DE6F0098CF95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5AE80B32285DE6E0098CF95 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5AE80B42285DE6E0098CF95 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32C39A11227A3092001DA20E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		32C39A12227A3092001DA20E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B5AE80C32285DE6F0098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5AE80C42285DE6F0098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearApp/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B5AE80C62285DE6F0098CF95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DropBearApp;
+			};
+			name = Debug;
+		};
+		B5AE80C72285DE6F0098CF95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VLYBQY25EM;
+				INFOPLIST_FILE = DropBearAppUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.DropBearAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DropBearApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32C399F9227A3092001DA20E /* Build configuration list for PBXProject "DropBearApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32C39A11227A3092001DA20E /* Debug */,
+				32C39A12227A3092001DA20E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE80C22285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearAppApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE80C32285DE6F0098CF95 /* Debug */,
+				B5AE80C42285DE6F0098CF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5AE80C52285DE6F0098CF95 /* Build configuration list for PBXNativeTarget "DropBearAppAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5AE80C62285DE6F0098CF95 /* Debug */,
+				B5AE80C72285DE6F0098CF95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D12837D8264EC85600DC6417 /* DropBearSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DropBearSupport;
+		};
+		D12837DA264EC85E00DC6417 /* DropBear */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DropBear;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 32C399F6227A3092001DA20E /* Project object */;
+}

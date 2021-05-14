@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.source_files = 'DropBearSupport/**/*.swift'
+  spec.source_files = 'Sources/DropBearSupport/**/*.swift'
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 

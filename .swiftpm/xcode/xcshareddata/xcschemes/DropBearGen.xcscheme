@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5AE80A72285DE6E0098CF95"
-               BuildableName = "DropBearApp.app"
-               BlueprintName = "DropBearApp"
-               ReferencedContainer = "container:DropBear.xcodeproj">
+               BlueprintIdentifier = "DropBearGen"
+               BuildableName = "DropBearGen"
+               BlueprintName = "DropBearGen"
+               ReferencedContainer = "container:">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B5AE80BA2285DE6F0098CF95"
-               BuildableName = "DropBearAppUITests.xctest"
-               BlueprintName = "DropBearAppUITests"
-               ReferencedContainer = "container:DropBear.xcodeproj">
+               BlueprintIdentifier = "DropBearGenTests"
+               BuildableName = "DropBearGenTests"
+               BlueprintName = "DropBearGenTests"
+               ReferencedContainer = "container:">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,10 +54,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5AE80A72285DE6E0098CF95"
-            BuildableName = "DropBearApp.app"
-            BlueprintName = "DropBearApp"
-            ReferencedContainer = "container:DropBear.xcodeproj">
+            BlueprintIdentifier = "DropBearGen"
+            BuildableName = "DropBearGen"
+            BlueprintName = "DropBearGen"
+            ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -71,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B5AE80A72285DE6E0098CF95"
-            BuildableName = "DropBearApp.app"
-            BlueprintName = "DropBearApp"
-            ReferencedContainer = "container:DropBear.xcodeproj">
+            BlueprintIdentifier = "DropBearGen"
+            BuildableName = "DropBearGen"
+            BlueprintName = "DropBearGen"
+            ReferencedContainer = "container:">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
