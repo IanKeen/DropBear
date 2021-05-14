@@ -130,8 +130,8 @@ FooRobot()
 
 # DropBear Generator
 
-### Compiling for Release
+### Making Release
 
 ```zsh
-$ swift build -c release --product DropBearGen --disable-sandbox -Xlinker -weak-l_InternalSwiftSyntaxParser -Xswiftc -suppress-warnings
+$ make build-release
 ```
