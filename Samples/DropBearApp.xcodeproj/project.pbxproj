@@ -345,7 +345,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${BUILD_DIR}/Debug/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
+			shellScript = "${SRCROOT}/../.build/x86_64-apple-macosx/release/DropBearGen ${SRCROOT}/DropBearApp ${SRCROOT}/DropBearAppUITests/Generated/AccessibilityIdentifiers.swift\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
