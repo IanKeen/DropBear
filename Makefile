@@ -15,3 +15,6 @@ clean:
 rebuild: clean build
 
 rebuild-release: clean build-release
+
+package-release: rebuild-release
+	@tar -czf DropBearGen.tar.gz --directory=.build/x86_64-apple-macosx/release DropBearGen
