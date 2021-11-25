@@ -26,9 +26,9 @@ extension Robot where Self: CellContainerRobot {
 
     public func cell(_ index: Int, file: StaticString = #file, line: UInt = #line) -> XCUIElement {
         let cells = source.cells.firstMatch
-        let cellsAvailable = cells.waitForExistence(timeout: DropBear.defaultWaitTime)
+        DropBear.poll(until: { cells.exists }, timeout: DropBear.defaultWaitTime)
 
-        if !cellsAvailable {
+        if !cells.exists {
             XCTFail("Failed to find any cell containers", file: file, line: line)
         }
 
