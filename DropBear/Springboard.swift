@@ -3,7 +3,7 @@ import XCTest
 extension Springboard.DeleteAppButton {
     public static var `default`: Springboard.DeleteAppButton {
         return .init { application, icon in
-            return iOS13.delete(application, icon) || iOS12.delete(application, icon)
+            return iOS14.delete(application, icon) || iOS13.delete(application, icon) || iOS12.delete(application, icon)
         }
     }
 
@@ -34,6 +34,26 @@ extension Springboard.DeleteAppButton {
             return true
         }
     }
+
+    public static var iOS14: Springboard.DeleteAppButton {
+        return .init { application, icon in
+            let button = application.buttons["Remove App"]
+
+            guard button.waitForExistence(timeout: DropBear.defaultWaitTime) && button.isHittable else { return false }
+
+            button.tap()
+
+            let deleteButton = application.alerts.buttons["Delete App"]
+
+            guard button.waitForExistence(timeout: DropBear.defaultWaitTime) && button.isHittable else { return false }
+
+            deleteButton.tap()
+
+            return true
+        }
+    }
+
+    public static var iOS15: Springboard.DeleteAppButton { iOS14 }
 }
 
 public enum Springboard {
