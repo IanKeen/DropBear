@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   spec.name = 'DropBear'
-  spec.version = '0.13.0'
+  spec.version = '0.14.0'
   spec.homepage = 'https://github.com/IanKeen/DropBear'
   spec.summary = 'A marvellous UI testing framework.'
   spec.description = <<-DESC
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  spec.source_files = 'DropBear/**/*.swift'
+  spec.source_files = 'Sources/DropBear/**/*.swift'
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
