@@ -1,4 +1,5 @@
 import DropBearSupport
+import UIKit
 
 let delegate = isUITesting
     ? UITestAppDelegate.self
