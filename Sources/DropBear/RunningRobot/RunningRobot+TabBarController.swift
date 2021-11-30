@@ -46,6 +46,8 @@ extension RunningRobot where Current: TabBarRobot {
     }
 
     public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<NavigationElement, Next> {
+        DropBear.poll(until: { self.source.tabBars.firstMatch.buttons.count > 0 }, timeout: DropBear.defaultWaitTime)
+
         let tabBar = source.tabBars.firstMatch
 
         if tabBar.buttons.count == 0 {
