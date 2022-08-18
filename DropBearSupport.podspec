@@ -2,8 +2,9 @@ Pod::Spec.new do |spec|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
+  spec.platform = :ios
   spec.name = 'DropBearSupport'
-  spec.version = '0.14.0'
+  spec.version = '0.14.1'
   spec.homepage = 'https://github.com/IanKeen/DropBear'
   spec.summary = 'An app-side companion to DropBear.'
   spec.description = <<-DESC
