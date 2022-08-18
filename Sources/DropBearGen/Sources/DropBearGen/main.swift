@@ -25,7 +25,7 @@ do {
 
 } catch let error {
     let string = """
-    ERROR: \(error.localizedDescription)
+    ERROR: \(error)
     Arguments Provided: \(Array(CommandLine.arguments.dropFirst()))
     """
 

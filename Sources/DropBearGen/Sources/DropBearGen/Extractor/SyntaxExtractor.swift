@@ -1,4 +1,5 @@
 import SwiftSyntax
+import SwiftSyntaxParser
 
 public final class SyntaxExtractor: Extractor {
     // MARK: - Lifecycle

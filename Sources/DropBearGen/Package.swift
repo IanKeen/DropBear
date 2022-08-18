@@ -1,100 +1,42 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.5
 
 import Foundation
 import PackageDescription
 
 let package = Package(
     name: "DropBearGen",
+    platforms: [.macOS(.v12)],
+    products: [
+        .executable(name: "DropBearGen", targets: ["DropBearGen"])
+    ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.50500.0")),
+        .package(url: "https://github.com/apple/swift-syntax.git", .exact("0.50600.1")),
         .package(url: "https://github.com/tid-kijyun/Kanna.git", from: "5.2.7")
     ],
     targets: [
-        .target(
+        .executableTarget(
             name: "DropBearGen",
-            dependencies: ["SwiftSyntax", "Kanna"]
+            dependencies: [
+                .product(name: "SwiftSyntax", package: "swift-syntax"),
+                .product(name: "SwiftSyntaxParser", package: "swift-syntax"),
+                "lib_InternalSwiftSyntaxParser",
+                "Kanna"
+            ],
+            // Pass `-dead_strip_dylibs` to ignore the dynamic version of `lib_InternalSwiftSyntaxParser`
+            // that ships with SwiftSyntax because we want the static version from
+            // `StaticInternalSwiftSyntaxParser`.
+            linkerSettings: [
+                .unsafeFlags(["-Xlinker", "-dead_strip_dylibs"])
+            ]
         ),
         .testTarget(
             name: "DropBearGenTests",
-            dependencies: ["DropBearGen"]),
+            dependencies: ["DropBearGen"]
+        ),
+        .binaryTarget(
+            name: "lib_InternalSwiftSyntaxParser",
+            url: "https://github.com/keith/StaticInternalSwiftSyntaxParser/releases/download/5.6/lib_InternalSwiftSyntaxParser.xcframework.zip",
+            checksum: "88d748f76ec45880a8250438bd68e5d6ba716c8042f520998a438db87083ae9d"
+        )
     ]
 )
-
-hookInternalSwiftSyntaxParser()
-isDebuggingMain(false)
-
-/// When debuging from Xcode (via command + R) we need to do the dylib dance
-func isDebuggingMain(_ isDebug: Bool) {
-    if isDebug {
-        package
-            .targets
-            .filter { $0.name == "DropBearGen" }
-            .first?
-            .installSwiftSyntaxParser()
-    }
-}
-
-func hookInternalSwiftSyntaxParser() {
-    let isFromTerminal = ProcessInfo.processInfo.environment.values.contains("/usr/bin/swift")
-    if !isFromTerminal {
-        package
-            .targets
-            .filter(\.isTest)
-            .forEach { $0.installSwiftSyntaxParser() }
-    }
-}
-
-extension PackageDescription.Target {
-    func installSwiftSyntaxParser() {
-        linkerSettings = [linkerSetting]
-    }
-
-    private var linkerSetting: LinkerSetting {
-        guard let xcodeFolder = Executable("/usr/bin/xcode-select")("-p") else {
-            fatalError("Could not run `xcode-select -p`")
-        }
-
-        let toolchainFolder = "\(xcodeFolder.trimmed)/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx"
-
-        return .unsafeFlags(["-rpath", toolchainFolder])
-    }
-}
-
-extension String {
-    var trimmed: String { trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }
-}
-
-private struct Executable {
-    private let url: URL
-
-    init(_ filePath: String) {
-        url = URL(fileURLWithPath: filePath)
-    }
-
-    func callAsFunction(_ arguments: String...) -> String? {
-        let process = Process()
-        process.executableURL = url
-        process.arguments = arguments
-
-        let stdout = Pipe()
-        process.standardOutput = stdout
-
-        process.launch()
-        process.waitUntilExit()
-
-        return stdout.readStringToEndOfFile()
-    }
-}
-
-extension Pipe {
-    func readStringToEndOfFile() -> String? {
-        let data: Data
-        if #available(OSX 10.15.4, *) {
-            data = (try? fileHandleForReading.readToEnd()) ?? Data()
-        } else {
-            data = fileHandleForReading.readDataToEndOfFile()
-        }
-
-        return String(data: data, encoding: .utf8)
-    }
-}
