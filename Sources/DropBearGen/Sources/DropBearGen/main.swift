@@ -7,8 +7,12 @@ func execute(input: Path, output: Path) throws {
     try generator.generate(path: output)
 }
 
-enum CommandError: Swift.Error {
+enum CommandError: LocalizedError {
     case invalidArguments
+
+    var errorDescription: String? {
+        return "usage: DropBearGen input_folder output_file"
+    }
 }
 
 do {
@@ -21,8 +25,8 @@ do {
 
 } catch let error {
     let string = """
-    ERROR: \(error)
-    Arguments: \(CommandLine.arguments)
+    ERROR: \(error.localizedDescription)
+    Arguments Provided: \(Array(CommandLine.arguments.dropFirst()))
     """
 
     fputs(string + "\n", stderr)
