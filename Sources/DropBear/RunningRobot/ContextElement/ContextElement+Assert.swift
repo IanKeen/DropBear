@@ -1,6 +1,6 @@
 import XCTest
 
-extension RunningRobot where Current: Assertable {
+extension _RunningRobot where Current: Assertable {
     @discardableResult
     public func assert(
         _ element: ContextElement<Context>,

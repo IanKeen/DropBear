@@ -1,10 +1,11 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
+
 import Foundation
 import PackageDescription
 
 let package = Package(
     name: "DropBear",
-    platforms: [.iOS(.v10)],
+    platforms: [.iOS(.v14)],
     products: [
         .library(name: "DropBear", targets: ["DropBear"]),
         .library(name: "DropBearSupport", targets: ["DropBearSupport"]),

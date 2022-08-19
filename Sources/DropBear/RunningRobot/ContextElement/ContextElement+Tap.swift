@@ -1,6 +1,6 @@
 import XCTest
 
-extension RunningRobot where Current: Actionable {
+extension _RunningRobot where Current: Actionable {
     @discardableResult
     public func tap(
         _ element: ContextElement<Context>,

@@ -1,6 +1,6 @@
 import XCTest
 
-public class AlertRobot<Alert: AlertType, Previous: Robot>: RestrictedRobotBase, Robot {
+public class AlertRobot<Alert: AlertType, Previous: _Robot>: RestrictedRobotBase, _Robot {
     let previous: Previous
     let alert: XCUIElement
     let required: Bool

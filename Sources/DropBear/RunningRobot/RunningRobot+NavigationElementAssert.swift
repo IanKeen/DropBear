@@ -1,6 +1,6 @@
 import XCTest
 
-extension RunningRobot where Context: NavigationControllerContext, Context.NavigationElement: RawRepresentable, Context.NavigationElement.RawValue == String {
+extension _RunningRobot where Context: NavigationControllerContext, Context.NavigationElement: RawRepresentable, Context.NavigationElement.RawValue == String {
     @discardableResult
     public func assert(
         _ element: Context.NavigationElement,

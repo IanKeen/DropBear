@@ -2,11 +2,9 @@ import XCTest
 
 public protocol RobotContext { }
 
-public struct NoContext: RobotContext { }
+public struct _NoContext: RobotContext { }
 
-public struct NoConfiguration { }
-
-public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, Previous: Robot>: Robot {
+public class _RunningRobot<Configuration, Context: RobotContext, Current: _Robot, Previous: _Robot>: _Robot {
     public typealias Element = Current.Element
 
     public var source: XCUIElement { return current.source }
@@ -28,5 +26,5 @@ public class RunningRobot<Configuration, Context: RobotContext, Current: Robot, 
     }
 }
 
-extension RunningRobot: Assertable where Current: Assertable { }
-extension RunningRobot: Actionable where Current: Actionable { }
+extension _RunningRobot: Assertable where Current: Assertable { }
+extension _RunningRobot: Actionable where Current: Actionable { }

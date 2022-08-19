@@ -1,6 +1,6 @@
 import XCTest
 
-extension Robot where Self: Actionable {
+extension _Robot where Self: Actionable {
     public func type(
         _ element: Element,
         in hierarchy: [XCUIElement.ElementType] = [.any],

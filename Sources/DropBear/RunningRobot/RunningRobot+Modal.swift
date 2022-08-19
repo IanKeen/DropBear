@@ -1,36 +1,36 @@
-public protocol ModalContext: RobotContext {
+public protocol _ModalContext: RobotContext {
     associatedtype NavigationElement
 
     associatedtype PresenterConfiguration
     associatedtype PresenterContext: RobotContext
-    associatedtype PresenterCurrent: Robot
-    associatedtype PresenterPrevious: Robot
+    associatedtype PresenterCurrent: _Robot
+    associatedtype PresenterPrevious: _Robot
 
-    typealias Presenter = RunningRobot<PresenterConfiguration, PresenterContext, PresenterCurrent, PresenterPrevious>
+    typealias Presenter = _RunningRobot<PresenterConfiguration, PresenterContext, PresenterCurrent, PresenterPrevious>
 
     var presenter: Presenter { get }
 }
 
-public struct Modal<NavigationElement, PresenterConfiguration, PresenterContext: RobotContext, PresenterCurrent: Robot, PresenterPrevious: Robot>: ModalContext {
+public struct _Modal<NavigationElement, PresenterConfiguration, PresenterContext: RobotContext, PresenterCurrent: _Robot, PresenterPrevious: _Robot>: _ModalContext {
     public let presenter: Presenter
 }
 
-extension RunningRobot {
-    public typealias ModalRobot<NavigationElement, Next: Robot> = RunningRobot<
+extension _RunningRobot {
+    public typealias ModalRobot<NavigationElement, Next: _Robot> = _RunningRobot<
         Configuration,
-        Modal<NavigationElement, Configuration, Context, Current, Previous>,
+        _Modal<NavigationElement, Configuration, Context, Current, Previous>,
         Next,
-        Root
+        _Root
     >
 
     public enum ModalAction { case modal }
 
-    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: ModalAction) -> ModalRobot<NavigationElement, Next> {
+    public func nextRobot<NavigationElement, Next: _Robot>(_: Next.Type = Next.self, action: ModalAction) -> ModalRobot<NavigationElement, Next> {
         return .init(configuration: configuration, context: .init(presenter: self), current: .init(source: source), previous: .init(source: source))
     }
 }
 
-extension RunningRobot where Context: ModalContext {
+extension _RunningRobot where Context: _ModalContext {
     public func dismissModal() -> Context.Presenter {
         return context.presenter
     }

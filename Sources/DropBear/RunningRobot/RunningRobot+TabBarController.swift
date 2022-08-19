@@ -1,28 +1,28 @@
 import XCTest
 
-public protocol TabBarRobot: Robot { }
+public protocol TabBarRobot: _Robot { }
 
 public protocol TabBarItemContext: NavigationControllerContext {
     associatedtype TabBarConfiguration
     associatedtype TabBarContext: RobotContext
-    associatedtype TabBarCurrent: Robot
-    associatedtype TabBarPrevious: Robot
+    associatedtype TabBarCurrent: _Robot
+    associatedtype TabBarPrevious: _Robot
 
-    typealias TabBar = RunningRobot<TabBarConfiguration, TabBarContext, TabBarCurrent, TabBarPrevious>
+    typealias TabBar = _RunningRobot<TabBarConfiguration, TabBarContext, TabBarCurrent, TabBarPrevious>
 
     var tabBar: TabBar { get }
 }
 
-public struct TabBarItem<NavigationElement, TabBarConfiguration, TabBarContext: RobotContext, TabBarCurrent: Robot, TabBarPrevious: Robot>: TabBarItemContext {
+public struct TabBarItem<NavigationElement, TabBarConfiguration, TabBarContext: RobotContext, TabBarCurrent: _Robot, TabBarPrevious: _Robot>: TabBarItemContext {
     public let tabBar: TabBar
 }
 
-extension RunningRobot where Current: TabBarRobot {
-    public typealias TabItemRobot<NavigationElement, Next: Robot> = RunningRobot<
+extension _RunningRobot where Current: TabBarRobot {
+    public typealias TabItemRobot<NavigationElement, Next: _Robot> = _RunningRobot<
         Configuration,
         TabBarItem<NavigationElement, Configuration, Context, Current, Previous>,
         Next,
-        RunningRobot<Configuration, Context, Current, Previous>
+        _RunningRobot<Configuration, Context, Current, Previous>
     >
 
     public struct TabItemAction {
@@ -45,7 +45,7 @@ extension RunningRobot where Current: TabBarRobot {
         }
     }
 
-    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<NavigationElement, Next> {
+    public func nextRobot<NavigationElement, Next: _Robot>(_: Next.Type = Next.self, action: TabItemAction, file: StaticString = #file, line: UInt = #line) -> TabItemRobot<NavigationElement, Next> {
         DropBear.poll(until: { self.source.tabBars.firstMatch.buttons.count > 0 }, timeout: DropBear.defaultWaitTime)
 
         let tabBar = source.tabBars.firstMatch
@@ -62,7 +62,7 @@ extension RunningRobot where Current: TabBarRobot {
     }
 }
 
-extension RunningRobot where Context: TabBarItemContext {
+extension _RunningRobot where Context: TabBarItemContext {
     public func backToTabBarController(file: StaticString = #file, line: UInt = #line) -> Context.TabBar {
         return context.tabBar
     }

@@ -2,7 +2,7 @@ import XCTest
 
 public protocol Actionable { }
 
-extension Robot where Self: Actionable {
+extension _Robot where Self: Actionable {
     public func adjust(
         _ element: Element,
         in hierarchy: [XCUIElement.ElementType] = [.any],

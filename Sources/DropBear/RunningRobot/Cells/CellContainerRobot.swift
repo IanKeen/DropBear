@@ -1,24 +1,24 @@
 import XCTest
 
-public protocol CellContainerRobot: Robot { }
+public protocol CellContainerRobot: _Robot { }
 
-extension RunningRobot: CellContainerRobot where Current: CellContainerRobot { }
+extension _RunningRobot: CellContainerRobot where Current: CellContainerRobot { }
 
-extension RunningRobot where Current: CellContainerRobot {
-    public func nextRobot<Next: Robot>(_: Next.Type = Next.self, forCell index: Int, action: RootAction, file: StaticString = #file, line: UInt = #line) -> RootRobot<Next> {
+extension _RunningRobot where Current: CellContainerRobot {
+    public func nextRobot<Next: _Robot>(_: Next.Type = Next.self, forCell index: Int, action: RootAction, file: StaticString = #file, line: UInt = #line) -> RootRobot<Next> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
 
-    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, forCell index: Int, action: NavigationAction, file: StaticString = #file, line: UInt = #line) -> NavigationRobot<NavigationElement, Next> {
+    public func nextRobot<NavigationElement, Next: _Robot>(_: Next.Type = Next.self, forCell index: Int, action: NavigationAction, file: StaticString = #file, line: UInt = #line) -> NavigationRobot<NavigationElement, Next> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
 
-    public func nextRobot<NavigationElement, Next: Robot>(_: Next.Type = Next.self, forCell index: Int, action: ModalAction, file: StaticString = #file, line: UInt = #line) -> ModalRobot<NavigationElement, Next> {
+    public func nextRobot<NavigationElement, Next: _Robot>(_: Next.Type = Next.self, forCell index: Int, action: ModalAction, file: StaticString = #file, line: UInt = #line) -> ModalRobot<NavigationElement, Next> {
         return tap(cell: index, file: file, line: line).nextRobot(action: action)
     }
 }
 
-extension Robot where Self: CellContainerRobot {
+extension _Robot where Self: CellContainerRobot {
     public func tap(cell index: Int, file: StaticString = #file, line: UInt = #line) -> Self {
         cell(index, file: file, line: line).tap()
         return self
