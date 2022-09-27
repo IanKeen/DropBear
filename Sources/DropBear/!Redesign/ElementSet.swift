@@ -34,6 +34,10 @@ public struct ElementSet<
     public static func element(_ value: H) -> Self { .init(rawValue: value.rawValue) }
 }
 
+public typealias ElementSet1<A: RawRepresentable> = ElementSet<
+    A, NoElement, NoElement, NoElement, NoElement, NoElement, NoElement, NoElement
+> where A.RawValue == String
+
 public typealias ElementSet2<A: RawRepresentable, B: RawRepresentable> = ElementSet<
     A, B, NoElement, NoElement, NoElement, NoElement, NoElement, NoElement
 > where A.RawValue == String, B.RawValue == String
