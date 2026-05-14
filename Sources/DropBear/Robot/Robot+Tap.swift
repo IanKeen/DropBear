@@ -30,6 +30,22 @@ extension Robot where Self: Actionable {
 
         return self
     }
+    
+    public func tapTextView(
+        _ element: Element,
+        link: String,
+        in hierarchy: [XCUIElement.ElementType] = [.any],
+        numberOfTaps: Int = 1, numberOfTouches: Int = 1,
+        file: StaticString = #file, line: UInt = #line
+        ) -> Self
+    {
+        element
+            .element(in: source, hierarchy: hierarchy, file: file, line: line)
+            .textViews.links[link]
+            .tap(withNumberOfTaps: numberOfTaps, numberOfTouches: numberOfTouches)
+
+        return self
+    }
 
     public func press(
         _ element: Element,
