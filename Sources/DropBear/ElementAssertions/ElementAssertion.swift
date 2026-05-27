@@ -10,6 +10,14 @@ public struct ElementAssertion: @unchecked Sendable {
         self.assertion = assertion
         self.message = message
     }
+
+    /// Evaluates the assertion against `element` and returns the result without
+    /// failing the test. Use this to branch on UI state; use `XCUIElement.assert`
+    /// / `Robot.assert` when a false result should fail the test.
+    @MainActor
+    public func evaluate(_ element: XCUIElement) -> Bool {
+        assertion(element)
+    }
 }
 
 public prefix func !(assertion: ElementAssertion) -> ElementAssertion {

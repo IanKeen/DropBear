@@ -56,4 +56,15 @@ class Tests: UITest {
             .assert(.navigationTitle, .isEqual(to: "Home"))
             .assert(.label, .exists)
     }
+    func testMatchesEvaluatesWithoutFailing() {
+        let robot = ScrollableStackRobot.launch()
+        XCTAssertTrue(robot.matches(.label, .exists))
+        XCTAssertTrue(robot.matches(.label, .isEqual(to: "Undecided")))
+        XCTAssertFalse(robot.matches(.label, .isEqual(to: "Not the label text")))
+    }
+    func testElementContainingText() {
+        let robot = ScrollableStackRobot.launch()
+        XCTAssertTrue(robot.element(containingText: "ndecide", type: .staticText).exists)
+        XCTAssertFalse(robot.element(containingText: "no such text here", type: .staticText).exists)
+    }
 }
