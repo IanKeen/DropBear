@@ -78,4 +78,19 @@ extension Robot where Self: Assertable {
 
         return self
     }
+
+    /// Non-failing counterpart to `assert`: resolves `element` and returns
+    /// whether `assertion` holds, without failing the test. Use to branch on UI
+    /// state (e.g. retry / skip flows) where `assert` would abort the test.
+    public func matches(
+        _ element: Element,
+        in hierarchy: [XCUIElement.ElementType] = [.any],
+        _ assertion: ElementAssertion,
+        file: StaticString = #filePath, line: UInt = #line
+        ) -> Bool
+    {
+        return assertion.evaluate(
+            element.element(in: source, hierarchy: hierarchy, file: file, line: line)
+        )
+    }
 }
